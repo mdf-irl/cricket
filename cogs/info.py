@@ -82,16 +82,6 @@ class Info(discord.ext.commands.Cog):
         mem = await self._memory_info()
         disk = await self._disk_info()
 
-        # Build main info embed
-        embed = discord.Embed(
-            title="🤖 Bot Status",
-            color=discord.Color.pink(),
-            description=(
-                f"**Cricket** v420.69 ([GitHub](https://github.com/mdf-irl/cricket)) - latency: **{round(self.bot.latency * 1000)}**ms\n"
-                f"Powered by **discord.py** {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})"
-            ),
-        )
-
         # System info (use cached stats where possible)
         stats = await self._get_stats()
         boot = stats.get("boot") if stats else None
@@ -99,14 +89,26 @@ class Info(discord.ext.commands.Cog):
         bot_uptime = self._format_uptime(self.connected_time)
         system_uptime = self._format_uptime(booted_time) if booted_time else "N/A"
 
+        # Build main info embed
+        embed = discord.Embed(
+            title="🤖 Bot Status",
+            color=discord.Color.pink(),
+            description=(
+                f"**Cricket** v420.69 ([GitHub](https://github.com/mdf-irl/cricket)) - **latency**: {round(self.bot.latency * 1000)}ms\n"
+                f"**Uptime**: {bot_uptime} (**bot**) / {system_uptime} (**system**)"
+                # f"Powered by **discord.py** {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})"
+            ),
+        )
+
         # System stats in separate section
         embed.add_field(name="💾 CPU", value=cpu, inline=True)
         embed.add_field(name="🧠 Memory", value=mem, inline=True)
         embed.add_field(name="💿 Disk", value=disk, inline=True)
 
-        embed.set_footer(text=f"Uptime: {bot_uptime} (bot) / {system_uptime} (system)")
+        #embed.set_footer(text=f"Uptime: {bot_uptime} (bot) / {system_uptime} (system)")
+        embed.set_footer(text=f"🔋 Powered by discord.py {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})")
 
-        await i.followup.send(embed=embed)
+        await i.followup.send(embed=embed, ephemeral=True)
 
     async def _cpu_info(self) -> str:
         stats = await self._get_stats()
