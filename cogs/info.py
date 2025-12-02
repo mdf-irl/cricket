@@ -91,11 +91,11 @@ class Info(discord.ext.commands.Cog):
 
         # Build main info embed
         embed = discord.Embed(
-            title="🤖 Bot Status",
+            title="🦗 Cricket v420.69",
             color=discord.Color.pink(),
             description=(
-                f"**Cricket** v420.69 ([GitHub](https://github.com/mdf-irl/cricket)) - **latency**: {round(self.bot.latency * 1000)}ms\n"
-                f"**Uptime**: {bot_uptime} (**bot**) / {system_uptime} (**system**)"
+                f"**Latency**: {round(self.bot.latency * 1000)}ms\n"
+                f"**Uptime**: {bot_uptime} (**bot**) / {system_uptime} (**system**)\n"
                 # f"Powered by **discord.py** {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})"
             ),
         )
