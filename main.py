@@ -54,10 +54,10 @@ async def load_cogs():
 async def on_ready():
     logger.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
     
-    try:
-        await bot.change_presence(activity=discord.Game(name="Dungeons & Dragons"))
-    except Exception as e:
-        logger.warning(f"Failed to set presence: {e}")
+    # try:
+    #     await bot.change_presence(activity=discord.Game(name="Dungeons & Dragons"))
+    # except Exception as e:
+    #     logger.warning(f"Failed to set presence: {e}")
 
     if not Config.TEST_GUILD_ID:
         logger.error("TEST_GUILD_ID not set in environment variables")
