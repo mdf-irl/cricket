@@ -1,9 +1,9 @@
-import discord
 import json
 from pathlib import Path
-from urllib.parse import urlparse, urlunparse
 from typing import Optional
+from urllib.parse import urlparse, urlunparse
 
+import discord
 from discord.ext import commands
 from discord import app_commands
 
@@ -17,10 +17,11 @@ DATA_FILE = Path("data") / "character_map.json"
 
 
 def clean_url(url: str) -> str:
+    """Remove query and fragment from URL."""
     if not url or not url.startswith(("http://", "https://")):
         return ""
     parsed = urlparse(url)
-    return urlunparse(parsed._replace(query="", fragment=""))
+    return urlunparse((parsed.scheme, parsed.netloc, parsed.path, "", "", ""))
 
 
 async def fetch_character(char_id: int) -> Optional[dict]:
@@ -31,37 +32,30 @@ async def fetch_character(char_id: int) -> Optional[dict]:
     url = f"https://character-service.dndbeyond.com/character/v5/character/{char_id}"
     try:
         data = await HTTP.fetch_json(url)
-    except Exception as e:
-        logger.error(f"HTTP error fetching character {char_id}: {e}")
-        return None
+        if not isinstance(data, dict):
+            logger.warning(f"Unexpected response for character {char_id}")
+            return None
 
-    if not isinstance(data, dict):
-        logger.warning(f"Unexpected response for character {char_id}")
-        return None
+        char_data = data.get("data", {})
+        decorations = char_data.get("decorations", {})
+        avatar = decorations.get("avatarUrl") or char_data.get("avatarUrl") or char_data.get("portraitAvatarUrl", "")
 
-    char_data = data.get("data", {})
-    avatar = (
-        char_data.get("decorations", {}).get("avatarUrl") or
-        char_data.get("avatarUrl") or
-        char_data.get("portraitAvatarUrl", "")
-    )
-
-    classes = char_data.get("classes", [])
-    if classes:
+        classes = char_data.get("classes", [])
         class_info = " / ".join(
             f"{c.get('definition', {}).get('name', 'Unknown')} ({c.get('level', 0)})"
             for c in classes
-        )
-    else:
-        class_info = "No Class Info"
+        ) if classes else "No Class Info"
 
-    return {
-        "name": char_data.get("name", "Unknown"),
-        "race": char_data.get("race", {}).get("fullName", "Unknown Race"),
-        "level": sum(int(c.get("level", 0)) for c in classes),
-        "classes": class_info,
-        "avatar": clean_url(avatar)
-    }
+        return {
+            "name": char_data.get("name", "Unknown"),
+            "race": char_data.get("race", {}).get("fullName", "Unknown Race"),
+            "level": sum(c.get("level", 0) for c in classes),
+            "classes": class_info,
+            "avatar": clean_url(avatar)
+        }
+    except Exception as e:
+        logger.error(f"Error fetching character {char_id}: {type(e).__name__}: {e}")
+        return None
 
 
 class Sheet(commands.Cog):
@@ -73,6 +67,7 @@ class Sheet(commands.Cog):
 
     @staticmethod
     def load_character_data() -> dict[int, int]:
+        """Load user ID to character ID mapping from JSON file."""
         if not DATA_FILE.exists():
             logger.warning(f"Missing character map file: {DATA_FILE}")
             return {}
@@ -80,10 +75,7 @@ class Sheet(commands.Cog):
             with DATA_FILE.open("r", encoding="utf-8") as f:
                 raw = json.load(f)
                 return {int(uid): int(cid) for uid, cid in raw.items()}
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {DATA_FILE}: {e}")
-            return {}
-        except Exception as e:
+        except (json.JSONDecodeError, ValueError) as e:
             logger.error(f"Error loading {DATA_FILE}: {type(e).__name__}: {e}")
             return {}
 
@@ -117,7 +109,7 @@ class Sheet(commands.Cog):
             color=discord.Color.blue(),
         )
 
-        if info.get("avatar"):
+        if info["avatar"]:
             embed.set_thumbnail(url=info["avatar"])
 
         await interaction.followup.send(embed=embed)

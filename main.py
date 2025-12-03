@@ -1,5 +1,5 @@
 import asyncio
-import os
+from pathlib import Path
 
 import discord
 from discord.ext import commands
@@ -18,76 +18,62 @@ bot = commands.Bot(command_prefix=None, intents=intents, help_command=None)
 
 async def load_cogs():
     """Load all cogs from the cogs directory."""
-    try:
-        cog_files = os.listdir("./cogs")
-    except FileNotFoundError:
+    cogs_dir = Path("./cogs")
+    
+    if not cogs_dir.exists():
         logger.error("./cogs directory not found!")
-        return
-    except PermissionError:
-        logger.error("Permission denied accessing ./cogs directory!")
         return
 
     loaded_count = 0
     failed_count = 0
 
-    for file in sorted(cog_files):
-        if file.endswith(".py") and not file.startswith("_"):
-            cog_name = file[:-3]
-            try:
-                await bot.load_extension(f"cogs.{cog_name}")
-                logger.info(f"Loaded cog: {cog_name}")
-                loaded_count += 1
-            except commands.ExtensionNotFound:
-                logger.error(f"Cog module not found: {cog_name}")
-                failed_count += 1
-            except commands.ExtensionAlreadyLoaded:
-                logger.warning(f"Cog already loaded: {cog_name}")
-            except commands.NoEntryPointError:
-                logger.error(f"Cog missing setup() function: {cog_name}")
-                failed_count += 1
-            except commands.ExtensionFailed as e:
-                logger.error(f"Cog execution error ({cog_name}): {e.original}")
-                failed_count += 1
-            except Exception as e:
-                logger.error(f"Unexpected error loading cog {cog_name}: {type(e).__name__}: {e}")
-                failed_count += 1
+    for file in sorted(cogs_dir.glob("*.py")):
+        if file.stem.startswith("_"):
+            continue
+            
+        try:
+            await bot.load_extension(f"cogs.{file.stem}")
+            logger.info(f"Loaded cog: {file.stem}")
+            loaded_count += 1
+        except (commands.ExtensionNotFound, commands.NoEntryPointError) as e:
+            logger.error(f"Cog error ({file.stem}): {type(e).__name__}")
+            failed_count += 1
+        except commands.ExtensionAlreadyLoaded:
+            logger.warning(f"Cog already loaded: {file.stem}")
+        except commands.ExtensionFailed as e:
+            logger.error(f"Cog execution error ({file.stem}): {e.original}")
+            failed_count += 1
+        except Exception as e:
+            logger.error(f"Unexpected error loading {file.stem}: {type(e).__name__}: {e}")
+            failed_count += 1
 
     logger.info(f"Cog loading complete: {loaded_count} loaded, {failed_count} failed")
 
 @bot.event
 async def on_ready():
     logger.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
-    
-    # try:
-    #     await bot.change_presence(activity=discord.Game(name="Dungeons & Dragons"))
-    # except Exception as e:
-    #     logger.warning(f"Failed to set presence: {e}")
 
     if not Config.TEST_GUILD_ID:
         logger.error("TEST_GUILD_ID not set in environment variables")
         return
 
     try:
-        bot.tree.copy_global_to(guild=discord.Object(id=Config.TEST_GUILD_ID))
-        synced = await bot.tree.sync(guild=discord.Object(id=Config.TEST_GUILD_ID))
+        guild = discord.Object(id=Config.TEST_GUILD_ID)
+        bot.tree.copy_global_to(guild=guild)
+        synced = await bot.tree.sync(guild=guild)
         logger.info(f"Synced {len(synced)} command(s) to guild {Config.TEST_GUILD_ID}")
-    except discord.Forbidden:
-        logger.error(f"Permission denied syncing commands to guild {Config.TEST_GUILD_ID}")
-    except discord.HTTPException as e:
-        logger.error(f"HTTP error syncing commands: {e}")
+    except (discord.Forbidden, discord.HTTPException) as e:
+        logger.error(f"Error syncing commands to guild {Config.TEST_GUILD_ID}: {type(e).__name__}: {e}")
     except Exception as e:
         logger.error(f"Unexpected error syncing commands: {type(e).__name__}: {e}")
 
-def validate_config() -> bool:
-    """Validate required configuration before starting bot."""
-    return Config.load()
-
 async def main():
-    try:
-        if not validate_config():
-            logger.error("Configuration validation failed. Exiting.")
-            return
+    """Main bot entry point."""
+    if not Config.load():
+        logger.error("Configuration validation failed. Exiting.")
+        return
 
+    try:
         await HTTP.open()
         logger.info("HTTP session initialized")
 
@@ -95,11 +81,8 @@ async def main():
             await load_cogs()
             logger.info("Starting bot...")
             await bot.start(Config.DISCORD_TOKEN)
-
-    except discord.LoginFailure:
-        logger.error("Invalid DISCORD_TOKEN provided")
-    except discord.HTTPException as e:
-        logger.error(f"Discord HTTP error: {e}")
+    except (discord.LoginFailure, discord.HTTPException) as e:
+        logger.error(f"Discord error: {type(e).__name__}: {e}")
     except KeyboardInterrupt:
         logger.info("Bot interrupted by user")
     except Exception as e:
@@ -116,5 +99,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logger.info("Bot shutdown complete")
-    except Exception as e:
-        logger.critical(f"Critical error: {type(e).__name__}: {e}")

@@ -1,8 +1,9 @@
+import json
+import os
+
 import discord
 from discord.ext import commands
 from discord import app_commands
-import json
-import os
 
 from logger_config import get_logger
 
@@ -25,14 +26,8 @@ class Books(commands.Cog):
                 data = json.load(f)
                 logger.info(f"Loaded books data from {self.DATA_FILE}")
                 return data
-        except FileNotFoundError:
-            logger.error(f"{self.DATA_FILE} not found!")
-            return {}
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {self.DATA_FILE}: {e}")
-            return {}
-        except Exception as e:
-            logger.error(f"Unexpected error loading {self.DATA_FILE}: {type(e).__name__}: {e}")
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            logger.error(f"Error loading {self.DATA_FILE}: {type(e).__name__}: {e}")
             return {}
 
     def format_books(self, category: dict) -> list[str]:
@@ -46,17 +41,11 @@ class Books(commands.Cog):
         """
         lines = []
         for book, editions in category.items():
-            try:
-                edition_str = " | ".join(
-                    f"{year} [**DDB**]({links['ddb']})/[**PDF**]({links['pdf']})"
-                    for year, links in editions.items()
-                )
-                lines.append(f"{book} ({edition_str})")
-            except KeyError as e:
-                logger.warning(f"Missing link data for {book}: {e}")
-                lines.append(f"{book} (incomplete data)")
-            except Exception as e:
-                logger.warning(f"Error formatting {book}: {type(e).__name__}: {e}")
+            edition_str = " | ".join(
+                f"{year} [**DDB**]({links.get('ddb', '#')})/[**PDF**]({links.get('pdf', '#')})"
+                for year, links in editions.items()
+            )
+            lines.append(f"{book} ({edition_str})")
         return lines
 
     @app_commands.command(name="books", description="Show links to official D&D books.")
@@ -74,11 +63,13 @@ class Books(commands.Cog):
             core = self.books_data.get("core_books", {})
             expansions = self.books_data.get("expansions", {})
 
-            desc_lines = []
-            desc_lines.append("📘 **Core Books**")
-            desc_lines.extend(self.format_books(core))
-            desc_lines.append("\n📚 **Expansion Books**")
-            desc_lines.extend(self.format_books(expansions))
+            desc_lines = [
+                "📘 **Core Books**",
+                *self.format_books(core),
+                "",
+                "📚 **Expansion Books**",
+                *self.format_books(expansions)
+            ]
 
             embed = discord.Embed(
                 title="Dungeons & Dragons 5th Edition Books",
