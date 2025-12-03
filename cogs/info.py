@@ -62,21 +62,21 @@ class Info(discord.ext.commands.Cog):
             pass
 
     @discord.app_commands.command(name="avatar")
-    async def avatar(self, i: discord.Interaction, user: typing.Optional[discord.Member] = None) -> None:
+    async def avatar(self, interaction: discord.Interaction, user: typing.Optional[discord.Member] = None) -> None:
         """Show the full-size avatar for a user (defaults to caller)."""
-        target = user or i.user
-        if not isinstance(target, discord.Member) and hasattr(i, "user"):
+        target = user or interaction.user
+        if not isinstance(target, discord.Member) and hasattr(interaction, "user"):
             # When outside a guild Member may not be available; use the Interaction user
-            target = i.user
+            target = interaction.user
 
         embed = discord.Embed(title=f"{target.display_name}'s Full-Sized Avatar", color=discord.Color.pink())
         embed.set_image(url=target.display_avatar.url)
-        await i.response.send_message(embed=embed)
+        await interaction.response.send_message(embed=embed)
 
-    @discord.app_commands.command(name="about")
-    async def about(self, i: discord.Interaction) -> None:
+    @discord.app_commands.command(name="botinfo")
+    async def botinfo(self, interaction: discord.Interaction) -> None:
         """Show information about the bot and host system."""
-        await i.response.defer()
+        await interaction.response.defer()
 
         cpu = await self._cpu_info()
         mem = await self._memory_info()
@@ -108,7 +108,7 @@ class Info(discord.ext.commands.Cog):
         #embed.set_footer(text=f"Uptime: {bot_uptime} (bot) / {system_uptime} (system)")
         embed.set_footer(text=f"🔋 Powered by discord.py {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})")
 
-        await i.followup.send(embed=embed, ephemeral=True)
+        await interaction.followup.send(embed=embed, ephemeral=True)
 
     async def _cpu_info(self) -> str:
         stats = await self._get_stats()
@@ -207,28 +207,119 @@ class Info(discord.ext.commands.Cog):
         return f"{days}d, {hours}h, {minutes}m, {seconds}s"
 
     @discord.app_commands.command(name="guildinfo")
-    async def guildinfo(self, i: discord.Interaction) -> None:
+    async def guildinfo(self, interaction: discord.Interaction) -> None:
         """Show information about the guild the command was used in."""
-        guild = i.guild
+        guild = interaction.guild
         if not guild:
-            await i.response.send_message("This command must be used in a server.", ephemeral=True)
+            await interaction.response.send_message("This command must be used in a server.", ephemeral=True)
             return
 
+        # Owner (use cached member if available, else fetch user by owner_id,
+        # else fall back to a plain mention string so output isn't 'Unknown')
+        owner_display = "Unknown"
+        owner_id = getattr(guild, "owner_id", None)
+        try:
+            owner = getattr(guild, "owner", None)
+            if owner:
+                owner_display = owner.mention
+            elif owner_id:
+                try:
+                    owner_user = await self.bot.fetch_user(owner_id)
+                    owner_display = owner_user.mention
+                except Exception:
+                    owner_display = f"<@{owner_id}>"
+        except Exception:
+            owner_display = "Unknown"
+
+        # Boosts / premium info
+        boost_count = getattr(guild, "premium_subscription_count", None)
+        if boost_count is None:
+            boost_count = 0
+        tier = getattr(guild, "premium_tier", None)
+        try:
+            tier_display = tier.name if hasattr(tier, "name") else str(tier)
+        except Exception:
+            tier_display = "None"
+
         embed = discord.Embed(title=guild.name, color=discord.Color.pink())
-        embed.add_field(name="Created", value=guild.created_at.strftime('%m/%d/%Y'), inline=True)
+        embed.add_field(name="Owner", value=owner_display, inline=True)
+        embed.add_field(name="Boosts", value=f"{boost_count} (Tier: {tier_display})", inline=True)
         embed.add_field(name="Members", value=guild.member_count, inline=True)
+        embed.add_field(name="Created", value=guild.created_at.strftime('%m/%d/%Y'), inline=True)
         if guild.icon:
             embed.set_thumbnail(url=guild.icon.url)
-        await i.response.send_message(embed=embed)
+        await interaction.response.send_message(embed=embed)
 
     @discord.app_commands.command(name="userinfo")
     @discord.app_commands.describe(user="The user to display information about; defaults to you.")
-    async def userinfo(self, i: discord.Interaction, user: typing.Optional[discord.Member] = None) -> None:
+    async def userinfo(self, interaction: discord.Interaction, user: typing.Optional[discord.User] = None) -> None:
         """Show information about a user (defaults to caller)."""
-        target = user or i.user
+        target = user or interaction.user
+
+        # Determine if we have a Member (guild-scoped) or only a User
+        # Try to get the freshest member data from the guild
+        member: typing.Optional[discord.Member] = None
+        if interaction.guild:
+            try:
+                # Fetch member to get fresh presence data
+                member = await interaction.guild.fetch_member(target.id)
+            except (discord.NotFound, discord.Forbidden, discord.HTTPException):
+                # Fall back to cached member
+                member = interaction.guild.get_member(target.id)
+        
+        if not member and isinstance(target, discord.Member):
+            member = target
+
         embed = discord.Embed(title=f"{target.display_name} ({target})", color=discord.Color.pink())
-        joined = getattr(target, 'joined_at', None)
-        embed.add_field(name="Guild join date", value=(joined.strftime('%m/%d/%Y') if joined else 'N/A'))
-        if target.display_avatar:
-            embed.set_thumbnail(url=target.display_avatar.url)
-        await i.response.send_message(embed=embed)
+
+        # Thumbnail / avatar
+        try:
+            if target.display_avatar:
+                embed.set_thumbnail(url=target.display_avatar.url)
+        except Exception:
+            pass
+
+        # Basic fields
+        embed.add_field(name="Mention", value=target.mention, inline=True)
+        embed.add_field(name="ID", value=str(target.id), inline=True)
+        embed.add_field(name="Bot", value=("Yes" if getattr(target, "bot", False) else "No"), inline=True)
+
+        # Account creation
+        created = getattr(target, "created_at", None)
+        embed.add_field(name="Created", value=(created.strftime('%m/%d/%Y') if created else "N/A"), inline=True)
+
+        # Guild-specific info
+        if member:
+            nick = member.nick or "-"
+            embed.add_field(name="Nickname", value=nick, inline=True)
+
+            # Roles (exclude @everyone)
+            roles = [r for r in member.roles if r.name != "@everyone"]
+            roles_count = len(roles)
+            top_role = member.top_role.name if getattr(member, "top_role", None) and member.top_role.name != "@everyone" else "-"
+            roles_display = ", ".join(r.mention for r in roles[-5:]) if roles_count else "-"
+            embed.add_field(name="Top Role", value=top_role, inline=True)
+            embed.add_field(name="Roles", value=f"{roles_count} ({roles_display})", inline=True)
+
+            joined = getattr(member, 'joined_at', None)
+            embed.add_field(name="Guild Join", value=(joined.strftime('%m/%d/%Y') if joined else 'N/A'), inline=True)
+
+            activities = getattr(member, 'activities', None)
+            if activities:
+                act_list = []
+                for a in activities:
+                    try:
+                        name = getattr(a, 'name', None) or str(a)
+                        act_list.append(name)
+                    except Exception:
+                        continue
+                if act_list:
+                    embed.add_field(name="Activities", value="; ".join(act_list[:3]), inline=False)
+        else:
+            # Non-guild user: only global info available
+            embed.add_field(name="Nickname", value="-", inline=True)
+            embed.add_field(name="Top Role", value="-", inline=True)
+            embed.add_field(name="Roles", value="-", inline=True)
+            embed.add_field(name="Guild Join", value="-", inline=True)
+
+        await interaction.response.send_message(embed=embed)

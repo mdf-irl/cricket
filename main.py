@@ -10,7 +10,11 @@ from logger_config import get_logger
 
 logger = get_logger(__name__)
 
-bot = commands.Bot(command_prefix=None, intents=discord.Intents.default(), help_command=None)
+intents = discord.Intents.default()
+intents.members = True
+intents.presences = True
+
+bot = commands.Bot(command_prefix=None, intents=intents, help_command=None)
 
 async def load_cogs():
     """Load all cogs from the cogs directory."""
