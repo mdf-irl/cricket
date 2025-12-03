@@ -36,9 +36,10 @@ class Info(discord.ext.commands.Cog):
 
     # expose commands as top-level slash commands (no `/info` group)
     _BYTES_PER_GB = 1024 ** 3
-    _is_linux = platform.system().lower() == "linux"
-    _platform_name: str = platform.system()
-    _machine_name: str = platform.machine()
+    _platform_system = platform.system()
+    _is_linux = _platform_system.lower() == "linux"
+    _platform_machine = platform.machine()
+    _python_version = platform.python_version()
     _stats_ttl = 5  # seconds
     _stats_cache: typing.Optional[dict[str, typing.Any]] = None
 
@@ -65,10 +66,6 @@ class Info(discord.ext.commands.Cog):
     async def avatar(self, interaction: discord.Interaction, user: typing.Optional[discord.Member] = None) -> None:
         """Show the full-size avatar for a user (defaults to caller)."""
         target = user or interaction.user
-        if not isinstance(target, discord.Member) and hasattr(interaction, "user"):
-            # When outside a guild Member may not be available; use the Interaction user
-            target = interaction.user
-
         embed = discord.Embed(title=f"{target.display_name}'s Full-Sized Avatar", color=discord.Color.pink())
         embed.set_image(url=target.display_avatar.url)
         await interaction.response.send_message(embed=embed)
@@ -78,16 +75,37 @@ class Info(discord.ext.commands.Cog):
         """Show information about the bot and host system."""
         await interaction.response.defer()
 
-        cpu = await self._cpu_info()
-        mem = await self._memory_info()
-        disk = await self._disk_info()
-
-        # System info (use cached stats where possible)
         stats = await self._get_stats()
-        boot = stats.get("boot") if stats else None
-        booted_time = datetime.datetime.fromtimestamp(boot) if boot else None
+        
+        # Build CPU info
+        cpu = "N/A"
+        if stats:
+            cpu_percent = stats.get("cpu_percent", 0.0)
+            cpu_count = stats.get("cpu_count", 0)
+            freq_cur = stats.get("freq", "N/A")
+            cpu_temp_c = stats.get("cpu_temp", "N/A")
+            cpu = f"**Usage**: {cpu_percent:.2f}%\n**Cores**: {cpu_count} @ {freq_cur}\n**Temp**: {cpu_temp_c}"
+        
+        # Build memory info
+        mem = "N/A"
+        if stats and (vm := stats.get("vm")):
+            pct = getattr(vm, "percent", None)
+            pct_display = f" ({pct:.0f}%)" if pct is not None else ""
+            mem = f"**Used**: {self._format_bytes(vm.used)}\n**Total**: {self._format_bytes(vm.total)}{pct_display}"
+        
+        # Build disk info
+        disk = "N/A"
+        if stats and (du := stats.get("du")):
+            pct = getattr(du, "percent", None)
+            pct_display = f" ({pct:.0f}%)" if pct is not None else ""
+            disk = f"**Used**: {self._format_bytes(du.used)}\n**Total**: {self._format_bytes(du.total)}{pct_display}"
+
+        # Uptime calculations
         bot_uptime = self._format_uptime(self.connected_time)
-        system_uptime = self._format_uptime(booted_time) if booted_time else "N/A"
+        system_uptime = "N/A"
+        if stats and (boot := stats.get("boot")):
+            booted_time = datetime.datetime.fromtimestamp(boot)
+            system_uptime = self._format_uptime(booted_time)
 
         # Build main info embed
         embed = discord.Embed(
@@ -95,58 +113,16 @@ class Info(discord.ext.commands.Cog):
             color=discord.Color.pink(),
             description=(
                 f"**Latency**: {round(self.bot.latency * 1000)}ms\n"
-                f"**Uptime**: {bot_uptime} (**bot**) / {system_uptime} (**system**)\n"
-                # f"Powered by **discord.py** {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})"
+                f"**Uptime**: {bot_uptime} (**bot**) / {system_uptime} (**system**)"
             ),
         )
 
-        # System stats in separate section
         embed.add_field(name="💾 CPU", value=cpu, inline=True)
         embed.add_field(name="🧠 Memory", value=mem, inline=True)
         embed.add_field(name="💿 Disk", value=disk, inline=True)
-
-        #embed.set_footer(text=f"Uptime: {bot_uptime} (bot) / {system_uptime} (system)")
-        embed.set_footer(text=f"🔋 Powered by discord.py {discord.__version__} w/ Python {platform.python_version()} on {platform.system()} ({platform.machine()})")
+        embed.set_footer(text=f"🔋 Powered by discord.py {discord.__version__} w/ Python {self._python_version} on {self._platform_system} ({self._platform_machine})")
 
         await interaction.followup.send(embed=embed, ephemeral=True)
-
-    async def _cpu_info(self) -> str:
-        stats = await self._get_stats()
-        if not stats:
-            return "N/A"
-
-        cpu_percent = stats.get("cpu_percent") or 0.0
-        cpu_count = stats.get("cpu_count") or 0
-        freq_cur = stats.get("freq") or "N/A"
-        cpu_temp_c = stats.get("cpu_temp") or "N/A"
-
-        return f"**Usage**: {cpu_percent:.2f}%\n**Cores**: {cpu_count} @ {freq_cur}\n**Temp**: {cpu_temp_c}"
-
-    async def _memory_info(self) -> str:
-        stats = await self._get_stats()
-        if not stats:
-            return "N/A"
-        vm = stats.get("vm")
-        if not vm:
-            return "N/A"
-        used = vm.used
-        total = vm.total
-        pct = getattr(vm, "percent", None)
-        pct_display = f" ({pct:.0f}%)" if pct is not None else ""
-        return f"**Used**: {self._format_bytes(used)}\n**Total**: {self._format_bytes(total)}{pct_display}"
-
-    async def _disk_info(self) -> str:
-        stats = await self._get_stats()
-        if not stats:
-            return "N/A"
-        du = stats.get("du")
-        if not du:
-            return "N/A"
-        used = du.used
-        total = du.total
-        pct = getattr(du, "percent", None)
-        pct_display = f" ({pct:.0f}%)" if pct is not None else ""
-        return f"**Used**: {self._format_bytes(used)}\n**Total**: {self._format_bytes(total)}{pct_display}"
 
     async def _get_stats(self) -> dict | None:
         """Fetch psutil stats once and cache for `_stats_ttl` seconds."""
@@ -168,10 +144,10 @@ class Info(discord.ext.commands.Cog):
                 asyncio.to_thread(psutil.boot_time),
             ]
 
-            cpu_percent, cpu_count_false, cpu_count_true, freq, vm, du, boot = await asyncio.gather(*tasks)
+            cpu_percent, cpu_count_physical, cpu_count_logical, freq, vm, du, boot = await asyncio.gather(*tasks)
 
-            cpu_count = cpu_count_false or cpu_count_true or 0
-            freq_cur = f"{(freq.current/1000):.2f} GHz" if freq else "N/A"
+            cpu_count = cpu_count_physical or cpu_count_logical or 0
+            freq_cur = f"{freq.current / 1000:.2f} GHz" if freq else "N/A"
 
             cpu_temp = None
             if self._is_linux and gpiozero:
@@ -214,32 +190,20 @@ class Info(discord.ext.commands.Cog):
             await interaction.response.send_message("This command must be used in a server.", ephemeral=True)
             return
 
-        # Owner (use cached member if available, else fetch user by owner_id,
-        # else fall back to a plain mention string so output isn't 'Unknown')
+        # Owner lookup with fallback chain
         owner_display = "Unknown"
-        owner_id = getattr(guild, "owner_id", None)
-        try:
-            owner = getattr(guild, "owner", None)
-            if owner:
-                owner_display = owner.mention
-            elif owner_id:
-                try:
-                    owner_user = await self.bot.fetch_user(owner_id)
-                    owner_display = owner_user.mention
-                except Exception:
-                    owner_display = f"<@{owner_id}>"
-        except Exception:
-            owner_display = "Unknown"
+        if guild.owner:
+            owner_display = guild.owner.mention
+        elif guild.owner_id:
+            try:
+                owner_user = await self.bot.fetch_user(guild.owner_id)
+                owner_display = owner_user.mention
+            except Exception:
+                owner_display = f"<@{guild.owner_id}>"
 
         # Boosts / premium info
-        boost_count = getattr(guild, "premium_subscription_count", None)
-        if boost_count is None:
-            boost_count = 0
-        tier = getattr(guild, "premium_tier", None)
-        try:
-            tier_display = tier.name if hasattr(tier, "name") else str(tier)
-        except Exception:
-            tier_display = "None"
+        boost_count = guild.premium_subscription_count or 0
+        tier_display = getattr(guild.premium_tier, "name", str(guild.premium_tier)) if guild.premium_tier else "None"
 
         embed = discord.Embed(title=guild.name, color=discord.Color.pink())
         embed.add_field(name="Owner", value=owner_display, inline=True)
@@ -282,39 +246,26 @@ class Info(discord.ext.commands.Cog):
         # Basic fields
         embed.add_field(name="Mention", value=target.mention, inline=True)
         embed.add_field(name="ID", value=str(target.id), inline=True)
-        embed.add_field(name="Bot", value=("Yes" if getattr(target, "bot", False) else "No"), inline=True)
-
-        # Account creation
-        created = getattr(target, "created_at", None)
-        embed.add_field(name="Created", value=(created.strftime('%m/%d/%Y') if created else "N/A"), inline=True)
+        embed.add_field(name="Bot", value="Yes" if target.bot else "No", inline=True)
+        embed.add_field(name="Created", value=target.created_at.strftime('%m/%d/%Y'), inline=True)
 
         # Guild-specific info
         if member:
-            nick = member.nick or "-"
-            embed.add_field(name="Nickname", value=nick, inline=True)
+            embed.add_field(name="Nickname", value=member.nick or "-", inline=True)
 
             # Roles (exclude @everyone)
             roles = [r for r in member.roles if r.name != "@everyone"]
-            roles_count = len(roles)
-            top_role = member.top_role.name if getattr(member, "top_role", None) and member.top_role.name != "@everyone" else "-"
-            roles_display = ", ".join(r.mention for r in roles[-5:]) if roles_count else "-"
+            top_role = member.top_role.name if member.top_role and member.top_role.name != "@everyone" else "-"
+            roles_display = ", ".join(r.mention for r in roles[-5:]) if roles else "-"
             embed.add_field(name="Top Role", value=top_role, inline=True)
-            embed.add_field(name="Roles", value=f"{roles_count} ({roles_display})", inline=True)
+            embed.add_field(name="Roles", value=f"{len(roles)} ({roles_display})", inline=True)
 
-            joined = getattr(member, 'joined_at', None)
-            embed.add_field(name="Guild Join", value=(joined.strftime('%m/%d/%Y') if joined else 'N/A'), inline=True)
+            embed.add_field(name="Guild Join", value=member.joined_at.strftime('%m/%d/%Y') if member.joined_at else 'N/A', inline=True)
 
-            activities = getattr(member, 'activities', None)
-            if activities:
-                act_list = []
-                for a in activities:
-                    try:
-                        name = getattr(a, 'name', None) or str(a)
-                        act_list.append(name)
-                    except Exception:
-                        continue
+            if member.activities:
+                act_list = [getattr(a, 'name', str(a)) for a in member.activities[:3]]
                 if act_list:
-                    embed.add_field(name="Activities", value="; ".join(act_list[:3]), inline=False)
+                    embed.add_field(name="Activities", value="; ".join(act_list), inline=False)
         else:
             # Non-guild user: only global info available
             embed.add_field(name="Nickname", value="-", inline=True)
