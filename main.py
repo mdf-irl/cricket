@@ -13,6 +13,7 @@ logger = get_logger(__name__)
 intents = discord.Intents.default()
 intents.members = True
 intents.presences = True
+intents.message_content = True
 
 bot = commands.Bot(command_prefix=None, intents=intents, help_command=None)
 
