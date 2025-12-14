@@ -116,7 +116,7 @@ class WeatherCog(commands.Cog):
                 embed.add_field(name="⬇️ Low / ⬆️ High", value=f"{temp_min:.1f}°F / {temp_max:.1f}°F")
             embed.add_field(name="☁️ Cloud Coverage", value=f"{clouds.get('all', 0)}%")
 
-            embed.set_footer(text="Powered by OpenWeatherMap")
+            embed.set_footer(text="🔋 Powered by OpenWeatherMap")
 
             # Remember this location for the user
             self.user_locations[interaction.user.id] = location

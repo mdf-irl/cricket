@@ -41,7 +41,7 @@ class HTTP:
         return cls.session
 
     @classmethod
-    async def fetch_json(cls, url: str) -> dict:
+    async def fetch_json(cls, url: str, headers: dict | None = None) -> dict:
         """Fetch JSON data from URL.
         
         Args:
@@ -56,7 +56,7 @@ class HTTP:
         """
         session = await cls._ensure_session()
         try:
-            async with session.get(url) as resp:
+            async with session.get(url, headers=headers) as resp:
                 resp.raise_for_status()
                 return await resp.json()
         except aiohttp.ClientConnectorError as e:
