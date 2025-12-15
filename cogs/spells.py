@@ -353,7 +353,7 @@ class Spells(commands.Cog):
         if len(description) > 1024:
             # Truncate with ellipsis if too long for one field
             description = description[:1021] + "..."
-        embed.add_field(name="Description", value=description, inline=True)
+        embed.add_field(name="Description", value=description, inline=False)
         
         # Add higher level info if available
         higher_level = spell_data.get("entriesHigherLevel", [])
@@ -373,7 +373,7 @@ class Spells(commands.Cog):
                 higher_text = "\n".join(higher_parts)
                 if len(higher_text) > 1024:
                     higher_text = higher_text[:1021] + "..."
-                embed.add_field(name="At Higher Levels", value=higher_text, inline=True)
+                embed.add_field(name="At Higher Levels", value=higher_text, inline=False)
         
         # Footer should reflect only the selected version's source/page
         embed.set_footer(text=self._build_footer([spell_data]))
