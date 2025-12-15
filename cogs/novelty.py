@@ -1,6 +1,6 @@
 import datetime
 import random
-from pathlib import Path
+# from pathlib import Path
 
 import discord
 from discord.ext import commands
@@ -91,8 +91,8 @@ class Novelty(commands.Cog):
     #     )
     #     embed.set_image(url="attachment://274.png")
 
-        await interaction.followup.send(embed=embed, file=file)
-        logger.info(f"test command used by {interaction.user} (ID: {interaction.user.id})")  
+    #     await interaction.followup.send(embed=embed, file=file)
+    #     logger.info(f"test command used by {interaction.user} (ID: {interaction.user.id})")  
 
 async def setup(bot: commands.Bot) -> None:
     """Load the Novelty cog."""

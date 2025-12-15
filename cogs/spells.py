@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 import discord
@@ -28,6 +29,13 @@ SOURCE_DISPLAY = {
     "XGE": "Xanathar's Guide to Everything",
 }
 
+# Precompiled regex patterns for cleaning spell text
+TAG_WITH_SOURCE_RE = re.compile(r'\{@\w+\s+([^}|]+)\|[^}]*\}')
+TAG_SIMPLE_RE = re.compile(r'\{@\w+\s+([^}]+)\}')
+PIPE_SOURCE_RE = re.compile(r'\|[A-Z]+\b')
+AOE_BRACKET_RE = re.compile(r'\[\s*Area of Effect\s*\]', re.IGNORECASE)
+MULTI_SPACE_RE = re.compile(r'[ \t]{2,}')
+
 
 class Spells(commands.Cog):
     """D&D 5e spells reference cog."""
@@ -36,6 +44,7 @@ class Spells(commands.Cog):
         self.bot = bot
         self.spells_data: dict[str, list[dict]] = self._load_spells_data()
         self.spell_entries: list[tuple[str, str]] = self._build_spell_entries()
+        self.spell_source_index: dict[str, dict[str, dict]] = self._build_source_index()
 
     def _load_spells_data(self) -> dict[str, list[dict]]:
         """Load spells data from all JSON files in data/spells folder."""
@@ -180,16 +189,34 @@ class Spells(commands.Cog):
 
     def _clean_text(self, text: str) -> str:
         """Clean spell text by removing wiki formatting tags."""
-        import re
+        # Quick exit if no markup-like tokens present
+        if "{@" not in text and "[" not in text and "|" not in text:
+            return text
         # First handle {@tag text|SOURCE} format - extract text before pipe
-        text = re.sub(r'\{@\w+\s+([^}|]+)\|[^}]*\}', r'\1', text)
+        text = TAG_WITH_SOURCE_RE.sub(r"\1", text)
         # Then handle {@tag text} format without pipe/source
-        text = re.sub(r'\{@\w+\s+([^}]+)\}', r'\1', text)
+        text = TAG_SIMPLE_RE.sub(r"\1", text)
         # Finally remove any remaining |SOURCE references without braces
-        text = re.sub(r'\|[A-Z]+\b', '', text)
+        text = PIPE_SOURCE_RE.sub("", text)
         # Remove bracketed AoE headings like "[Area of Effect]"
-        text = re.sub(r'\[\s*Area of Effect\s*\]', '', text, flags=re.IGNORECASE)
+        text = AOE_BRACKET_RE.sub("", text)
+        # Collapse excessive spaces (but keep newlines)
+        text = MULTI_SPACE_RE.sub(" ", text).strip()
         return text
+
+    def _build_source_index(self) -> dict[str, dict[str, dict]]:
+        """Build a fast lookup: spell_key -> SOURCE_ABBR -> spell version dict."""
+        index: dict[str, dict[str, dict]] = {}
+        for key, versions in self.spells_data.items():
+            vlist = versions if isinstance(versions, list) else [versions]
+            by_src: dict[str, dict] = {}
+            for v in vlist:
+                src = v.get("source_abbr")
+                if src:
+                    by_src[src.upper()] = v
+            if by_src:
+                index[key] = by_src
+        return index
 
     def _format_description(self, spell: dict) -> str:
         """Format the spell description from entries."""
@@ -285,7 +312,11 @@ class Spells(commands.Cog):
         spell_versions = self._select_spell_versions(spell_key)
         # If a specific source was selected via autocomplete, prefer that version
         if selected_source:
-            spell_data = next((v for v in spell_versions if v.get("source_abbr", "").upper() == selected_source), spell_versions[0])
+            by_src = self.spell_source_index.get(spell_key)
+            if by_src and selected_source in by_src:
+                spell_data = by_src[selected_source]
+            else:
+                spell_data = spell_versions[0]
         else:
             spell_data = spell_versions[0]
         
