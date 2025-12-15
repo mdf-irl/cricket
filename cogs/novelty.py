@@ -1,5 +1,6 @@
 import datetime
 import random
+from pathlib import Path
 
 import discord
 from discord.ext import commands
@@ -66,7 +67,32 @@ class Novelty(commands.Cog):
             color=discord.Color.pink()
         )
         await interaction.response.send_message(embed=embed)
-        logger.info(f"newbycon command used by {interaction.user} (ID: {interaction.user.id})")  
+        logger.info(f"newbycon command used by {interaction.user} (ID: {interaction.user.id})")
+    
+    # @discord.app_commands.command(name="test", description="Send a test image.")
+    # async def test(self, interaction: discord.Interaction) -> None:
+    #     """Send the test image file."""
+    #     await interaction.response.defer()
+    #     file_path = Path("data/274.png")
+        
+    #     if not file_path.exists():
+    #         await interaction.response.send_message(
+    #             "❌ Test image file not found.",
+    #             ephemeral=True
+    #         )
+    #         logger.error(f"Test image file not found: {file_path}")
+    #         return
+        
+    #     file = discord.File(file_path)
+        
+    #     embed = discord.Embed(
+    #         title="Player's Handbook (2024): Page 274",
+    #         color=discord.Color.red()
+    #     )
+    #     embed.set_image(url="attachment://274.png")
+
+        await interaction.followup.send(embed=embed, file=file)
+        logger.info(f"test command used by {interaction.user} (ID: {interaction.user.id})")  
 
 async def setup(bot: commands.Bot) -> None:
     """Load the Novelty cog."""

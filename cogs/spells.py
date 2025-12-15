@@ -21,6 +21,13 @@ SCHOOLS = {
     "T": "Transmutation",
 }
 
+# Display names for known source abbreviations
+SOURCE_DISPLAY = {
+    "XPHB": "Player's Handbook (2024)",
+    "TCE": "Tasha's Cauldron of Everything",
+    "XGE": "Xanathar's Guide to Everything",
+}
+
 
 class Spells(commands.Cog):
     """D&D 5e spells reference cog."""
@@ -70,14 +77,16 @@ class Spells(commands.Cog):
         """Convert level number to level name."""
         if level == 0:
             return "Cantrip"
-        elif level == 1:
-            return "1st Level"
-        elif level == 2:
-            return "2nd Level"
-        elif level == 3:
-            return "3rd Level"
         else:
-            return f"{level}th Level"
+            return f"Level {level}"
+        # elif level == 1:
+        #     return "1st Level"
+        # elif level == 2:
+        #     return "2nd Level"
+        # elif level == 3:
+        #     return "3rd Level"
+        # else:
+        #     return f"{level}th Level"
 
     def _format_school(self, school_code: str) -> str:
         """Convert school code to full name."""
@@ -178,6 +187,8 @@ class Spells(commands.Cog):
         text = re.sub(r'\{@\w+\s+([^}]+)\}', r'\1', text)
         # Finally remove any remaining |SOURCE references without braces
         text = re.sub(r'\|[A-Z]+\b', '', text)
+        # Remove bracketed AoE headings like "[Area of Effect]"
+        text = re.sub(r'\[\s*Area of Effect\s*\]', '', text, flags=re.IGNORECASE)
         return text
 
     def _format_description(self, spell: dict) -> str:
@@ -213,6 +224,7 @@ class Spells(commands.Cog):
             parts = []
             for v in spell_versions:
                 src = v.get("source_abbr", "UNK")
+                src = SOURCE_DISPLAY.get(src, src)
                 pg = v.get("page", "?")
                 parts.append(f"{src} page {pg}")
             return f"📖 {', '.join(parts)}"
@@ -220,15 +232,23 @@ class Spells(commands.Cog):
         spell = spell_versions[0]
         page = spell.get("page", "Unknown")
         source = spell.get("source_abbr", "Unknown")
+        source = SOURCE_DISPLAY.get(source, source)
         return f"📖 {source} page {page}"
 
     def _build_spell_entries(self) -> list[tuple[str, str]]:
         """Pre-compute display and key pairs for autocomplete."""
         entries: list[tuple[str, str]] = []
         for key, versions in self.spells_data.items():
-            spell_data = versions[0] if isinstance(versions, list) else versions
-            display_name = spell_data.get("name", key.title())
-            entries.append((display_name, key))
+            # If multiple sources exist for this spell, expose each version
+            if isinstance(versions, list) and len(versions) > 1:
+                for v in sorted(versions, key=lambda x: x.get("source_abbr", "")):
+                    display_name = v.get("name", key.title())
+                    src = v.get("source_abbr", "")
+                    entries.append((f"{display_name} ({src})", f"{key}|{src}"))
+            else:
+                v = versions[0] if isinstance(versions, list) else versions
+                display_name = v.get("name", key.title())
+                entries.append((display_name, key))
         entries.sort(key=lambda x: x[0])
         return entries
 
@@ -245,8 +265,14 @@ class Spells(commands.Cog):
             )
             return
         
-        spell_key = name.lower().strip()
-        
+        raw_value = name
+        spell_key = raw_value.lower().strip()
+        selected_source = None
+        if "|" in spell_key:
+            parts = spell_key.split("|", 1)
+            spell_key = parts[0]
+            selected_source = parts[1].upper()
+
         if spell_key not in self.spells_data:
             available = ", ".join(sorted(list(self.spells_data.keys())[:10]))
             await interaction.followup.send(
@@ -257,7 +283,11 @@ class Spells(commands.Cog):
 
         # Handle multiple versions of the same spell
         spell_versions = self._select_spell_versions(spell_key)
-        spell_data = spell_versions[0]
+        # If a specific source was selected via autocomplete, prefer that version
+        if selected_source:
+            spell_data = next((v for v in spell_versions if v.get("source_abbr", "").upper() == selected_source), spell_versions[0])
+        else:
+            spell_data = spell_versions[0]
         
         spell_name = spell_data.get("name", name)
         level = spell_data.get("level", 0)
@@ -266,12 +296,12 @@ class Spells(commands.Cog):
         # Build title with school and level
         level_str = self._format_level(level)
         school_str = self._format_school(school)
-        title = f"{school_str} {level_str}"
+        title = f"{spell_name} — {level_str} {school_str}" if level > 0 else f"{spell_name} — {school_str} Cantrip"
         
         embed = discord.Embed(
-            title=spell_name,
-            description=title,
-            color=discord.Color.blue()
+            title=title,
+            # description=title,
+            color=discord.Color.pink()
         )
         
         # Add spell details
@@ -292,7 +322,7 @@ class Spells(commands.Cog):
         if len(description) > 1024:
             # Truncate with ellipsis if too long for one field
             description = description[:1021] + "..."
-        embed.add_field(name="Description", value=description, inline=False)
+        embed.add_field(name="Description", value=description, inline=True)
         
         # Add higher level info if available
         higher_level = spell_data.get("entriesHigherLevel", [])
@@ -312,9 +342,10 @@ class Spells(commands.Cog):
                 higher_text = "\n".join(higher_parts)
                 if len(higher_text) > 1024:
                     higher_text = higher_text[:1021] + "..."
-                embed.add_field(name="At Higher Levels", value=higher_text, inline=False)
+                embed.add_field(name="At Higher Levels", value=higher_text, inline=True)
         
-        embed.set_footer(text=self._build_footer(spell_versions))
+        # Footer should reflect only the selected version's source/page
+        embed.set_footer(text=self._build_footer([spell_data]))
         
         await interaction.followup.send(embed=embed)
         logger.info(f"spell command used by {interaction.user} (ID: {interaction.user.id}) for: {spell_name}")
