@@ -312,11 +312,17 @@ class Spells(commands.Cog):
         if not self.spells_data:
             return []
         
-        spell_names = list(self.spells_data.keys())
+        spell_entries: list[tuple[str, str]] = []
+        for key, versions in self.spells_data.items():
+            spell_data = versions[0] if isinstance(versions, list) else versions
+            display_name = spell_data.get("name", key.title())
+            spell_entries.append((display_name, key))
+        
+        # Filter by current input (case-insensitive) against display name and key
         matches = [
-            app_commands.Choice(name=name.title(), value=name)
-            for name in spell_names
-            if current.lower() in name.lower()
+            app_commands.Choice(name=display, value=key)
+            for display, key in sorted(spell_entries, key=lambda x: x[0])
+            if current.lower() in display.lower() or current.lower() in key.lower()
         ]
         return matches[:25]  # Discord limits to 25 choices
 
