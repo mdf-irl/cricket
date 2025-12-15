@@ -28,22 +28,41 @@ class Spells(commands.Cog):
         self.bot = bot
         self.spells_data: dict[str, dict] = self._load_spells_data()
 
-    def _load_spells_data(self) -> dict[str, dict]:
-        """Load spells data from local JSON file."""
+    def _load_spells_data(self) -> dict[str, list[dict]]:
+        """Load spells data from all JSON files in data/spells folder."""
+        from pathlib import Path
+        spells_dict = {}
+        spells_dir = Path("data/spells")
+        
+        if not spells_dir.exists():
+            logger.warning(f"Spells directory not found: {spells_dir}")
+            return {}
+        
         try:
-            file_path = os.path.join("data", "spells-xphb.json")
-            with open(file_path, "r", encoding="utf-8") as f:
-                raw_data = json.load(f)
-                # Convert list format to dict by spell name (lowercase for case-insensitive lookup)
-                spells_dict = {}
+            for spell_file in sorted(spells_dir.glob("*.json")):
+                source = spell_file.stem.replace("spells-", "").upper()
+                
+                with open(spell_file, "r", encoding="utf-8") as f:
+                    raw_data = json.load(f)
+                
                 for spell in raw_data.get("spell", []):
                     name = spell.get("name", "")
                     if name:
-                        spells_dict[name.lower()] = spell
-                logger.info(f"Loaded {len(spells_dict)} spells from spells-xphb.json")
-                return spells_dict
+                        spell_key = name.lower()
+                        
+                        # Add source to spell data
+                        spell_with_source = spell.copy()
+                        spell_with_source["source_abbr"] = source
+                        
+                        if spell_key not in spells_dict:
+                            spells_dict[spell_key] = []
+                        spells_dict[spell_key].append(spell_with_source)
+            
+            total = sum(len(v) for v in spells_dict.values())
+            logger.info(f"Loaded {total} spells from {spells_dir} ({len(spells_dict)} unique names)")
+            return spells_dict
         except (FileNotFoundError, json.JSONDecodeError) as e:
-            logger.error(f"Error loading spells-xphb.json: {e}")
+            logger.error(f"Error loading spells from {spells_dir}: {e}")
             return {}
 
     def _format_level(self, level: int) -> str:
@@ -203,7 +222,13 @@ class Spells(commands.Cog):
             )
             return
 
-        spell_data = self.spells_data[spell_key]
+        # Handle multiple versions of the same spell
+        spell_versions = self.spells_data[spell_key]
+        if isinstance(spell_versions, list):
+            spell_data = spell_versions[0]  # Use first version for display
+        else:
+            spell_data = spell_versions
+        
         spell_name = spell_data.get("name", name)
         level = spell_data.get("level", 0)
         school = spell_data.get("school", "")
@@ -259,8 +284,20 @@ class Spells(commands.Cog):
                     higher_text = higher_text[:1021] + "..."
                 embed.add_field(name="At Higher Levels", value=higher_text, inline=False)
         
-        page = spell_data.get("page", "Unknown")
-        embed.set_footer(text=f"📖 XPHB page {page}")
+        # Build footer with all versions if there are duplicates
+        if isinstance(spell_versions, list) and len(spell_versions) > 1:
+            footer_parts = []
+            for v in spell_versions:
+                src = v.get("source_abbr", "UNK")
+                pg = v.get("page", "?")
+                footer_parts.append(f"{src} page {pg}")
+            footer_text = f"📖 {', '.join(footer_parts)}"
+        else:
+            page = spell_data.get("page", "Unknown")
+            source = spell_data.get("source_abbr", "Unknown")
+            footer_text = f"📖 {source} page {page}"
+        
+        embed.set_footer(text=footer_text)
         
         await interaction.followup.send(embed=embed)
         logger.info(f"spell command used by {interaction.user} (ID: {interaction.user.id}) for: {spell_name}")
