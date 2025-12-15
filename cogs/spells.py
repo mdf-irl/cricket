@@ -1,5 +1,6 @@
-import os
 import json
+from pathlib import Path
+
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -26,11 +27,11 @@ class Spells(commands.Cog):
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.spells_data: dict[str, dict] = self._load_spells_data()
+        self.spells_data: dict[str, list[dict]] = self._load_spells_data()
+        self.spell_entries: list[tuple[str, str]] = self._build_spell_entries()
 
     def _load_spells_data(self) -> dict[str, list[dict]]:
         """Load spells data from all JSON files in data/spells folder."""
-        from pathlib import Path
         spells_dict = {}
         spells_dir = Path("data/spells")
         
@@ -199,6 +200,38 @@ class Spells(commands.Cog):
         
         return "\n".join(description_parts)
 
+    def _select_spell_versions(self, spell_key: str) -> list[dict]:
+        """Return all versions for a spell key sorted by source abbreviation."""
+        versions = self.spells_data.get(spell_key, [])
+        if not isinstance(versions, list):
+            versions = [versions]
+        return sorted(versions, key=lambda v: v.get("source_abbr", ""))
+
+    def _build_footer(self, spell_versions: list[dict]) -> str:
+        """Build footer text listing all sources/pages for the spell."""
+        if len(spell_versions) > 1:
+            parts = []
+            for v in spell_versions:
+                src = v.get("source_abbr", "UNK")
+                pg = v.get("page", "?")
+                parts.append(f"{src} page {pg}")
+            return f"📖 {', '.join(parts)}"
+
+        spell = spell_versions[0]
+        page = spell.get("page", "Unknown")
+        source = spell.get("source_abbr", "Unknown")
+        return f"📖 {source} page {page}"
+
+    def _build_spell_entries(self) -> list[tuple[str, str]]:
+        """Pre-compute display and key pairs for autocomplete."""
+        entries: list[tuple[str, str]] = []
+        for key, versions in self.spells_data.items():
+            spell_data = versions[0] if isinstance(versions, list) else versions
+            display_name = spell_data.get("name", key.title())
+            entries.append((display_name, key))
+        entries.sort(key=lambda x: x[0])
+        return entries
+
     @app_commands.command(name="spell", description="Look up a D&D 5e spell.")
     @app_commands.describe(name="The spell name to look up")
     async def spell(self, interaction: discord.Interaction, name: str) -> None:
@@ -223,11 +256,8 @@ class Spells(commands.Cog):
             return
 
         # Handle multiple versions of the same spell
-        spell_versions = self.spells_data[spell_key]
-        if isinstance(spell_versions, list):
-            spell_data = spell_versions[0]  # Use first version for display
-        else:
-            spell_data = spell_versions
+        spell_versions = self._select_spell_versions(spell_key)
+        spell_data = spell_versions[0]
         
         spell_name = spell_data.get("name", name)
         level = spell_data.get("level", 0)
@@ -284,20 +314,7 @@ class Spells(commands.Cog):
                     higher_text = higher_text[:1021] + "..."
                 embed.add_field(name="At Higher Levels", value=higher_text, inline=False)
         
-        # Build footer with all versions if there are duplicates
-        if isinstance(spell_versions, list) and len(spell_versions) > 1:
-            footer_parts = []
-            for v in spell_versions:
-                src = v.get("source_abbr", "UNK")
-                pg = v.get("page", "?")
-                footer_parts.append(f"{src} page {pg}")
-            footer_text = f"📖 {', '.join(footer_parts)}"
-        else:
-            page = spell_data.get("page", "Unknown")
-            source = spell_data.get("source_abbr", "Unknown")
-            footer_text = f"📖 {source} page {page}"
-        
-        embed.set_footer(text=footer_text)
+        embed.set_footer(text=self._build_footer(spell_versions))
         
         await interaction.followup.send(embed=embed)
         logger.info(f"spell command used by {interaction.user} (ID: {interaction.user.id}) for: {spell_name}")
@@ -311,17 +328,11 @@ class Spells(commands.Cog):
         """Provide autocomplete suggestions for spell names."""
         if not self.spells_data:
             return []
-        
-        spell_entries: list[tuple[str, str]] = []
-        for key, versions in self.spells_data.items():
-            spell_data = versions[0] if isinstance(versions, list) else versions
-            display_name = spell_data.get("name", key.title())
-            spell_entries.append((display_name, key))
-        
+
         # Filter by current input (case-insensitive) against display name and key
         matches = [
             app_commands.Choice(name=display, value=key)
-            for display, key in sorted(spell_entries, key=lambda x: x[0])
+            for display, key in self.spell_entries
             if current.lower() in display.lower() or current.lower() in key.lower()
         ]
         return matches[:25]  # Discord limits to 25 choices
