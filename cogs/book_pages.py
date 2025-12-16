@@ -18,7 +18,7 @@ MAX_PAGES_BY_SOURCE = {
     "TCE": 192,
     "MPMM": 288,
     "XMM": 384,
-    "XDMG": 384,
+    "XDMG": 388,
 }
 SOURCE_DISPLAY = {
     "XPHB": "Player's Handbook (2024)",
@@ -121,6 +121,8 @@ class BookPage(commands.Cog):
         self.spell_entries: list[tuple[str, str]] = self._build_entries(self.spells_data)
         self.monsters_data: dict[str, list[dict]] = self._load_data("data/monsters", "monster")
         self.monster_entries: list[tuple[str, str]] = self._build_entries(self.monsters_data)
+        self.items_data: dict[str, list[dict]] = self._load_data("data/items", "item")
+        self.item_entries: list[tuple[str, str]] = self._build_entries(self.items_data)
     
     def _load_data(self, folder: str, data_key: str) -> dict[str, list[dict]]:
         """Load data from all JSON files in specified folder."""
@@ -238,18 +240,29 @@ class BookPage(commands.Cog):
                 max_pages=max_pages,
                 title_emoji="🐉",
                 title_prefix="D&D Spell",
-                color=discord.Color.red(),
+                color=discord.Color.blue(),
             )
-        else:  # monster
+        elif item_type == "monster":
             view = PageView(
                 user_id=interaction.user.id,
                 item_name=item_name,
                 source=source,
                 page=page,
                 max_pages=max_pages,
-                title_emoji="🐲",
+                title_emoji="🐉",
                 title_prefix="D&D Monster",
-                color=discord.Color.dark_red(),
+                color=discord.Color.red(),
+            )
+        else:  # item
+            view = PageView(
+                user_id=interaction.user.id,
+                item_name=item_name,
+                source=source,
+                page=page,
+                max_pages=max_pages,
+                title_emoji="🐉",
+                title_prefix="D&D Item",
+                color=discord.Color.gold(),
             )
         
         await interaction.followup.send(embed=view._current_embed(), view=view)
@@ -284,6 +297,21 @@ class BookPage(commands.Cog):
     ) -> list[app_commands.Choice[str]]:
         """Autocomplete monster names as 'name (source)'."""
         return self._autocomplete(current, self.monster_entries, self.monsters_data)
+
+    @app_commands.command(name="item", description="View an item page from D&D 5e books.")
+    @app_commands.describe(name="The item name to view")
+    async def item(self, interaction: discord.Interaction, name: str) -> None:
+        """Display an item's page as an image."""
+        await self._handle_page_command(interaction, name, self.items_data, "item")
+
+    @item.autocomplete("name")
+    async def item_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> list[app_commands.Choice[str]]:
+        """Autocomplete item names as 'name (source)'."""
+        return self._autocomplete(current, self.item_entries, self.items_data)
     
     def _autocomplete(
         self,

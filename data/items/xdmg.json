@@ -1,0 +1,2924 @@
+{
+  "item": [
+    {
+      "name": "+1 Rod of the Pact Keeper",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "+1 Wand of the War Mage",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "+1 Wraps of Unarmed Power",
+      "source": "XDMG",
+      "page": 325
+    },
+    {
+      "name": "+2 Rod of the Pact Keeper",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "+2 Wand of the War Mage",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "+2 Wraps of Unarmed Power",
+      "source": "XDMG",
+      "page": 325
+    },
+    {
+      "name": "+3 Rod of the Pact Keeper",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "+3 Wand of the War Mage",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "+3 Wraps of Unarmed Power",
+      "source": "XDMG",
+      "page": 325
+    },
+    {
+      "name": "Alchemy Jug",
+      "source": "XDMG",
+      "page": 227
+    },
+    {
+      "name": "Alexandrite",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Amber",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Amethyst",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Amulet of Health",
+      "source": "XDMG",
+      "page": 228
+    },
+    {
+      "name": "Amulet of Proof against Detection and Location",
+      "source": "XDMG",
+      "page": 228
+    },
+    {
+      "name": "Amulet of the Planes",
+      "source": "XDMG",
+      "page": 150
+    },
+    {
+      "name": "Animated Shield",
+      "source": "XDMG",
+      "page": 229
+    },
+    {
+      "name": "Apparatus of Kwalish",
+      "source": "XDMG",
+      "page": 229
+    },
+    {
+      "name": "Aquamarine",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Armor of Invulnerability",
+      "source": "XDMG",
+      "page": 152
+    },
+    {
+      "name": "Arrow-Catching Shield",
+      "source": "XDMG",
+      "page": 231
+    },
+    {
+      "name": "Assassin's Blood",
+      "source": "XDMG",
+      "page": 90
+    },
+    {
+      "name": "Axe of the Dwarvish Lords",
+      "source": "XDMG",
+      "page": 231
+    },
+    {
+      "name": "Azurite",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Baba Yaga's Dancing Broom",
+      "source": "XDMG",
+      "page": 232
+    },
+    {
+      "name": "Bag of Beans",
+      "source": "XDMG",
+      "page": 233
+    },
+    {
+      "name": "Bag of Devouring",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Bag of Holding",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Bag of Tricks, Gray",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Bag of Tricks, Rust",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Bag of Tricks, Tan",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Banded Agate",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Bead of Force",
+      "source": "XDMG",
+      "page": 234
+    },
+    {
+      "name": "Bead of Nourishment",
+      "source": "XDMG",
+      "page": 235
+    },
+    {
+      "name": "Bead of Refreshment",
+      "source": "XDMG",
+      "page": 235
+    },
+    {
+      "name": "Bejeweled gold bracelet",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Bejeweled ivory drinking horn with gold filigree",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Belt of Cloud Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Belt of Dwarvenkind",
+      "source": "XDMG",
+      "page": 235
+    },
+    {
+      "name": "Belt of Fire Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Belt of Frost Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Belt of Hill Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Belt of Stone Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Belt of Storm Giant Strength",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Black Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Black Opal",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Black Pearl",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Black Sapphire",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Black velvet mask stitched with silver thread",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Blackrazor",
+      "source": "XDMG",
+      "page": 236
+    },
+    {
+      "name": "Bloodstone",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Blue Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Blue Quartz",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Blue Sapphire",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Blue Spinel",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Bomb",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Book of Exalted Deeds",
+      "source": "XDMG",
+      "page": 237
+    },
+    {
+      "name": "Book of Vile Darkness",
+      "source": "XDMG",
+      "page": 238
+    },
+    {
+      "name": "Boots of Elvenkind",
+      "source": "XDMG",
+      "page": 239
+    },
+    {
+      "name": "Boots of False Tracks",
+      "source": "XDMG",
+      "page": 239
+    },
+    {
+      "name": "Boots of Levitation",
+      "source": "XDMG",
+      "page": 239
+    },
+    {
+      "name": "Boots of Speed",
+      "source": "XDMG",
+      "page": 240
+    },
+    {
+      "name": "Boots of Striding and Springing",
+      "source": "XDMG",
+      "page": 240
+    },
+    {
+      "name": "Boots of the Winterlands",
+      "source": "XDMG",
+      "page": 240
+    },
+    {
+      "name": "Bottle stopper cork embossed with gold leaf and set with amethysts",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Bowl of Commanding Water Elementals",
+      "source": "XDMG",
+      "page": 240
+    },
+    {
+      "name": "Box of turquoise animal figurines",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Bracers of Archery",
+      "source": "XDMG",
+      "page": 240
+    },
+    {
+      "name": "Bracers of Defense",
+      "source": "XDMG",
+      "page": 241
+    },
+    {
+      "name": "Brass Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Brass mug with jade inlay",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Brazier of Commanding Fire Elementals",
+      "source": "XDMG",
+      "page": 241
+    },
+    {
+      "name": "Bronze crown",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Bronze Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Brooch of Shielding",
+      "source": "XDMG",
+      "page": 241
+    },
+    {
+      "name": "Broom of Flying",
+      "source": "XDMG",
+      "page": 241
+    },
+    {
+      "name": "Bundle of sheet music representing the lost dirges of a famous composer",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Burnt Othur Fumes",
+      "source": "XDMG",
+      "page": 90
+    },
+    {
+      "name": "Candle of Invocation",
+      "source": "XDMG",
+      "page": 241
+    },
+    {
+      "name": "Candle of the Deep",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Canvas (1 sq. yd.)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Cap of Water Breathing",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Cape of the Mountebank",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Carnelian",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Carpet of Flying, 3 ft. \u00d7 5 ft.",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Carpet of Flying, 4 ft. \u00d7 6 ft.",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Carpet of Flying, 5 ft. \u00d7 7 ft.",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Carpet of Flying, 6 ft. \u00d7 9 ft.",
+      "source": "XDMG",
+      "page": 242
+    },
+    {
+      "name": "Carrion Crawler Mucus",
+      "source": "XDMG",
+      "page": 90
+    },
+    {
+      "name": "Carved bone statuette",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Carved ivory statuette",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Carved wooden harp with ivory inlay and zircon gems",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Cauldron of Rebirth",
+      "source": "XDMG",
+      "page": 243
+    },
+    {
+      "name": "Censer of Controlling Air Elementals",
+      "source": "XDMG",
+      "page": 243
+    },
+    {
+      "name": "Ceremonial gold armor with black pearls",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Chalcedony",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Charlatan's Die",
+      "source": "XDMG",
+      "page": 243
+    },
+    {
+      "name": "Chicken",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Chime of Opening",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Chrysoberyl",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Chrysoprase",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Cinnamon",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Circlet of Blasting",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Citrine",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Cloak of Arachnida",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Cloak of Billowing",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Cloak of Displacement",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Cloak of Elvenkind",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Cloak of Invisibility",
+      "source": "XDMG",
+      "page": 244
+    },
+    {
+      "name": "Cloak of Many Fashions",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Cloak of Protection",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Cloak of the Bat",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Cloak of the Manta Ray",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Clockwork Amulet",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Cloth-of-gold vestments",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Clothes of Mending",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Cloves",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Copper",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Copper chalice with silver filigree",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Copper Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Coral",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Cotton Cloth (1 sq. yd.)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Cow",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Crystal Ball",
+      "source": "XDMG",
+      "page": 245
+    },
+    {
+      "name": "Crystal Ball of Mind Reading",
+      "source": "XDMG",
+      "page": 159
+    },
+    {
+      "name": "Crystal Ball of Telepathy",
+      "source": "XDMG",
+      "page": 159
+    },
+    {
+      "name": "Crystal Ball of True Seeing",
+      "source": "XDMG",
+      "page": 159
+    },
+    {
+      "name": "Cube of Force",
+      "source": "XDMG",
+      "page": 246
+    },
+    {
+      "name": "Cube of Summoning",
+      "source": "XDMG",
+      "page": 247
+    },
+    {
+      "name": "Cubic Gate",
+      "source": "XDMG",
+      "page": 247
+    },
+    {
+      "name": "Daern's Instant Fortress",
+      "source": "XDMG",
+      "page": 247
+    },
+    {
+      "name": "Dagger of Venom",
+      "source": "XDMG",
+      "page": 248
+    },
+    {
+      "name": "Dark Shard Amulet",
+      "source": "XDMG",
+      "page": 248
+    },
+    {
+      "name": "Decanter of Endless Water",
+      "source": "XDMG",
+      "page": 249
+    },
+    {
+      "name": "Deck of Illusions",
+      "source": "XDMG",
+      "page": 249
+    },
+    {
+      "name": "Deck of Many Things",
+      "source": "XDMG",
+      "page": 250
+    },
+    {
+      "name": "Demonomicon of Iggwilv",
+      "source": "XDMG",
+      "page": 252
+    },
+    {
+      "name": "Detailed, life-sized dragonborn skull cast in electrum",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Diamond",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Dimensional Shackles",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Dread Helm",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Driftglobe",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Dust of Disappearance",
+      "source": "XDMG",
+      "page": 255
+    },
+    {
+      "name": "Dust of Dryness",
+      "source": "XDMG",
+      "page": 255
+    },
+    {
+      "name": "Dust of Sneezing and Choking",
+      "source": "XDMG",
+      "page": 255
+    },
+    {
+      "name": "Dwarven Thrower",
+      "source": "XDMG",
+      "page": 256
+    },
+    {
+      "name": "Dynamite Stick",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Ear Horn of Hearing",
+      "source": "XDMG",
+      "page": 256
+    },
+    {
+      "name": "Efreeti Bottle",
+      "source": "XDMG",
+      "page": 256
+    },
+    {
+      "name": "Elemental Gem, Blue Sapphire",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Elemental Gem, Emerald",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Elemental Gem, Red Corundum",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Elemental Gem, Yellow Diamond",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Elixir of Health",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Embroidered glove set with jewel chips",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Embroidered silk and velvet mantle set with numerous moonstones",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Embroidered silk handkerchief",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Emerald",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Enduring Spellbook",
+      "source": "XDMG",
+      "page": 257
+    },
+    {
+      "name": "Enspelled Staff (Cantrip)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 1)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 2)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 3)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 4)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 5)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 6)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 7)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Enspelled Staff (Level 8)",
+      "source": "XDMG",
+      "page": 258
+    },
+    {
+      "name": "Ersatz Eye",
+      "source": "XDMG",
+      "page": 259
+    },
+    {
+      "name": "Essence of Ether",
+      "source": "XDMG",
+      "page": 90
+    },
+    {
+      "name": "Eversmoking Bottle",
+      "source": "XDMG",
+      "page": 259
+    },
+    {
+      "name": "Eye Agate",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Eye of Vecna",
+      "source": "XDMG",
+      "page": 259
+    },
+    {
+      "name": "Eye patch decorated with tiny blue sapphires and moonstones",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Eyes of Charming",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Eyes of Minute Seeing",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Eyes of the Eagle",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Bronze Griffon",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Ebony Fly",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Golden Lions",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Ivory Goats",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Marble Elephant",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Obsidian Steed",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Onyx Dog",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Serpentine Owl",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Figurine of Wondrous Power, Silver Raven",
+      "source": "XDMG",
+      "page": 261
+    },
+    {
+      "name": "Fine gold chain set with a fire opal",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Fire Opal",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Flour",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Folding Boat",
+      "source": "XDMG",
+      "page": 263
+    },
+    {
+      "name": "Fragmentation Grenade",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Garnet",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Gauntlets of Ogre Power",
+      "source": "XDMG",
+      "page": 264
+    },
+    {
+      "name": "Gem of Brightness",
+      "source": "XDMG",
+      "page": 264
+    },
+    {
+      "name": "Gem of Seeing",
+      "source": "XDMG",
+      "page": 264
+    },
+    {
+      "name": "Gilded royal coach or funeral barge",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Ginger",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Glamoured Studded Leather",
+      "source": "XDMG",
+      "page": 264
+    },
+    {
+      "name": "Gloves of Missile Snaring",
+      "source": "XDMG",
+      "page": 265
+    },
+    {
+      "name": "Gloves of Swimming and Climbing",
+      "source": "XDMG",
+      "page": 265
+    },
+    {
+      "name": "Gloves of Thievery",
+      "source": "XDMG",
+      "page": 265
+    },
+    {
+      "name": "Goat",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Goggles of Night",
+      "source": "XDMG",
+      "page": 265
+    },
+    {
+      "name": "Gold",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Gold Bar (5-pound)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Gold birdcage with electrum filigree",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold bracelet",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold circlet set with four aquamarines",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold comb shaped like a dragon with red garnets as eyes",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold cup set with emeralds",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Gold idol",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold jewelry box with platinum filigree",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold locket with a painted portrait inside",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold music box",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold ring set with bloodstones",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Gold statuette set with rubies",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Green Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Grenade Launcher",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Gunpowder (keg)",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Gunpowder (powder horn)",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Hag Eye",
+      "source": "XDMG",
+      "page": 265
+    },
+    {
+      "name": "Hand of Vecna",
+      "source": "XDMG",
+      "page": 259
+    },
+    {
+      "name": "Handheld mirror set in a painted wooden frame",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Hat of Disguise",
+      "source": "XDMG",
+      "page": 266
+    },
+    {
+      "name": "Hat of Many Spells",
+      "source": "XDMG",
+      "page": 266
+    },
+    {
+      "name": "Hat of Vermin",
+      "source": "XDMG",
+      "page": 267
+    },
+    {
+      "name": "Hat of Wizardry",
+      "source": "XDMG",
+      "page": 267
+    },
+    {
+      "name": "Headband of Intellect",
+      "source": "XDMG",
+      "page": 268
+    },
+    {
+      "name": "Helm of Brilliance",
+      "source": "XDMG",
+      "page": 268
+    },
+    {
+      "name": "Helm of Comprehending Languages",
+      "source": "XDMG",
+      "page": 268
+    },
+    {
+      "name": "Helm of Telepathy",
+      "source": "XDMG",
+      "page": 268
+    },
+    {
+      "name": "Helm of Teleportation",
+      "source": "XDMG",
+      "page": 268
+    },
+    {
+      "name": "Hematite",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Heward's Handy Haversack",
+      "source": "XDMG",
+      "page": 269
+    },
+    {
+      "name": "Heward's Handy Spice Pouch",
+      "source": "XDMG",
+      "page": 269
+    },
+    {
+      "name": "Horn of Blasting",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horn of Silent Alarm",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horn of Valhalla, Brass",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horn of Valhalla, Bronze",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horn of Valhalla, Iron",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horn of Valhalla, Silver",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horseshoes of a Zephyr",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Horseshoes of Speed",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Immovable Rod",
+      "source": "XDMG",
+      "page": 270
+    },
+    {
+      "name": "Instrument of Illusions",
+      "source": "XDMG",
+      "page": 271
+    },
+    {
+      "name": "Instrument of Scribing",
+      "source": "XDMG",
+      "page": 271
+    },
+    {
+      "name": "Instrument of the Bards, Anstruth Harp",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Canaith Mandolin",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Cli Lyre",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Doss Lute",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Fochlucan Bandore",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Mac-Fuirmidh Cittern",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Instrument of the Bards, Ollamh Harp",
+      "source": "XDMG",
+      "page": 272
+    },
+    {
+      "name": "Ioun Stone, Absorption",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Agility",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Awareness",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Fortitude",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Greater Absorption",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Insight",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Intellect",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Leadership",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Mastery",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Protection",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Regeneration",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Reserve",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Strength",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Ioun Stone, Sustenance",
+      "source": "XDMG",
+      "page": 273
+    },
+    {
+      "name": "Iron",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Iron Bands of Bilarro",
+      "source": "XDMG",
+      "page": 274
+    },
+    {
+      "name": "Iron Flask",
+      "source": "XDMG",
+      "page": 274
+    },
+    {
+      "name": "Jacinth",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Jade",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Jade game board with gold playing pieces",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Jasper",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Javelin of Lightning",
+      "source": "XDMG",
+      "page": 275
+    },
+    {
+      "name": "Jet",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Jeweled anklet",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Jeweled gold crown",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Jeweled platinum ring",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Keoghtom's Ointment",
+      "source": "XDMG",
+      "page": 275
+    },
+    {
+      "name": "Lantern of Revealing",
+      "source": "XDMG",
+      "page": 275
+    },
+    {
+      "name": "Lapis Lazuli",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Linen (1 sq. yd.)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Lock of Trickery",
+      "source": "XDMG",
+      "page": 275
+    },
+    {
+      "name": "Lolth's Sting",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Lute of Thunderous Thumping",
+      "source": "XDMG",
+      "page": 275
+    },
+    {
+      "name": "Mace of Disruption",
+      "source": "XDMG",
+      "page": 276
+    },
+    {
+      "name": "Mace of Smiting",
+      "source": "XDMG",
+      "page": 276
+    },
+    {
+      "name": "Mace of Terror",
+      "source": "XDMG",
+      "page": 276
+    },
+    {
+      "name": "Malachite",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Malice",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Mantle of Spell Resistance",
+      "source": "XDMG",
+      "page": 276
+    },
+    {
+      "name": "Manual of Bodily Health",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Manual of Clay Golems",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Manual of Flesh Golems",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Manual of Gainful Exercise",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Manual of Iron Golems",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Manual of Quickness of Action",
+      "source": "XDMG",
+      "page": 278
+    },
+    {
+      "name": "Manual of Stone Golems",
+      "source": "XDMG",
+      "page": 277
+    },
+    {
+      "name": "Medallion of Thoughts",
+      "source": "XDMG",
+      "page": 278
+    },
+    {
+      "name": "Midnight Tears",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Mirror of Life Trapping",
+      "source": "XDMG",
+      "page": 278
+    },
+    {
+      "name": "Moonstone",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Moss Agate",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Mystery Key",
+      "source": "XDMG",
+      "page": 280
+    },
+    {
+      "name": "Nature's Mantle",
+      "source": "XDMG",
+      "page": 280
+    },
+    {
+      "name": "Necklace of Adaptation",
+      "source": "XDMG",
+      "page": 280
+    },
+    {
+      "name": "Necklace of Fireballs",
+      "source": "XDMG",
+      "page": 280
+    },
+    {
+      "name": "Necklace of Prayer Beads",
+      "source": "XDMG",
+      "page": 281
+    },
+    {
+      "name": "Necklace string of small pink pearls",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Nolzur's Marvelous Pigments",
+      "source": "XDMG",
+      "page": 281
+    },
+    {
+      "name": "Obsidian",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Obsidian statuette with gold fittings and inlay",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Oil of Etherealness",
+      "source": "XDMG",
+      "page": 282
+    },
+    {
+      "name": "Oil of Sharpness",
+      "source": "XDMG",
+      "page": 282
+    },
+    {
+      "name": "Oil of Slipperiness",
+      "source": "XDMG",
+      "page": 283
+    },
+    {
+      "name": "Oil of Taggit",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Old masterpiece painting",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Onyx",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Opal",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Orb of Direction",
+      "source": "XDMG",
+      "page": 283
+    },
+    {
+      "name": "Orb of Dragonkind",
+      "source": "XDMG",
+      "page": 283
+    },
+    {
+      "name": "Orb of Time",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Ox",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Painted gold war mask",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Pair of engraved bone dice",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Pale Tincture",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Pearl",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Pearl of Power",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Pepper",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Perfume of Bewitching",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Periapt of Health",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Periapt of Proof against Poison",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Periapt of Wound Closure",
+      "source": "XDMG",
+      "page": 284
+    },
+    {
+      "name": "Peridot",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Philter of Love",
+      "source": "XDMG",
+      "page": 285
+    },
+    {
+      "name": "Pig",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Pipe of Smoke Monsters",
+      "source": "XDMG",
+      "page": 285
+    },
+    {
+      "name": "Pipes of Haunting",
+      "source": "XDMG",
+      "page": 285
+    },
+    {
+      "name": "Pipes of the Sewers",
+      "source": "XDMG",
+      "page": 285
+    },
+    {
+      "name": "Platinum",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Platinum bracelet set with an emerald",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Pole of Angling",
+      "source": "XDMG",
+      "page": 286
+    },
+    {
+      "name": "Pole of Collapsing",
+      "source": "XDMG",
+      "page": 286
+    },
+    {
+      "name": "Portable Hole",
+      "source": "XDMG",
+      "page": 286
+    },
+    {
+      "name": "Pot of Awakening",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Acid Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Animal Friendship",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Clairvoyance",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Climbing",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Cloud Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Cold Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Comprehension",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Diminution",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Fire Breath",
+      "source": "XDMG",
+      "page": 187
+    },
+    {
+      "name": "Potion of Fire Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Fire Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Flying",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Force Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Frost Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Gaseous Form",
+      "source": "XDMG",
+      "page": 287
+    },
+    {
+      "name": "Potion of Greater Healing",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Greater Invisibility",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Growth",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Healing",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Heroism",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Hill Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Invisibility",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Invulnerability",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Lightning Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Longevity",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Mind Reading",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Necrotic Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Poison",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Poison Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Psychic Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Pugilism",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Radiant Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Speed",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Stone Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Storm Giant Strength",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Superior Healing",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Supreme Healing",
+      "source": "XDMG",
+      "page": 288
+    },
+    {
+      "name": "Potion of Thunder Resistance",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Vitality",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Potion of Water Breathing",
+      "source": "XDMG",
+      "page": 289
+    },
+    {
+      "name": "Prosthetic Limb",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Purple Worm Poison",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Quaal's Feather Token, Anchor",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quaal's Feather Token, Bird",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quaal's Feather Token, Fan",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quaal's Feather Token, Swan Boat",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quaal's Feather Token, Tree",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quaal's Feather Token, Whip",
+      "source": "XDMG",
+      "page": 290
+    },
+    {
+      "name": "Quarterstaff of the Acrobat",
+      "source": "XDMG",
+      "page": 291
+    },
+    {
+      "name": "Quartz",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Quiver of Ehlonna",
+      "source": "XDMG",
+      "page": 189
+    },
+    {
+      "name": "Red Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Rhodochrosite",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Ring of Acid Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Animal Influence",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Cold Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Djinni Summoning",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Elemental Command (Air)",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Elemental Command (Earth)",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Elemental Command (Fire)",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Elemental Command (Water)",
+      "source": "XDMG",
+      "page": 292
+    },
+    {
+      "name": "Ring of Evasion",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Feather Falling",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Fire Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Force Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Free Action",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Invisibility",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Jumping",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Lightning Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Mind Shielding",
+      "source": "XDMG",
+      "page": 293
+    },
+    {
+      "name": "Ring of Necrotic Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Poison Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Protection",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Psychic Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Radiant Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Regeneration",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Shooting Stars",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Spell Storing",
+      "source": "XDMG",
+      "page": 295
+    },
+    {
+      "name": "Ring of Spell Turning",
+      "source": "XDMG",
+      "page": 295
+    },
+    {
+      "name": "Ring of Swimming",
+      "source": "XDMG",
+      "page": 295
+    },
+    {
+      "name": "Ring of Telekinesis",
+      "source": "XDMG",
+      "page": 295
+    },
+    {
+      "name": "Ring of the Ram",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Ring of Three Wishes",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Ring of Thunder Resistance",
+      "source": "XDMG",
+      "page": 294
+    },
+    {
+      "name": "Ring of Warmth",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Ring of Water Walking",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Ring of X-ray Vision",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Rival Coin",
+      "source": "XDMG",
+      "page": 296
+    },
+    {
+      "name": "Robe of Eyes",
+      "source": "XDMG",
+      "page": 297
+    },
+    {
+      "name": "Robe of Scintillating Colors",
+      "source": "XDMG",
+      "page": 297
+    },
+    {
+      "name": "Robe of Stars",
+      "source": "XDMG",
+      "page": 297
+    },
+    {
+      "name": "Robe of the Archmagi",
+      "source": "XDMG",
+      "page": 298
+    },
+    {
+      "name": "Robe of Useful Items",
+      "source": "XDMG",
+      "page": 298
+    },
+    {
+      "name": "Rod of Absorption",
+      "source": "XDMG",
+      "page": 299
+    },
+    {
+      "name": "Rod of Alertness",
+      "source": "XDMG",
+      "page": 299
+    },
+    {
+      "name": "Rod of Lordly Might",
+      "source": "XDMG",
+      "page": 300
+    },
+    {
+      "name": "Rod of Resurrection",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "Rod of Rulership",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "Rod of Security",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "Rope of Climbing",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "Rope of Entanglement",
+      "source": "XDMG",
+      "page": 301
+    },
+    {
+      "name": "Rope of Mending",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Ruby",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Ruby of the War Mage",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Saddle of the Cavalier",
+      "source": "XDMG",
+      "page": 199
+    },
+    {
+      "name": "Saffron",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Salt",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Sardonyx",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Scarab of Protection",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scimitar of Speed",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Aberrations)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Beasts)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Celestials)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Constructs)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Dragons)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Elementals)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Fey)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Fiends)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Giants)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Humanoids)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Monstrosities)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Oozes)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Plants)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Protection (Undead)",
+      "source": "XDMG",
+      "page": 302
+    },
+    {
+      "name": "Scroll of Titan Summoning (Animal Lord)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Blob of Annihilation)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Colossus)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Elemental Cataclysm)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Empyrean)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Kraken)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Scroll of Titan Summoning (Tarrasque)",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Sending Stones",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Sentinel Shield",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Serpent Venom",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Set of gold nesting dolls",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Sheep",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Shield of Expression",
+      "source": "XDMG",
+      "page": 303
+    },
+    {
+      "name": "Shield of Missile Attraction",
+      "source": "XDMG",
+      "page": 304
+    },
+    {
+      "name": "Shield of the Cavalier",
+      "source": "XDMG",
+      "page": 304
+    },
+    {
+      "name": "Silk",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Silk vestments with gold embroidery",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Silver",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Silver and gold brooch",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Silver Bar (2-pound)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Silver Bar (5-pound)",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Silver chalice set with moonstones",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Silver Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Silver ewer",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Silver necklace with a gemstone pendant",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Slippers of Spider Climbing",
+      "source": "XDMG",
+      "page": 304
+    },
+    {
+      "name": "Smoke Grenade",
+      "source": "XDMG",
+      "page": 73
+    },
+    {
+      "name": "Sovereign Glue",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Cantrip)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 1)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 2)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 3)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 4)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 5)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 6)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 7)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 8)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spell Scroll (Level 9)",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Spellguard Shield",
+      "source": "XDMG",
+      "page": 305
+    },
+    {
+      "name": "Sphere of Annihilation",
+      "source": "XDMG",
+      "page": 306
+    },
+    {
+      "name": "Spinel",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Spirit Board",
+      "source": "XDMG",
+      "page": 306
+    },
+    {
+      "name": "Staff of Adornment",
+      "source": "XDMG",
+      "page": 306
+    },
+    {
+      "name": "Staff of Birdcalls",
+      "source": "XDMG",
+      "page": 307
+    },
+    {
+      "name": "Staff of Charming",
+      "source": "XDMG",
+      "page": 307
+    },
+    {
+      "name": "Staff of Fire",
+      "source": "XDMG",
+      "page": 307
+    },
+    {
+      "name": "Staff of Flowers",
+      "source": "XDMG",
+      "page": 308
+    },
+    {
+      "name": "Staff of Frost",
+      "source": "XDMG",
+      "page": 308
+    },
+    {
+      "name": "Staff of Healing",
+      "source": "XDMG",
+      "page": 308
+    },
+    {
+      "name": "Staff of Power",
+      "source": "XDMG",
+      "page": 308
+    },
+    {
+      "name": "Staff of Striking",
+      "source": "XDMG",
+      "page": 309
+    },
+    {
+      "name": "Staff of Swarming Insects",
+      "source": "XDMG",
+      "page": 309
+    },
+    {
+      "name": "Staff of the Adder",
+      "source": "XDMG",
+      "page": 310
+    },
+    {
+      "name": "Staff of the Magi",
+      "source": "XDMG",
+      "page": 310
+    },
+    {
+      "name": "Staff of the Python",
+      "source": "XDMG",
+      "page": 311
+    },
+    {
+      "name": "Staff of the Woodlands",
+      "source": "XDMG",
+      "page": 311
+    },
+    {
+      "name": "Staff of Thunder and Lightning",
+      "source": "XDMG",
+      "page": 311
+    },
+    {
+      "name": "Staff of Withering",
+      "source": "XDMG",
+      "page": 312
+    },
+    {
+      "name": "Star rose quartz",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Star Ruby",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Star Sapphire",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Stone of Controlling Earth Elementals",
+      "source": "XDMG",
+      "page": 312
+    },
+    {
+      "name": "Stone of Good Luck",
+      "source": "XDMG",
+      "page": 312
+    },
+    {
+      "name": "Sun Blade",
+      "source": "XDMG",
+      "page": 312
+    },
+    {
+      "name": "Sword of Answering",
+      "source": "XDMG",
+      "page": 313
+    },
+    {
+      "name": "Sword of Kas",
+      "source": "XDMG",
+      "page": 313
+    },
+    {
+      "name": "Talisman of Pure Good",
+      "source": "XDMG",
+      "page": 314
+    },
+    {
+      "name": "Talisman of the Sphere",
+      "source": "XDMG",
+      "page": 315
+    },
+    {
+      "name": "Talisman of Ultimate Evil",
+      "source": "XDMG",
+      "page": 315
+    },
+    {
+      "name": "Talking Doll",
+      "source": "XDMG",
+      "page": 315
+    },
+    {
+      "name": "Tankard of Sobriety",
+      "source": "XDMG",
+      "page": 315
+    },
+    {
+      "name": "Tentacle Rod",
+      "source": "XDMG",
+      "page": 316
+    },
+    {
+      "name": "Thunderous Greatclub",
+      "source": "XDMG",
+      "page": 316
+    },
+    {
+      "name": "Tiger Eye",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Tome of Clear Thought",
+      "source": "XDMG",
+      "page": 317
+    },
+    {
+      "name": "Tome of Leadership and Influence",
+      "source": "XDMG",
+      "page": 317
+    },
+    {
+      "name": "Tome of the Stilled Tongue",
+      "source": "XDMG",
+      "page": 208
+    },
+    {
+      "name": "Tome of Understanding",
+      "source": "XDMG",
+      "page": 317
+    },
+    {
+      "name": "Topaz",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Torpor",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Tourmaline",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Trident of Fish Command",
+      "source": "XDMG",
+      "page": 317
+    },
+    {
+      "name": "Truth Serum",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Turquoise",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Universal Solvent",
+      "source": "XDMG",
+      "page": 318
+    },
+    {
+      "name": "Veteran's Cane",
+      "source": "XDMG",
+      "page": 318
+    },
+    {
+      "name": "Wand of Binding",
+      "source": "XDMG",
+      "page": 318
+    },
+    {
+      "name": "Wand of Conducting",
+      "source": "XDMG",
+      "page": 319
+    },
+    {
+      "name": "Wand of Enemy Detection",
+      "source": "XDMG",
+      "page": 319
+    },
+    {
+      "name": "Wand of Fear",
+      "source": "XDMG",
+      "page": 319
+    },
+    {
+      "name": "Wand of Fireballs",
+      "source": "XDMG",
+      "page": 319
+    },
+    {
+      "name": "Wand of Lightning Bolts",
+      "source": "XDMG",
+      "page": 320
+    },
+    {
+      "name": "Wand of Magic Detection",
+      "source": "XDMG",
+      "page": 320
+    },
+    {
+      "name": "Wand of Magic Missiles",
+      "source": "XDMG",
+      "page": 320
+    },
+    {
+      "name": "Wand of Orcus",
+      "source": "XDMG",
+      "page": 320
+    },
+    {
+      "name": "Wand of Paralysis",
+      "source": "XDMG",
+      "page": 321
+    },
+    {
+      "name": "Wand of Polymorph",
+      "source": "XDMG",
+      "page": 321
+    },
+    {
+      "name": "Wand of Pyrotechnics",
+      "source": "XDMG",
+      "page": 321
+    },
+    {
+      "name": "Wand of Secrets",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "Wand of Web",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "Wand of Wonder",
+      "source": "XDMG",
+      "page": 322
+    },
+    {
+      "name": "Wave",
+      "source": "XDMG",
+      "page": 323
+    },
+    {
+      "name": "Well of Many Worlds",
+      "source": "XDMG",
+      "page": 324
+    },
+    {
+      "name": "Well-made tapestry that is 10 feet by 10 feet",
+      "source": "XDMG",
+      "page": 215
+    },
+    {
+      "name": "Wheat",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Whelm",
+      "source": "XDMG",
+      "page": 324
+    },
+    {
+      "name": "White Dragon Scale Mail",
+      "source": "XDMG",
+      "page": 254
+    },
+    {
+      "name": "Wind Fan",
+      "source": "XDMG",
+      "page": 213
+    },
+    {
+      "name": "Winged Boots",
+      "source": "XDMG",
+      "page": 325
+    },
+    {
+      "name": "Wings of Flying",
+      "source": "XDMG",
+      "page": 324
+    },
+    {
+      "name": "Wyvern Poison",
+      "source": "XDMG",
+      "page": 91
+    },
+    {
+      "name": "Yellow Sapphire",
+      "source": "XDMG",
+      "page": 214
+    },
+    {
+      "name": "Zircon",
+      "source": "XDMG",
+      "page": 214
+    }
+  ]
+}

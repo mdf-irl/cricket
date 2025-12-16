@@ -1,0 +1,704 @@
+{
+  "item": [
+    {
+      "name": "Acid",
+      "source": "XPHB",
+      "page": 222
+    },
+    {
+      "name": "Airship",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Alchemist's Fire",
+      "source": "XPHB",
+      "page": 222
+    },
+    {
+      "name": "Alchemist's Supplies",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Ale (mug)",
+      "source": "XPHB",
+      "page": 231
+    },
+    {
+      "name": "Amulet",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Antitoxin",
+      "source": "XPHB",
+      "page": 222
+    },
+    {
+      "name": "Backpack",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Ball Bearings",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Barrel",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Basic Poison",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Basket",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Bedroll",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Bell",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Blanket",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Block and Tackle",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Book",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Bread (loaf)",
+      "source": "XPHB",
+      "page": 231
+    },
+    {
+      "name": "Brewer's Supplies",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Bucket",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Bullseye Lantern",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Burglar's Pack",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Calligrapher's Supplies",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Caltrops",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Camel",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Candle",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Carpenter's Tools",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Carriage",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Cart",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Cartographer's Tools",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Chain",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Chariot",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Cheese (wedge)",
+      "source": "XPHB",
+      "page": 231
+    },
+    {
+      "name": "Chest",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Climber's Kit",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Cobbler's Tools",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Common Wine (bottle)",
+      "source": "XPHB",
+      "page": 231
+    },
+    {
+      "name": "Component Pouch",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Cook's Utensils",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Costume",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Crossbow Bolt Case",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Crowbar",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Dice Set",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Diplomat's Pack",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Disguise Kit",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Draft Horse",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Dragonchess Set",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Dungeoneer's Pack",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Elephant",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Emblem",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Entertainer's Pack",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Exotic Saddle",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Explorer's Pack",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Feed (per day)",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Fine Clothes",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Fine Wine (bottle)",
+      "source": "XPHB",
+      "page": 231
+    },
+    {
+      "name": "Flask",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Forgery Kit",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Galley",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Glass Bottle",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Glassblower's Tools",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Grappling Hook",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Healer's Kit",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Herbalism Kit",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Holy Water",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Hooded Lantern",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Hunting Trap",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Ink",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Ink Pen",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Iron Pot",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Iron Spike",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Iron Spikes",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Jeweler's Tools",
+      "source": "XPHB",
+      "page": 220
+    },
+    {
+      "name": "Jug",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Keelboat",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Ladder",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Lamp",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Leatherworker's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Lock",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Longship",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Magnifying Glass",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Manacles",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Map",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Map or Scroll Case",
+      "source": "XPHB",
+      "page": 224
+    },
+    {
+      "name": "Mason's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Mastiff",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Military Saddle",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Mirror",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Mule",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Navigator's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Net",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Oil",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Painter's Supplies",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Paper",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Parchment",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Perfume",
+      "source": "XPHB",
+      "page": 227
+    },
+    {
+      "name": "Playing Cards",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Poisoner's Kit",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Pole",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Pony",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Portable Ram",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Potter's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Pouch",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Priest's Pack",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Psychic Blade",
+      "source": "XPHB",
+      "page": 136
+    },
+    {
+      "name": "Quiver",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Rations",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Reliquary",
+      "source": "XPHB",
+      "page": 226
+    },
+    {
+      "name": "Riding Horse",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Riding Saddle",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Robe",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Rope",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Rowboat",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Sack",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Sailing Ship",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Scholar's Pack",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Shovel",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Signal Whistle",
+      "source": "XPHB",
+      "page": 228
+    },
+    {
+      "name": "Sled",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Smith's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Sprig of Mistletoe",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Spyglass",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Stabling (per day)",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "String",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Tent",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Thieves' Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Three-Dragon Ante Set",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Tinderbox",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Tinker's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Torch",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Traveler's Clothes",
+      "source": "XPHB",
+      "page": 225
+    },
+    {
+      "name": "Trinket",
+      "source": "XPHB",
+      "page": 47
+    },
+    {
+      "name": "Vial",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Wagon",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Warhorse",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Warship",
+      "source": "XPHB",
+      "page": 230
+    },
+    {
+      "name": "Waterskin",
+      "source": "XPHB",
+      "page": 229
+    },
+    {
+      "name": "Weaver's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Woodcarver's Tools",
+      "source": "XPHB",
+      "page": 221
+    },
+    {
+      "name": "Yew Wand",
+      "source": "XPHB",
+      "page": 225
+    }
+  ]
+}

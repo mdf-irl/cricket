@@ -1,0 +1,424 @@
+{
+  "item": [
+    {
+      "name": "+1 All-Purpose Tool",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+1 Amulet of the Devout",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+1 Arcane Grimoire",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "+1 Bloodwell Vial",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "+1 Moon Sickle",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "+1 Rhythm-Maker's Drum",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "+2 All-Purpose Tool",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+2 Amulet of the Devout",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+2 Arcane Grimoire",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "+2 Bloodwell Vial",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "+2 Moon Sickle",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "+2 Rhythm-Maker's Drum",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "+3 All-Purpose Tool",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+3 Amulet of the Devout",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "+3 Arcane Grimoire",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "+3 Bloodwell Vial",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "+3 Moon Sickle",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "+3 Rhythm-Maker's Drum",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Acid Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Alchemical Compendium",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Astral Shard",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "Astromancy Archive",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "Atlas of Endless Horizons",
+      "source": "TCE",
+      "page": 120
+    },
+    {
+      "name": "Baba Yaga's Mortar and Pestle",
+      "source": "TCE",
+      "page": 121
+    },
+    {
+      "name": "Baba Yaga's Pestle",
+      "source": "TCE",
+      "page": 121
+    },
+    {
+      "name": "Barrier Tattoo (Large)",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Barrier Tattoo (Medium)",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Barrier Tattoo (Small)",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Bell Branch",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Blood Fury Tattoo",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Cauldron of Rebirth",
+      "source": "TCE",
+      "page": 122
+    },
+    {
+      "name": "Coiling Grasp Tattoo",
+      "source": "TCE",
+      "page": 123
+    },
+    {
+      "name": "Cold Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Crook of Rao",
+      "source": "TCE",
+      "page": 123
+    },
+    {
+      "name": "Crystalline Chronicle",
+      "source": "TCE",
+      "page": 124
+    },
+    {
+      "name": "Demonomicon of Iggwilv",
+      "source": "TCE",
+      "page": 125
+    },
+    {
+      "name": "Devotee's Censer",
+      "source": "TCE",
+      "page": 126
+    },
+    {
+      "name": "Duplicitous Manuscript",
+      "source": "TCE",
+      "page": 126
+    },
+    {
+      "name": "Eldritch Claw Tattoo",
+      "source": "TCE",
+      "page": 126
+    },
+    {
+      "name": "Elemental Essence Shard",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Elemental Essence Shard (Air)",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Elemental Essence Shard (Earth)",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Elemental Essence Shard (Fire)",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Elemental Essence Shard (Water)",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Far Realm Shard",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Feywild Shard",
+      "source": "TCE",
+      "page": 127
+    },
+    {
+      "name": "Fire Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Force Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Fulminating Treatise",
+      "source": "TCE",
+      "page": 128
+    },
+    {
+      "name": "Ghost Step Tattoo",
+      "source": "TCE",
+      "page": 128
+    },
+    {
+      "name": "Guardian Emblem",
+      "source": "TCE",
+      "page": 128
+    },
+    {
+      "name": "Heart Weaver's Primer",
+      "source": "TCE",
+      "page": 128
+    },
+    {
+      "name": "Illuminator's Tattoo",
+      "source": "TCE",
+      "page": 129
+    },
+    {
+      "name": "Libram of Souls and Flesh",
+      "source": "TCE",
+      "page": 129
+    },
+    {
+      "name": "Lifewell Tattoo",
+      "source": "TCE",
+      "page": 129
+    },
+    {
+      "name": "Lightning Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Luba's Tarokka of Souls",
+      "source": "TCE",
+      "page": 129
+    },
+    {
+      "name": "Lyre of Building",
+      "source": "TCE",
+      "page": 131
+    },
+    {
+      "name": "Masquerade Tattoo",
+      "source": "TCE",
+      "page": 131
+    },
+    {
+      "name": "Mighty Servant of Leuk-o",
+      "source": "TCE",
+      "page": 131
+    },
+    {
+      "name": "Nature's Mantle",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Necrotic Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Outer Essence Shard",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Outer Essence Shard (Chaotic)",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Outer Essence Shard (Evil)",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Outer Essence Shard (Good)",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Outer Essence Shard (Lawful)",
+      "source": "TCE",
+      "page": 133
+    },
+    {
+      "name": "Planecaller's Codex",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Poison Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Prosthetic Limb",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Protective Verses",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Psychic Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Radiant Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    },
+    {
+      "name": "Reveler's Concertina",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Shadowfell Brand Tattoo",
+      "source": "TCE",
+      "page": 134
+    },
+    {
+      "name": "Shadowfell Shard",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (1st Level)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (2nd Level)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (3rd Level)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (4th Level)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (5th Level)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Spellwrought Tattoo (Cantrip)",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Teeth of Dahlver-Nar",
+      "source": "TCE",
+      "page": 135
+    },
+    {
+      "name": "Thunder Absorbing Tattoo",
+      "source": "TCE",
+      "page": 119
+    }
+  ]
+}
