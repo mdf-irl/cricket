@@ -1,0 +1,1959 @@
+{
+  "spell": [
+    {
+      "name": "Acid Splash",
+      "source": "XPHB",
+      "page": 239
+    },
+    {
+      "name": "Aid",
+      "source": "XPHB",
+      "page": 239
+    },
+    {
+      "name": "Alarm",
+      "source": "XPHB",
+      "page": 239
+    },
+    {
+      "name": "Alter Self",
+      "source": "XPHB",
+      "page": 239
+    },
+    {
+      "name": "Animal Friendship",
+      "source": "XPHB",
+      "page": 239
+    },
+    {
+      "name": "Animal Messenger",
+      "source": "XPHB",
+      "page": 240
+    },
+    {
+      "name": "Animal Shapes",
+      "source": "XPHB",
+      "page": 240
+    },
+    {
+      "name": "Animate Dead",
+      "source": "XPHB",
+      "page": 240
+    },
+    {
+      "name": "Animate Objects",
+      "source": "XPHB",
+      "page": 240
+    },
+    {
+      "name": "Antilife Shell",
+      "source": "XPHB",
+      "page": 241
+    },
+    {
+      "name": "Antimagic Field",
+      "source": "XPHB",
+      "page": 241
+    },
+    {
+      "name": "Antipathy/Sympathy",
+      "source": "XPHB",
+      "page": 242
+    },
+    {
+      "name": "Arcane Eye",
+      "source": "XPHB",
+      "page": 242
+    },
+    {
+      "name": "Arcane Gate",
+      "source": "XPHB",
+      "page": 242
+    },
+    {
+      "name": "Arcane Lock",
+      "source": "XPHB",
+      "page": 242
+    },
+    {
+      "name": "Arcane Vigor",
+      "source": "XPHB",
+      "page": 242
+    },
+    {
+      "name": "Armor of Agathys",
+      "source": "XPHB",
+      "page": 243
+    },
+    {
+      "name": "Arms of Hadar",
+      "source": "XPHB",
+      "page": 243
+    },
+    {
+      "name": "Astral Projection",
+      "source": "XPHB",
+      "page": 243
+    },
+    {
+      "name": "Augury",
+      "source": "XPHB",
+      "page": 244
+    },
+    {
+      "name": "Aura of Life",
+      "source": "XPHB",
+      "page": 244
+    },
+    {
+      "name": "Aura of Purity",
+      "source": "XPHB",
+      "page": 244
+    },
+    {
+      "name": "Aura of Vitality",
+      "source": "XPHB",
+      "page": 244
+    },
+    {
+      "name": "Awaken",
+      "source": "XPHB",
+      "page": 244
+    },
+    {
+      "name": "Bane",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Banishing Smite",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Banishment",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Barkskin",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Beacon of Hope",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Beast Sense",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Befuddlement",
+      "source": "XPHB",
+      "page": 245
+    },
+    {
+      "name": "Bestow Curse",
+      "source": "XPHB",
+      "page": 246
+    },
+    {
+      "name": "Bigby's Hand",
+      "source": "XPHB",
+      "page": 246
+    },
+    {
+      "name": "Blade Barrier",
+      "source": "XPHB",
+      "page": 247
+    },
+    {
+      "name": "Blade Ward",
+      "source": "XPHB",
+      "page": 247
+    },
+    {
+      "name": "Bless",
+      "source": "XPHB",
+      "page": 247
+    },
+    {
+      "name": "Blight",
+      "source": "XPHB",
+      "page": 247
+    },
+    {
+      "name": "Blinding Smite",
+      "source": "XPHB",
+      "page": 247
+    },
+    {
+      "name": "Blindness/Deafness",
+      "source": "XPHB",
+      "page": 248
+    },
+    {
+      "name": "Blink",
+      "source": "XPHB",
+      "page": 248
+    },
+    {
+      "name": "Blur",
+      "source": "XPHB",
+      "page": 248
+    },
+    {
+      "name": "Burning Hands",
+      "source": "XPHB",
+      "page": 248
+    },
+    {
+      "name": "Call Lightning",
+      "source": "XPHB",
+      "page": 248
+    },
+    {
+      "name": "Calm Emotions",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Chain Lightning",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Charm Monster",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Charm Person",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Chill Touch",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Chromatic Orb",
+      "source": "XPHB",
+      "page": 249
+    },
+    {
+      "name": "Circle of Death",
+      "source": "XPHB",
+      "page": 250
+    },
+    {
+      "name": "Circle of Power",
+      "source": "XPHB",
+      "page": 250
+    },
+    {
+      "name": "Clairvoyance",
+      "source": "XPHB",
+      "page": 250
+    },
+    {
+      "name": "Clone",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Cloud of Daggers",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Cloudkill",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Color Spray",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Command",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Commune",
+      "source": "XPHB",
+      "page": 251
+    },
+    {
+      "name": "Commune with Nature",
+      "source": "XPHB",
+      "page": 252
+    },
+    {
+      "name": "Compelled Duel",
+      "source": "XPHB",
+      "page": 252
+    },
+    {
+      "name": "Comprehend Languages",
+      "source": "XPHB",
+      "page": 252
+    },
+    {
+      "name": "Compulsion",
+      "source": "XPHB",
+      "page": 252
+    },
+    {
+      "name": "Cone of Cold",
+      "source": "XPHB",
+      "page": 253
+    },
+    {
+      "name": "Confusion",
+      "source": "XPHB",
+      "page": 253
+    },
+    {
+      "name": "Conjure Animals",
+      "source": "XPHB",
+      "page": 254
+    },
+    {
+      "name": "Conjure Barrage",
+      "source": "XPHB",
+      "page": 254
+    },
+    {
+      "name": "Conjure Celestial",
+      "source": "XPHB",
+      "page": 254
+    },
+    {
+      "name": "Conjure Elemental",
+      "source": "XPHB",
+      "page": 254
+    },
+    {
+      "name": "Conjure Fey",
+      "source": "XPHB",
+      "page": 255
+    },
+    {
+      "name": "Conjure Minor Elementals",
+      "source": "XPHB",
+      "page": 255
+    },
+    {
+      "name": "Conjure Volley",
+      "source": "XPHB",
+      "page": 255
+    },
+    {
+      "name": "Conjure Woodland Beings",
+      "source": "XPHB",
+      "page": 255
+    },
+    {
+      "name": "Contact Other Plane",
+      "source": "XPHB",
+      "page": 255
+    },
+    {
+      "name": "Contagion",
+      "source": "XPHB",
+      "page": 256
+    },
+    {
+      "name": "Contingency",
+      "source": "XPHB",
+      "page": 256
+    },
+    {
+      "name": "Continual Flame",
+      "source": "XPHB",
+      "page": 256
+    },
+    {
+      "name": "Control Water",
+      "source": "XPHB",
+      "page": 256
+    },
+    {
+      "name": "Control Weather",
+      "source": "XPHB",
+      "page": 257
+    },
+    {
+      "name": "Cordon of Arrows",
+      "source": "XPHB",
+      "page": 258
+    },
+    {
+      "name": "Counterspell",
+      "source": "XPHB",
+      "page": 258
+    },
+    {
+      "name": "Create Food and Water",
+      "source": "XPHB",
+      "page": 258
+    },
+    {
+      "name": "Create or Destroy Water",
+      "source": "XPHB",
+      "page": 258
+    },
+    {
+      "name": "Create Undead",
+      "source": "XPHB",
+      "page": 258
+    },
+    {
+      "name": "Creation",
+      "source": "XPHB",
+      "page": 259
+    },
+    {
+      "name": "Crown of Madness",
+      "source": "XPHB",
+      "page": 259
+    },
+    {
+      "name": "Crusader's Mantle",
+      "source": "XPHB",
+      "page": 259
+    },
+    {
+      "name": "Cure Wounds",
+      "source": "XPHB",
+      "page": 259
+    },
+    {
+      "name": "Dancing Lights",
+      "source": "XPHB",
+      "page": 259
+    },
+    {
+      "name": "Darkness",
+      "source": "XPHB",
+      "page": 260
+    },
+    {
+      "name": "Darkvision",
+      "source": "XPHB",
+      "page": 260
+    },
+    {
+      "name": "Daylight",
+      "source": "XPHB",
+      "page": 260
+    },
+    {
+      "name": "Death Ward",
+      "source": "XPHB",
+      "page": 261
+    },
+    {
+      "name": "Delayed Blast Fireball",
+      "source": "XPHB",
+      "page": 261
+    },
+    {
+      "name": "Demiplane",
+      "source": "XPHB",
+      "page": 261
+    },
+    {
+      "name": "Destructive Wave",
+      "source": "XPHB",
+      "page": 261
+    },
+    {
+      "name": "Detect Evil and Good",
+      "source": "XPHB",
+      "page": 261
+    },
+    {
+      "name": "Detect Magic",
+      "source": "XPHB",
+      "page": 262
+    },
+    {
+      "name": "Detect Poison and Disease",
+      "source": "XPHB",
+      "page": 262
+    },
+    {
+      "name": "Detect Thoughts",
+      "source": "XPHB",
+      "page": 262
+    },
+    {
+      "name": "Dimension Door",
+      "source": "XPHB",
+      "page": 262
+    },
+    {
+      "name": "Disguise Self",
+      "source": "XPHB",
+      "page": 262
+    },
+    {
+      "name": "Disintegrate",
+      "source": "XPHB",
+      "page": 263
+    },
+    {
+      "name": "Dispel Evil and Good",
+      "source": "XPHB",
+      "page": 263
+    },
+    {
+      "name": "Dispel Magic",
+      "source": "XPHB",
+      "page": 264
+    },
+    {
+      "name": "Dissonant Whispers",
+      "source": "XPHB",
+      "page": 264
+    },
+    {
+      "name": "Divination",
+      "source": "XPHB",
+      "page": 264
+    },
+    {
+      "name": "Divine Favor",
+      "source": "XPHB",
+      "page": 265
+    },
+    {
+      "name": "Divine Smite",
+      "source": "XPHB",
+      "page": 265
+    },
+    {
+      "name": "Divine Word",
+      "source": "XPHB",
+      "page": 265
+    },
+    {
+      "name": "Dominate Beast",
+      "source": "XPHB",
+      "page": 265
+    },
+    {
+      "name": "Dominate Monster",
+      "source": "XPHB",
+      "page": 265
+    },
+    {
+      "name": "Dominate Person",
+      "source": "XPHB",
+      "page": 266
+    },
+    {
+      "name": "Dragon's Breath",
+      "source": "XPHB",
+      "page": 266
+    },
+    {
+      "name": "Drawmij's Instant Summons",
+      "source": "XPHB",
+      "page": 266
+    },
+    {
+      "name": "Dream",
+      "source": "XPHB",
+      "page": 266
+    },
+    {
+      "name": "Druidcraft",
+      "source": "XPHB",
+      "page": 266
+    },
+    {
+      "name": "Earthquake",
+      "source": "XPHB",
+      "page": 267
+    },
+    {
+      "name": "Eldritch Blast",
+      "source": "XPHB",
+      "page": 267
+    },
+    {
+      "name": "Elemental Weapon",
+      "source": "XPHB",
+      "page": 267
+    },
+    {
+      "name": "Elementalism",
+      "source": "XPHB",
+      "page": 267
+    },
+    {
+      "name": "Enhance Ability",
+      "source": "XPHB",
+      "page": 268
+    },
+    {
+      "name": "Enlarge/Reduce",
+      "source": "XPHB",
+      "page": 268
+    },
+    {
+      "name": "Ensnaring Strike",
+      "source": "XPHB",
+      "page": 268
+    },
+    {
+      "name": "Entangle",
+      "source": "XPHB",
+      "page": 268
+    },
+    {
+      "name": "Enthrall",
+      "source": "XPHB",
+      "page": 269
+    },
+    {
+      "name": "Etherealness",
+      "source": "XPHB",
+      "page": 269
+    },
+    {
+      "name": "Evard's Black Tentacles",
+      "source": "XPHB",
+      "page": 270
+    },
+    {
+      "name": "Expeditious Retreat",
+      "source": "XPHB",
+      "page": 270
+    },
+    {
+      "name": "Eyebite",
+      "source": "XPHB",
+      "page": 270
+    },
+    {
+      "name": "Fabricate",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "Faerie Fire",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "False Life",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "Fear",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "Feather Fall",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "Feign Death",
+      "source": "XPHB",
+      "page": 271
+    },
+    {
+      "name": "Find Familiar",
+      "source": "XPHB",
+      "page": 272
+    },
+    {
+      "name": "Find Steed",
+      "source": "XPHB",
+      "page": 272
+    },
+    {
+      "name": "Find the Path",
+      "source": "XPHB",
+      "page": 273
+    },
+    {
+      "name": "Find Traps",
+      "source": "XPHB",
+      "page": 273
+    },
+    {
+      "name": "Finger of Death",
+      "source": "XPHB",
+      "page": 273
+    },
+    {
+      "name": "Fire Bolt",
+      "source": "XPHB",
+      "page": 274
+    },
+    {
+      "name": "Fire Shield",
+      "source": "XPHB",
+      "page": 274
+    },
+    {
+      "name": "Fire Storm",
+      "source": "XPHB",
+      "page": 275
+    },
+    {
+      "name": "Fireball",
+      "source": "XPHB",
+      "page": 274
+    },
+    {
+      "name": "Flame Blade",
+      "source": "XPHB",
+      "page": 275
+    },
+    {
+      "name": "Flame Strike",
+      "source": "XPHB",
+      "page": 275
+    },
+    {
+      "name": "Flaming Sphere",
+      "source": "XPHB",
+      "page": 275
+    },
+    {
+      "name": "Flesh to Stone",
+      "source": "XPHB",
+      "page": 275
+    },
+    {
+      "name": "Fly",
+      "source": "XPHB",
+      "page": 276
+    },
+    {
+      "name": "Fog Cloud",
+      "source": "XPHB",
+      "page": 276
+    },
+    {
+      "name": "Forbiddance",
+      "source": "XPHB",
+      "page": 276
+    },
+    {
+      "name": "Forcecage",
+      "source": "XPHB",
+      "page": 276
+    },
+    {
+      "name": "Foresight",
+      "source": "XPHB",
+      "page": 276
+    },
+    {
+      "name": "Fount of Moonlight",
+      "source": "XPHB",
+      "page": 277
+    },
+    {
+      "name": "Freedom of Movement",
+      "source": "XPHB",
+      "page": 277
+    },
+    {
+      "name": "Friends",
+      "source": "XPHB",
+      "page": 277
+    },
+    {
+      "name": "Gaseous Form",
+      "source": "XPHB",
+      "page": 277
+    },
+    {
+      "name": "Gate",
+      "source": "XPHB",
+      "page": 277
+    },
+    {
+      "name": "Geas",
+      "source": "XPHB",
+      "page": 278
+    },
+    {
+      "name": "Gentle Repose",
+      "source": "XPHB",
+      "page": 278
+    },
+    {
+      "name": "Giant Insect",
+      "source": "XPHB",
+      "page": 279
+    },
+    {
+      "name": "Glibness",
+      "source": "XPHB",
+      "page": 279
+    },
+    {
+      "name": "Globe of Invulnerability",
+      "source": "XPHB",
+      "page": 279
+    },
+    {
+      "name": "Glyph of Warding",
+      "source": "XPHB",
+      "page": 279
+    },
+    {
+      "name": "Goodberry",
+      "source": "XPHB",
+      "page": 280
+    },
+    {
+      "name": "Grasping Vine",
+      "source": "XPHB",
+      "page": 280
+    },
+    {
+      "name": "Grease",
+      "source": "XPHB",
+      "page": 280
+    },
+    {
+      "name": "Greater Invisibility",
+      "source": "XPHB",
+      "page": 281
+    },
+    {
+      "name": "Greater Restoration",
+      "source": "XPHB",
+      "page": 281
+    },
+    {
+      "name": "Guardian of Faith",
+      "source": "XPHB",
+      "page": 281
+    },
+    {
+      "name": "Guards and Wards",
+      "source": "XPHB",
+      "page": 282
+    },
+    {
+      "name": "Guidance",
+      "source": "XPHB",
+      "page": 282
+    },
+    {
+      "name": "Guiding Bolt",
+      "source": "XPHB",
+      "page": 282
+    },
+    {
+      "name": "Gust of Wind",
+      "source": "XPHB",
+      "page": 282
+    },
+    {
+      "name": "Hail of Thorns",
+      "source": "XPHB",
+      "page": 283
+    },
+    {
+      "name": "Hallow",
+      "source": "XPHB",
+      "page": 283
+    },
+    {
+      "name": "Hallucinatory Terrain",
+      "source": "XPHB",
+      "page": 283
+    },
+    {
+      "name": "Harm",
+      "source": "XPHB",
+      "page": 283
+    },
+    {
+      "name": "Haste",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Heal",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Healing Word",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Heat Metal",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Hellish Rebuke",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Heroes' Feast",
+      "source": "XPHB",
+      "page": 284
+    },
+    {
+      "name": "Heroism",
+      "source": "XPHB",
+      "page": 285
+    },
+    {
+      "name": "Hex",
+      "source": "XPHB",
+      "page": 285
+    },
+    {
+      "name": "Hold Monster",
+      "source": "XPHB",
+      "page": 285
+    },
+    {
+      "name": "Hold Person",
+      "source": "XPHB",
+      "page": 286
+    },
+    {
+      "name": "Holy Aura",
+      "source": "XPHB",
+      "page": 286
+    },
+    {
+      "name": "Hunger of Hadar",
+      "source": "XPHB",
+      "page": 286
+    },
+    {
+      "name": "Hunter's Mark",
+      "source": "XPHB",
+      "page": 287
+    },
+    {
+      "name": "Hypnotic Pattern",
+      "source": "XPHB",
+      "page": 287
+    },
+    {
+      "name": "Ice Knife",
+      "source": "XPHB",
+      "page": 287
+    },
+    {
+      "name": "Ice Storm",
+      "source": "XPHB",
+      "page": 287
+    },
+    {
+      "name": "Identify",
+      "source": "XPHB",
+      "page": 287
+    },
+    {
+      "name": "Illusory Script",
+      "source": "XPHB",
+      "page": 288
+    },
+    {
+      "name": "Imprisonment",
+      "source": "XPHB",
+      "page": 288
+    },
+    {
+      "name": "Incendiary Cloud",
+      "source": "XPHB",
+      "page": 288
+    },
+    {
+      "name": "Inflict Wounds",
+      "source": "XPHB",
+      "page": 288
+    },
+    {
+      "name": "Insect Plague",
+      "source": "XPHB",
+      "page": 289
+    },
+    {
+      "name": "Invisibility",
+      "source": "XPHB",
+      "page": 289
+    },
+    {
+      "name": "Jallarzi's Storm of Radiance",
+      "source": "XPHB",
+      "page": 289
+    },
+    {
+      "name": "Jump",
+      "source": "XPHB",
+      "page": 290
+    },
+    {
+      "name": "Knock",
+      "source": "XPHB",
+      "page": 290
+    },
+    {
+      "name": "Legend Lore",
+      "source": "XPHB",
+      "page": 290
+    },
+    {
+      "name": "Leomund's Secret Chest",
+      "source": "XPHB",
+      "page": 290
+    },
+    {
+      "name": "Leomund's Tiny Hut",
+      "source": "XPHB",
+      "page": 291
+    },
+    {
+      "name": "Lesser Restoration",
+      "source": "XPHB",
+      "page": 291
+    },
+    {
+      "name": "Levitate",
+      "source": "XPHB",
+      "page": 291
+    },
+    {
+      "name": "Light",
+      "source": "XPHB",
+      "page": 292
+    },
+    {
+      "name": "Lightning Arrow",
+      "source": "XPHB",
+      "page": 292
+    },
+    {
+      "name": "Lightning Bolt",
+      "source": "XPHB",
+      "page": 292
+    },
+    {
+      "name": "Locate Animals or Plants",
+      "source": "XPHB",
+      "page": 292
+    },
+    {
+      "name": "Locate Creature",
+      "source": "XPHB",
+      "page": 292
+    },
+    {
+      "name": "Locate Object",
+      "source": "XPHB",
+      "page": 293
+    },
+    {
+      "name": "Longstrider",
+      "source": "XPHB",
+      "page": 293
+    },
+    {
+      "name": "Mage Armor",
+      "source": "XPHB",
+      "page": 293
+    },
+    {
+      "name": "Mage Hand",
+      "source": "XPHB",
+      "page": 293
+    },
+    {
+      "name": "Magic Circle",
+      "source": "XPHB",
+      "page": 293
+    },
+    {
+      "name": "Magic Jar",
+      "source": "XPHB",
+      "page": 294
+    },
+    {
+      "name": "Magic Missile",
+      "source": "XPHB",
+      "page": 295
+    },
+    {
+      "name": "Magic Mouth",
+      "source": "XPHB",
+      "page": 295
+    },
+    {
+      "name": "Magic Weapon",
+      "source": "XPHB",
+      "page": 295
+    },
+    {
+      "name": "Major Image",
+      "source": "XPHB",
+      "page": 295
+    },
+    {
+      "name": "Mass Cure Wounds",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Mass Heal",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Mass Healing Word",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Mass Suggestion",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Maze",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Meld into Stone",
+      "source": "XPHB",
+      "page": 296
+    },
+    {
+      "name": "Melf's Acid Arrow",
+      "source": "XPHB",
+      "page": 297
+    },
+    {
+      "name": "Mending",
+      "source": "XPHB",
+      "page": 297
+    },
+    {
+      "name": "Message",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Meteor Swarm",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Mind Blank",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Mind Sliver",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Mind Spike",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Minor Illusion",
+      "source": "XPHB",
+      "page": 298
+    },
+    {
+      "name": "Mirage Arcane",
+      "source": "XPHB",
+      "page": 299
+    },
+    {
+      "name": "Mirror Image",
+      "source": "XPHB",
+      "page": 299
+    },
+    {
+      "name": "Mislead",
+      "source": "XPHB",
+      "page": 299
+    },
+    {
+      "name": "Misty Step",
+      "source": "XPHB",
+      "page": 299
+    },
+    {
+      "name": "Modify Memory",
+      "source": "XPHB",
+      "page": 299
+    },
+    {
+      "name": "Moonbeam",
+      "source": "XPHB",
+      "page": 300
+    },
+    {
+      "name": "Mordenkainen's Faithful Hound",
+      "source": "XPHB",
+      "page": 300
+    },
+    {
+      "name": "Mordenkainen's Magnificent Mansion",
+      "source": "XPHB",
+      "page": 300
+    },
+    {
+      "name": "Mordenkainen's Private Sanctum",
+      "source": "XPHB",
+      "page": 301
+    },
+    {
+      "name": "Mordenkainen's Sword",
+      "source": "XPHB",
+      "page": 302
+    },
+    {
+      "name": "Move Earth",
+      "source": "XPHB",
+      "page": 302
+    },
+    {
+      "name": "Nondetection",
+      "source": "XPHB",
+      "page": 302
+    },
+    {
+      "name": "Nystul's Magic Aura",
+      "source": "XPHB",
+      "page": 302
+    },
+    {
+      "name": "Otiluke's Freezing Sphere",
+      "source": "XPHB",
+      "page": 302
+    },
+    {
+      "name": "Otiluke's Resilient Sphere",
+      "source": "XPHB",
+      "page": 303
+    },
+    {
+      "name": "Otto's Irresistible Dance",
+      "source": "XPHB",
+      "page": 303
+    },
+    {
+      "name": "Pass without Trace",
+      "source": "XPHB",
+      "page": 303
+    },
+    {
+      "name": "Passwall",
+      "source": "XPHB",
+      "page": 304
+    },
+    {
+      "name": "Phantasmal Force",
+      "source": "XPHB",
+      "page": 304
+    },
+    {
+      "name": "Phantasmal Killer",
+      "source": "XPHB",
+      "page": 304
+    },
+    {
+      "name": "Phantom Steed",
+      "source": "XPHB",
+      "page": 304
+    },
+    {
+      "name": "Planar Ally",
+      "source": "XPHB",
+      "page": 304
+    },
+    {
+      "name": "Planar Binding",
+      "source": "XPHB",
+      "page": 305
+    },
+    {
+      "name": "Plane Shift",
+      "source": "XPHB",
+      "page": 305
+    },
+    {
+      "name": "Plant Growth",
+      "source": "XPHB",
+      "page": 305
+    },
+    {
+      "name": "Poison Spray",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Polymorph",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Power Word Fortify",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Power Word Heal",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Power Word Kill",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Power Word Stun",
+      "source": "XPHB",
+      "page": 306
+    },
+    {
+      "name": "Prayer of Healing",
+      "source": "XPHB",
+      "page": 307
+    },
+    {
+      "name": "Prestidigitation",
+      "source": "XPHB",
+      "page": 307
+    },
+    {
+      "name": "Prismatic Spray",
+      "source": "XPHB",
+      "page": 307
+    },
+    {
+      "name": "Prismatic Wall",
+      "source": "XPHB",
+      "page": 308
+    },
+    {
+      "name": "Produce Flame",
+      "source": "XPHB",
+      "page": 308
+    },
+    {
+      "name": "Programmed Illusion",
+      "source": "XPHB",
+      "page": 309
+    },
+    {
+      "name": "Project Image",
+      "source": "XPHB",
+      "page": 309
+    },
+    {
+      "name": "Protection from Energy",
+      "source": "XPHB",
+      "page": 309
+    },
+    {
+      "name": "Protection from Evil and Good",
+      "source": "XPHB",
+      "page": 309
+    },
+    {
+      "name": "Protection from Poison",
+      "source": "XPHB",
+      "page": 310
+    },
+    {
+      "name": "Purify Food and Drink",
+      "source": "XPHB",
+      "page": 310
+    },
+    {
+      "name": "Raise Dead",
+      "source": "XPHB",
+      "page": 310
+    },
+    {
+      "name": "Rary's Telepathic Bond",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Ray of Enfeeblement",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Ray of Frost",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Ray of Sickness",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Regenerate",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Reincarnate",
+      "source": "XPHB",
+      "page": 311
+    },
+    {
+      "name": "Remove Curse",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Resistance",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Resurrection",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Reverse Gravity",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Revivify",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Rope Trick",
+      "source": "XPHB",
+      "page": 312
+    },
+    {
+      "name": "Sacred Flame",
+      "source": "XPHB",
+      "page": 313
+    },
+    {
+      "name": "Sanctuary",
+      "source": "XPHB",
+      "page": 313
+    },
+    {
+      "name": "Scorching Ray",
+      "source": "XPHB",
+      "page": 313
+    },
+    {
+      "name": "Scrying",
+      "source": "XPHB",
+      "page": 313
+    },
+    {
+      "name": "Searing Smite",
+      "source": "XPHB",
+      "page": 314
+    },
+    {
+      "name": "See Invisibility",
+      "source": "XPHB",
+      "page": 314
+    },
+    {
+      "name": "Seeming",
+      "source": "XPHB",
+      "page": 314
+    },
+    {
+      "name": "Sending",
+      "source": "XPHB",
+      "page": 314
+    },
+    {
+      "name": "Sequester",
+      "source": "XPHB",
+      "page": 315
+    },
+    {
+      "name": "Shapechange",
+      "source": "XPHB",
+      "page": 315
+    },
+    {
+      "name": "Shatter",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Shield",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Shield of Faith",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Shillelagh",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Shining Smite",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Shocking Grasp",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Silence",
+      "source": "XPHB",
+      "page": 316
+    },
+    {
+      "name": "Silent Image",
+      "source": "XPHB",
+      "page": 317
+    },
+    {
+      "name": "Simulacrum",
+      "source": "XPHB",
+      "page": 317
+    },
+    {
+      "name": "Sleep",
+      "source": "XPHB",
+      "page": 317
+    },
+    {
+      "name": "Sleet Storm",
+      "source": "XPHB",
+      "page": 317
+    },
+    {
+      "name": "Slow",
+      "source": "XPHB",
+      "page": 318
+    },
+    {
+      "name": "Sorcerous Burst",
+      "source": "XPHB",
+      "page": 318
+    },
+    {
+      "name": "Spare the Dying",
+      "source": "XPHB",
+      "page": 318
+    },
+    {
+      "name": "Speak with Animals",
+      "source": "XPHB",
+      "page": 318
+    },
+    {
+      "name": "Speak with Dead",
+      "source": "XPHB",
+      "page": 318
+    },
+    {
+      "name": "Speak with Plants",
+      "source": "XPHB",
+      "page": 319
+    },
+    {
+      "name": "Spider Climb",
+      "source": "XPHB",
+      "page": 319
+    },
+    {
+      "name": "Spike Growth",
+      "source": "XPHB",
+      "page": 319
+    },
+    {
+      "name": "Spirit Guardians",
+      "source": "XPHB",
+      "page": 319
+    },
+    {
+      "name": "Spiritual Weapon",
+      "source": "XPHB",
+      "page": 319
+    },
+    {
+      "name": "Staggering Smite",
+      "source": "XPHB",
+      "page": 320
+    },
+    {
+      "name": "Starry Wisp",
+      "source": "XPHB",
+      "page": 320
+    },
+    {
+      "name": "Steel Wind Strike",
+      "source": "XPHB",
+      "page": 320
+    },
+    {
+      "name": "Stinking Cloud",
+      "source": "XPHB",
+      "page": 321
+    },
+    {
+      "name": "Stone Shape",
+      "source": "XPHB",
+      "page": 321
+    },
+    {
+      "name": "Stoneskin",
+      "source": "XPHB",
+      "page": 321
+    },
+    {
+      "name": "Storm of Vengeance",
+      "source": "XPHB",
+      "page": 321
+    },
+    {
+      "name": "Suggestion",
+      "source": "XPHB",
+      "page": 321
+    },
+    {
+      "name": "Summon Aberration",
+      "source": "XPHB",
+      "page": 322
+    },
+    {
+      "name": "Summon Beast",
+      "source": "XPHB",
+      "page": 322
+    },
+    {
+      "name": "Summon Celestial",
+      "source": "XPHB",
+      "page": 323
+    },
+    {
+      "name": "Summon Construct",
+      "source": "XPHB",
+      "page": 324
+    },
+    {
+      "name": "Summon Dragon",
+      "source": "XPHB",
+      "page": 324
+    },
+    {
+      "name": "Summon Elemental",
+      "source": "XPHB",
+      "page": 325
+    },
+    {
+      "name": "Summon Fey",
+      "source": "XPHB",
+      "page": 326
+    },
+    {
+      "name": "Summon Fiend",
+      "source": "XPHB",
+      "page": 326
+    },
+    {
+      "name": "Summon Undead",
+      "source": "XPHB",
+      "page": 328
+    },
+    {
+      "name": "Sunbeam",
+      "source": "XPHB",
+      "page": 329
+    },
+    {
+      "name": "Sunburst",
+      "source": "XPHB",
+      "page": 329
+    },
+    {
+      "name": "Swift Quiver",
+      "source": "XPHB",
+      "page": 329
+    },
+    {
+      "name": "Symbol",
+      "source": "XPHB",
+      "page": 329
+    },
+    {
+      "name": "Synaptic Static",
+      "source": "XPHB",
+      "page": 330
+    },
+    {
+      "name": "Tasha's Bubbling Cauldron",
+      "source": "XPHB",
+      "page": 330
+    },
+    {
+      "name": "Tasha's Hideous Laughter",
+      "source": "XPHB",
+      "page": 331
+    },
+    {
+      "name": "Telekinesis",
+      "source": "XPHB",
+      "page": 331
+    },
+    {
+      "name": "Telepathy",
+      "source": "XPHB",
+      "page": 331
+    },
+    {
+      "name": "Teleport",
+      "source": "XPHB",
+      "page": 331
+    },
+    {
+      "name": "Teleportation Circle",
+      "source": "XPHB",
+      "page": 332
+    },
+    {
+      "name": "Tenser's Floating Disk",
+      "source": "XPHB",
+      "page": 332
+    },
+    {
+      "name": "Thaumaturgy",
+      "source": "XPHB",
+      "page": 333
+    },
+    {
+      "name": "Thorn Whip",
+      "source": "XPHB",
+      "page": 333
+    },
+    {
+      "name": "Thunderclap",
+      "source": "XPHB",
+      "page": 333
+    },
+    {
+      "name": "Thunderous Smite",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Thunderwave",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Time Stop",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Toll the Dead",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Tongues",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Transport via Plants",
+      "source": "XPHB",
+      "page": 334
+    },
+    {
+      "name": "Tree Stride",
+      "source": "XPHB",
+      "page": 335
+    },
+    {
+      "name": "True Polymorph",
+      "source": "XPHB",
+      "page": 335
+    },
+    {
+      "name": "True Resurrection",
+      "source": "XPHB",
+      "page": 336
+    },
+    {
+      "name": "True Seeing",
+      "source": "XPHB",
+      "page": 336
+    },
+    {
+      "name": "True Strike",
+      "source": "XPHB",
+      "page": 336
+    },
+    {
+      "name": "Tsunami",
+      "source": "XPHB",
+      "page": 336
+    },
+    {
+      "name": "Unseen Servant",
+      "source": "XPHB",
+      "page": 336
+    },
+    {
+      "name": "Vampiric Touch",
+      "source": "XPHB",
+      "page": 337
+    },
+    {
+      "name": "Vicious Mockery",
+      "source": "XPHB",
+      "page": 337
+    },
+    {
+      "name": "Vitriolic Sphere",
+      "source": "XPHB",
+      "page": 337
+    },
+    {
+      "name": "Wall of Fire",
+      "source": "XPHB",
+      "page": 338
+    },
+    {
+      "name": "Wall of Force",
+      "source": "XPHB",
+      "page": 338
+    },
+    {
+      "name": "Wall of Ice",
+      "source": "XPHB",
+      "page": 339
+    },
+    {
+      "name": "Wall of Stone",
+      "source": "XPHB",
+      "page": 339
+    },
+    {
+      "name": "Wall of Thorns",
+      "source": "XPHB",
+      "page": 339
+    },
+    {
+      "name": "Warding Bond",
+      "source": "XPHB",
+      "page": 340
+    },
+    {
+      "name": "Water Breathing",
+      "source": "XPHB",
+      "page": 340
+    },
+    {
+      "name": "Water Walk",
+      "source": "XPHB",
+      "page": 340
+    },
+    {
+      "name": "Web",
+      "source": "XPHB",
+      "page": 340
+    },
+    {
+      "name": "Weird",
+      "source": "XPHB",
+      "page": 341
+    },
+    {
+      "name": "Wind Walk",
+      "source": "XPHB",
+      "page": 341
+    },
+    {
+      "name": "Wind Wall",
+      "source": "XPHB",
+      "page": 341
+    },
+    {
+      "name": "Wish",
+      "source": "XPHB",
+      "page": 341
+    },
+    {
+      "name": "Witch Bolt",
+      "source": "XPHB",
+      "page": 343
+    },
+    {
+      "name": "Word of Radiance",
+      "source": "XPHB",
+      "page": 343
+    },
+    {
+      "name": "Word of Recall",
+      "source": "XPHB",
+      "page": 343
+    },
+    {
+      "name": "Wrathful Smite",
+      "source": "XPHB",
+      "page": 343
+    },
+    {
+      "name": "Yolande's Regal Presence",
+      "source": "XPHB",
+      "page": 343
+    },
+    {
+      "name": "Zone of Truth",
+      "source": "XPHB",
+      "page": 343
+    }
+  ]
+}

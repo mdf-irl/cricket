@@ -1,0 +1,109 @@
+{
+  "spell": [
+    {
+      "name": "Blade of Disaster",
+      "source": "TCE",
+      "page": 106
+    },
+    {
+      "name": "Booming Blade",
+      "source": "TCE",
+      "page": 106
+    },
+    {
+      "name": "Dream of the Blue Veil",
+      "source": "TCE",
+      "page": 106
+    },
+    {
+      "name": "Green-Flame Blade",
+      "source": "TCE",
+      "page": 107
+    },
+    {
+      "name": "Intellect Fortress",
+      "source": "TCE",
+      "page": 107
+    },
+    {
+      "name": "Lightning Lure",
+      "source": "TCE",
+      "page": 107
+    },
+    {
+      "name": "Mind Sliver",
+      "source": "TCE",
+      "page": 108
+    },
+    {
+      "name": "Spirit Shroud",
+      "source": "TCE",
+      "page": 108
+    },
+    {
+      "name": "Summon Aberration",
+      "source": "TCE",
+      "page": 109
+    },
+    {
+      "name": "Summon Beast",
+      "source": "TCE",
+      "page": 109
+    },
+    {
+      "name": "Summon Celestial",
+      "source": "TCE",
+      "page": 110
+    },
+    {
+      "name": "Summon Construct",
+      "source": "TCE",
+      "page": 111
+    },
+    {
+      "name": "Summon Elemental",
+      "source": "TCE",
+      "page": 111
+    },
+    {
+      "name": "Summon Fey",
+      "source": "TCE",
+      "page": 112
+    },
+    {
+      "name": "Summon Fiend",
+      "source": "TCE",
+      "page": 112
+    },
+    {
+      "name": "Summon Shadowspawn",
+      "source": "TCE",
+      "page": 113
+    },
+    {
+      "name": "Summon Undead",
+      "source": "TCE",
+      "page": 114
+    },
+    {
+      "name": "Sword Burst",
+      "source": "TCE",
+      "page": 115
+    },
+    {
+      "name": "Tasha's Caustic Brew",
+      "source": "TCE",
+      "page": 115
+    },
+    {
+      "name": "Tasha's Mind Whip",
+      "source": "TCE",
+      "page": 115
+    },
+    {
+      "name": "Tasha's Otherworldly Guise",
+      "source": "TCE",
+      "page": 116
+    }
+  ]
+}

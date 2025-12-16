@@ -1,0 +1,479 @@
+{
+  "spell": [
+    {
+      "name": "Abi-Dalzim's Horrid Wilting",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Absorb Elements",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Aganazzar's Scorcher",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Beast Bond",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Bones of the Earth",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Catapult",
+      "source": "XGE",
+      "page": 150
+    },
+    {
+      "name": "Catnap",
+      "source": "XGE",
+      "page": 151
+    },
+    {
+      "name": "Cause Fear",
+      "source": "XGE",
+      "page": 151
+    },
+    {
+      "name": "Ceremony",
+      "source": "XGE",
+      "page": 151
+    },
+    {
+      "name": "Chaos Bolt",
+      "source": "XGE",
+      "page": 151
+    },
+    {
+      "name": "Charm Monster",
+      "source": "XGE",
+      "page": 151
+    },
+    {
+      "name": "Control Flames",
+      "source": "XGE",
+      "page": 152
+    },
+    {
+      "name": "Control Winds",
+      "source": "XGE",
+      "page": 152
+    },
+    {
+      "name": "Create Bonfire",
+      "source": "XGE",
+      "page": 152
+    },
+    {
+      "name": "Create Homunculus",
+      "source": "XGE",
+      "page": 152
+    },
+    {
+      "name": "Crown of Stars",
+      "source": "XGE",
+      "page": 152
+    },
+    {
+      "name": "Danse Macabre",
+      "source": "XGE",
+      "page": 153
+    },
+    {
+      "name": "Dawn",
+      "source": "XGE",
+      "page": 153
+    },
+    {
+      "name": "Dragon's Breath",
+      "source": "XGE",
+      "page": 154
+    },
+    {
+      "name": "Druid Grove",
+      "source": "XGE",
+      "page": 154
+    },
+    {
+      "name": "Dust Devil",
+      "source": "XGE",
+      "page": 154
+    },
+    {
+      "name": "Earth Tremor",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Earthbind",
+      "source": "XGE",
+      "page": 154
+    },
+    {
+      "name": "Elemental Bane",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Enemies Abound",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Enervation",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Erupting Earth",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Far Step",
+      "source": "XGE",
+      "page": 155
+    },
+    {
+      "name": "Find Greater Steed",
+      "source": "XGE",
+      "page": 156
+    },
+    {
+      "name": "Flame Arrows",
+      "source": "XGE",
+      "page": 156
+    },
+    {
+      "name": "Frostbite",
+      "source": "XGE",
+      "page": 156
+    },
+    {
+      "name": "Guardian of Nature",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Gust",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Healing Spirit",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Holy Weapon",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Ice Knife",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Illusory Dragon",
+      "source": "XGE",
+      "page": 157
+    },
+    {
+      "name": "Immolation",
+      "source": "XGE",
+      "page": 158
+    },
+    {
+      "name": "Infernal Calling",
+      "source": "XGE",
+      "page": 158
+    },
+    {
+      "name": "Infestation",
+      "source": "XGE",
+      "page": 158
+    },
+    {
+      "name": "Investiture of Flame",
+      "source": "XGE",
+      "page": 159
+    },
+    {
+      "name": "Investiture of Ice",
+      "source": "XGE",
+      "page": 159
+    },
+    {
+      "name": "Investiture of Stone",
+      "source": "XGE",
+      "page": 159
+    },
+    {
+      "name": "Investiture of Wind",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Invulnerability",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Life Transference",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Maddening Darkness",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Maelstrom",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Magic Stone",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Mass Polymorph",
+      "source": "XGE",
+      "page": 160
+    },
+    {
+      "name": "Maximilian's Earthen Grasp",
+      "source": "XGE",
+      "page": 161
+    },
+    {
+      "name": "Melf's Minute Meteors",
+      "source": "XGE",
+      "page": 161
+    },
+    {
+      "name": "Mental Prison",
+      "source": "XGE",
+      "page": 161
+    },
+    {
+      "name": "Mighty Fortress",
+      "source": "XGE",
+      "page": 161
+    },
+    {
+      "name": "Mind Spike",
+      "source": "XGE",
+      "page": 162
+    },
+    {
+      "name": "Mold Earth",
+      "source": "XGE",
+      "page": 162
+    },
+    {
+      "name": "Negative Energy Flood",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Power Word Pain",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Primal Savagery",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Primordial Ward",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Psychic Scream",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Pyrotechnics",
+      "source": "XGE",
+      "page": 163
+    },
+    {
+      "name": "Scatter",
+      "source": "XGE",
+      "page": 164
+    },
+    {
+      "name": "Shadow Blade",
+      "source": "XGE",
+      "page": 164
+    },
+    {
+      "name": "Shadow of Moil",
+      "source": "XGE",
+      "page": 164
+    },
+    {
+      "name": "Shape Water",
+      "source": "XGE",
+      "page": 164
+    },
+    {
+      "name": "Sickening Radiance",
+      "source": "XGE",
+      "page": 164
+    },
+    {
+      "name": "Skill Empowerment",
+      "source": "XGE",
+      "page": 165
+    },
+    {
+      "name": "Skywrite",
+      "source": "XGE",
+      "page": 165
+    },
+    {
+      "name": "Snare",
+      "source": "XGE",
+      "page": 165
+    },
+    {
+      "name": "Snilloc's Snowball Swarm",
+      "source": "XGE",
+      "page": 165
+    },
+    {
+      "name": "Soul Cage",
+      "source": "XGE",
+      "page": 165
+    },
+    {
+      "name": "Steel Wind Strike",
+      "source": "XGE",
+      "page": 166
+    },
+    {
+      "name": "Storm Sphere",
+      "source": "XGE",
+      "page": 166
+    },
+    {
+      "name": "Summon Greater Demon",
+      "source": "XGE",
+      "page": 166
+    },
+    {
+      "name": "Summon Lesser Demons",
+      "source": "XGE",
+      "page": 167
+    },
+    {
+      "name": "Synaptic Static",
+      "source": "XGE",
+      "page": 167
+    },
+    {
+      "name": "Temple of the Gods",
+      "source": "XGE",
+      "page": 167
+    },
+    {
+      "name": "Tenser's Transformation",
+      "source": "XGE",
+      "page": 168
+    },
+    {
+      "name": "Thunder Step",
+      "source": "XGE",
+      "page": 168
+    },
+    {
+      "name": "Thunderclap",
+      "source": "XGE",
+      "page": 168
+    },
+    {
+      "name": "Tidal Wave",
+      "source": "XGE",
+      "page": 168
+    },
+    {
+      "name": "Tiny Servant",
+      "source": "XGE",
+      "page": 168
+    },
+    {
+      "name": "Toll the Dead",
+      "source": "XGE",
+      "page": 169
+    },
+    {
+      "name": "Transmute Rock",
+      "source": "XGE",
+      "page": 169
+    },
+    {
+      "name": "Vitriolic Sphere",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Wall of Light",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Wall of Sand",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Wall of Water",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Warding Wind",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Watery Sphere",
+      "source": "XGE",
+      "page": 170
+    },
+    {
+      "name": "Whirlwind",
+      "source": "XGE",
+      "page": 171
+    },
+    {
+      "name": "Word of Radiance",
+      "source": "XGE",
+      "page": 171
+    },
+    {
+      "name": "Wrath of Nature",
+      "source": "XGE",
+      "page": 171
+    },
+    {
+      "name": "Zephyr Strike",
+      "source": "XGE",
+      "page": 171
+    }
+  ]
+}

@@ -13,6 +13,7 @@ class Config:
     DISCORD_TOKEN: str | None = os.getenv("DISCORD_TOKEN")
     TEST_GUILD_ID: int | None = None
     OPENWEATHERMAP_KEY: str | None = None
+    PRIVATE_URL_BASE: str | None = None
     
     @classmethod
     def load(cls) -> bool:
@@ -22,6 +23,7 @@ class Config:
             bool: True if all required config is valid, False otherwise.
         """
         cls.DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+        cls.PRIVATE_URL_BASE = os.getenv("PRIVATE_URL_BASE")
         
         guild_id_str = os.getenv("TEST_GUILD_ID")
         if guild_id_str:
@@ -42,6 +44,10 @@ class Config:
         
         if not cls.TEST_GUILD_ID:
             logger.error("TEST_GUILD_ID is not set or invalid in environment variables")
+            return False
+
+        if not cls.PRIVATE_URL_BASE:
+            logger.error("PRIVATE_URL_BASE not set")
             return False
         
         logger.info(f"Configuration loaded successfully (Guild ID: {cls.TEST_GUILD_ID})")
