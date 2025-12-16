@@ -1,0 +1,1309 @@
+{
+  "monster": [
+    {
+      "name": "Abjurer Wizard",
+      "source": "MPMM",
+      "page": 260
+    },
+    {
+      "name": "Adult Kruthik",
+      "source": "MPMM",
+      "page": 169
+    },
+    {
+      "name": "Adult Oblex",
+      "source": "MPMM",
+      "page": 198
+    },
+    {
+      "name": "Air Elemental Myrmidon",
+      "source": "MPMM",
+      "page": 122
+    },
+    {
+      "name": "Alhoon",
+      "source": "MPMM",
+      "page": 43
+    },
+    {
+      "name": "Alkilith",
+      "source": "MPMM",
+      "page": 44
+    },
+    {
+      "name": "Allip",
+      "source": "MPMM",
+      "page": 45
+    },
+    {
+      "name": "Amnizu",
+      "source": "MPMM",
+      "page": 46
+    },
+    {
+      "name": "Angry Sorrowsworn",
+      "source": "MPMM",
+      "page": 222
+    },
+    {
+      "name": "Annis Hag",
+      "source": "MPMM",
+      "page": 47
+    },
+    {
+      "name": "Apprentice Wizard",
+      "source": "MPMM",
+      "page": 259
+    },
+    {
+      "name": "Archdruid",
+      "source": "MPMM",
+      "page": 48
+    },
+    {
+      "name": "Archer",
+      "source": "MPMM",
+      "page": 49
+    },
+    {
+      "name": "Armanite",
+      "source": "MPMM",
+      "page": 50
+    },
+    {
+      "name": "Astral Dreadnought",
+      "source": "MPMM",
+      "page": 51
+    },
+    {
+      "name": "Aurochs",
+      "source": "MPMM",
+      "page": 71
+    },
+    {
+      "name": "Autumn Eladrin",
+      "source": "MPMM",
+      "page": 115
+    },
+    {
+      "name": "Babau",
+      "source": "MPMM",
+      "page": 52
+    },
+    {
+      "name": "Bael",
+      "source": "MPMM",
+      "page": 54
+    },
+    {
+      "name": "Balhannoth",
+      "source": "MPMM",
+      "page": 55
+    },
+    {
+      "name": "Banderhobb",
+      "source": "MPMM",
+      "page": 56
+    },
+    {
+      "name": "Baphomet",
+      "source": "MPMM",
+      "page": 58
+    },
+    {
+      "name": "Bard",
+      "source": "MPMM",
+      "page": 59
+    },
+    {
+      "name": "Barghest",
+      "source": "MPMM",
+      "page": 60
+    },
+    {
+      "name": "Berbalang",
+      "source": "MPMM",
+      "page": 61
+    },
+    {
+      "name": "Bheur Hag",
+      "source": "MPMM",
+      "page": 62
+    },
+    {
+      "name": "Black Abishai",
+      "source": "MPMM",
+      "page": 38
+    },
+    {
+      "name": "Blackguard",
+      "source": "MPMM",
+      "page": 63
+    },
+    {
+      "name": "Blue Abishai",
+      "source": "MPMM",
+      "page": 39
+    },
+    {
+      "name": "Bodak",
+      "source": "MPMM",
+      "page": 64
+    },
+    {
+      "name": "Boggle",
+      "source": "MPMM",
+      "page": 65
+    },
+    {
+      "name": "Boneclaw",
+      "source": "MPMM",
+      "page": 66
+    },
+    {
+      "name": "Brontosaurus",
+      "source": "MPMM",
+      "page": 95
+    },
+    {
+      "name": "Bulezau",
+      "source": "MPMM",
+      "page": 67
+    },
+    {
+      "name": "Cadaver Collector",
+      "source": "MPMM",
+      "page": 68
+    },
+    {
+      "name": "Canoloth",
+      "source": "MPMM",
+      "page": 69
+    },
+    {
+      "name": "Catoblepas",
+      "source": "MPMM",
+      "page": 70
+    },
+    {
+      "name": "Cave Fisher",
+      "source": "MPMM",
+      "page": 73
+    },
+    {
+      "name": "Champion",
+      "source": "MPMM",
+      "page": 74
+    },
+    {
+      "name": "Chitine",
+      "source": "MPMM",
+      "page": 75
+    },
+    {
+      "name": "Choker",
+      "source": "MPMM",
+      "page": 76
+    },
+    {
+      "name": "Choldrith",
+      "source": "MPMM",
+      "page": 77
+    },
+    {
+      "name": "Clockwork Bronze Scout",
+      "source": "MPMM",
+      "page": 79
+    },
+    {
+      "name": "Clockwork Iron Cobra",
+      "source": "MPMM",
+      "page": 79
+    },
+    {
+      "name": "Clockwork Oaken Bolter",
+      "source": "MPMM",
+      "page": 80
+    },
+    {
+      "name": "Clockwork Stone Defender",
+      "source": "MPMM",
+      "page": 80
+    },
+    {
+      "name": "Cloud Giant Smiling One",
+      "source": "MPMM",
+      "page": 81
+    },
+    {
+      "name": "Conjurer Wizard",
+      "source": "MPMM",
+      "page": 260
+    },
+    {
+      "name": "Corpse Flower",
+      "source": "MPMM",
+      "page": 82
+    },
+    {
+      "name": "Cranium Rat",
+      "source": "MPMM",
+      "page": 83
+    },
+    {
+      "name": "Darkling",
+      "source": "MPMM",
+      "page": 84
+    },
+    {
+      "name": "Darkling Elder",
+      "source": "MPMM",
+      "page": 84
+    },
+    {
+      "name": "Death Kiss",
+      "source": "MPMM",
+      "page": 85
+    },
+    {
+      "name": "Deathlock",
+      "source": "MPMM",
+      "page": 86
+    },
+    {
+      "name": "Deathlock Mastermind",
+      "source": "MPMM",
+      "page": 87
+    },
+    {
+      "name": "Deathlock Wight",
+      "source": "MPMM",
+      "page": 87
+    },
+    {
+      "name": "Deep Roth\u00e9",
+      "source": "MPMM",
+      "page": 71
+    },
+    {
+      "name": "Deep Scion",
+      "source": "MPMM",
+      "page": 88
+    },
+    {
+      "name": "Deinonychus",
+      "source": "MPMM",
+      "page": 95
+    },
+    {
+      "name": "Demogorgon",
+      "source": "MPMM",
+      "page": 90
+    },
+    {
+      "name": "Derro",
+      "source": "MPMM",
+      "page": 91
+    },
+    {
+      "name": "Derro Savant",
+      "source": "MPMM",
+      "page": 92
+    },
+    {
+      "name": "Devourer",
+      "source": "MPMM",
+      "page": 93
+    },
+    {
+      "name": "Dhergoloth",
+      "source": "MPMM",
+      "page": 94
+    },
+    {
+      "name": "Dimetrodon",
+      "source": "MPMM",
+      "page": 95
+    },
+    {
+      "name": "Dire Troll",
+      "source": "MPMM",
+      "page": 246
+    },
+    {
+      "name": "Diviner Wizard",
+      "source": "MPMM",
+      "page": 261
+    },
+    {
+      "name": "Dolphin",
+      "source": "MPMM",
+      "page": 97
+    },
+    {
+      "name": "Dolphin Delighter",
+      "source": "MPMM",
+      "page": 97
+    },
+    {
+      "name": "Draegloth",
+      "source": "MPMM",
+      "page": 98
+    },
+    {
+      "name": "Drow Arachnomancer",
+      "source": "MPMM",
+      "page": 99
+    },
+    {
+      "name": "Drow Favored Consort",
+      "source": "MPMM",
+      "page": 100
+    },
+    {
+      "name": "Drow House Captain",
+      "source": "MPMM",
+      "page": 101
+    },
+    {
+      "name": "Drow Inquisitor",
+      "source": "MPMM",
+      "page": 102
+    },
+    {
+      "name": "Drow Matron Mother",
+      "source": "MPMM",
+      "page": 104
+    },
+    {
+      "name": "Drow Shadowblade",
+      "source": "MPMM",
+      "page": 105
+    },
+    {
+      "name": "Duergar Despot",
+      "source": "MPMM",
+      "page": 107
+    },
+    {
+      "name": "Duergar Hammerer",
+      "source": "MPMM",
+      "page": 112
+    },
+    {
+      "name": "Duergar Kavalrachni",
+      "source": "MPMM",
+      "page": 107
+    },
+    {
+      "name": "Duergar Mind Master",
+      "source": "MPMM",
+      "page": 108
+    },
+    {
+      "name": "Duergar Screamer",
+      "source": "MPMM",
+      "page": 111
+    },
+    {
+      "name": "Duergar Soulblade",
+      "source": "MPMM",
+      "page": 109
+    },
+    {
+      "name": "Duergar Stone Guard",
+      "source": "MPMM",
+      "page": 110
+    },
+    {
+      "name": "Duergar Warlord",
+      "source": "MPMM",
+      "page": 111
+    },
+    {
+      "name": "Duergar Xarrorn",
+      "source": "MPMM",
+      "page": 111
+    },
+    {
+      "name": "Dybbuk",
+      "source": "MPMM",
+      "page": 113
+    },
+    {
+      "name": "Earth Elemental Myrmidon",
+      "source": "MPMM",
+      "page": 122
+    },
+    {
+      "name": "Eidolon",
+      "source": "MPMM",
+      "page": 114
+    },
+    {
+      "name": "Elder Brain",
+      "source": "MPMM",
+      "page": 120
+    },
+    {
+      "name": "Elder Oblex",
+      "source": "MPMM",
+      "page": 199
+    },
+    {
+      "name": "Elder Tempest",
+      "source": "MPMM",
+      "page": 121
+    },
+    {
+      "name": "Enchanter Wizard",
+      "source": "MPMM",
+      "page": 261
+    },
+    {
+      "name": "Evoker Wizard",
+      "source": "MPMM",
+      "page": 262
+    },
+    {
+      "name": "Female Steeder",
+      "source": "MPMM",
+      "page": 231
+    },
+    {
+      "name": "Fire Elemental Myrmidon",
+      "source": "MPMM",
+      "page": 123
+    },
+    {
+      "name": "Fire Giant Dreadnought",
+      "source": "MPMM",
+      "page": 124
+    },
+    {
+      "name": "Firenewt Warlock of Imix",
+      "source": "MPMM",
+      "page": 125
+    },
+    {
+      "name": "Firenewt Warrior",
+      "source": "MPMM",
+      "page": 125
+    },
+    {
+      "name": "Flail Snail",
+      "source": "MPMM",
+      "page": 126
+    },
+    {
+      "name": "Flind",
+      "source": "MPMM",
+      "page": 127
+    },
+    {
+      "name": "Fraz-Urb'luu",
+      "source": "MPMM",
+      "page": 129
+    },
+    {
+      "name": "Froghemoth",
+      "source": "MPMM",
+      "page": 130
+    },
+    {
+      "name": "Frost Giant Everlasting One",
+      "source": "MPMM",
+      "page": 131
+    },
+    {
+      "name": "Frost Salamander",
+      "source": "MPMM",
+      "page": 132
+    },
+    {
+      "name": "Gauth",
+      "source": "MPMM",
+      "page": 133
+    },
+    {
+      "name": "Gazer",
+      "source": "MPMM",
+      "page": 134
+    },
+    {
+      "name": "Geryon",
+      "source": "MPMM",
+      "page": 136
+    },
+    {
+      "name": "Giant Strider",
+      "source": "MPMM",
+      "page": 137
+    },
+    {
+      "name": "Giff",
+      "source": "MPMM",
+      "page": 138
+    },
+    {
+      "name": "Girallon",
+      "source": "MPMM",
+      "page": 139
+    },
+    {
+      "name": "Githyanki Gish",
+      "source": "MPMM",
+      "page": 140
+    },
+    {
+      "name": "Githyanki Kith'rak",
+      "source": "MPMM",
+      "page": 140
+    },
+    {
+      "name": "Githyanki Supreme Commander",
+      "source": "MPMM",
+      "page": 141
+    },
+    {
+      "name": "Githzerai Anarch",
+      "source": "MPMM",
+      "page": 142
+    },
+    {
+      "name": "Githzerai Enlightened",
+      "source": "MPMM",
+      "page": 143
+    },
+    {
+      "name": "Gnoll Flesh Gnawer",
+      "source": "MPMM",
+      "page": 144
+    },
+    {
+      "name": "Gnoll Hunter",
+      "source": "MPMM",
+      "page": 144
+    },
+    {
+      "name": "Gnoll Witherling",
+      "source": "MPMM",
+      "page": 145
+    },
+    {
+      "name": "Gray Render",
+      "source": "MPMM",
+      "page": 146
+    },
+    {
+      "name": "Graz'zt",
+      "source": "MPMM",
+      "page": 148
+    },
+    {
+      "name": "Green Abishai",
+      "source": "MPMM",
+      "page": 40
+    },
+    {
+      "name": "Grung",
+      "source": "MPMM",
+      "page": 149
+    },
+    {
+      "name": "Grung Elite Warrior",
+      "source": "MPMM",
+      "page": 150
+    },
+    {
+      "name": "Grung Wildling",
+      "source": "MPMM",
+      "page": 150
+    },
+    {
+      "name": "Guard Drake",
+      "source": "MPMM",
+      "page": 151
+    },
+    {
+      "name": "Hadrosaurus",
+      "source": "MPMM",
+      "page": 96
+    },
+    {
+      "name": "Hellfire Engine",
+      "source": "MPMM",
+      "page": 152
+    },
+    {
+      "name": "Hobgoblin Devastator",
+      "source": "MPMM",
+      "page": 153
+    },
+    {
+      "name": "Hobgoblin Iron Shadow",
+      "source": "MPMM",
+      "page": 154
+    },
+    {
+      "name": "Howler",
+      "source": "MPMM",
+      "page": 155
+    },
+    {
+      "name": "Hungry Sorrowsworn",
+      "source": "MPMM",
+      "page": 223
+    },
+    {
+      "name": "Hutijin",
+      "source": "MPMM",
+      "page": 157
+    },
+    {
+      "name": "Hydroloth",
+      "source": "MPMM",
+      "page": 158
+    },
+    {
+      "name": "Illusionist Wizard",
+      "source": "MPMM",
+      "page": 263
+    },
+    {
+      "name": "Juiblex",
+      "source": "MPMM",
+      "page": 160
+    },
+    {
+      "name": "Ki-rin",
+      "source": "MPMM",
+      "page": 162
+    },
+    {
+      "name": "Kobold Dragonshield",
+      "source": "MPMM",
+      "page": 163
+    },
+    {
+      "name": "Kobold Inventor",
+      "source": "MPMM",
+      "page": 164
+    },
+    {
+      "name": "Kobold Scale Sorcerer",
+      "source": "MPMM",
+      "page": 165
+    },
+    {
+      "name": "Korred",
+      "source": "MPMM",
+      "page": 166
+    },
+    {
+      "name": "Kraken Priest",
+      "source": "MPMM",
+      "page": 167
+    },
+    {
+      "name": "Kruthik Hive Lord",
+      "source": "MPMM",
+      "page": 169
+    },
+    {
+      "name": "Leucrotta",
+      "source": "MPMM",
+      "page": 170
+    },
+    {
+      "name": "Leviathan",
+      "source": "MPMM",
+      "page": 171
+    },
+    {
+      "name": "Lonely Sorrowsworn",
+      "source": "MPMM",
+      "page": 223
+    },
+    {
+      "name": "Lost Sorrowsworn",
+      "source": "MPMM",
+      "page": 224
+    },
+    {
+      "name": "Male Steeder",
+      "source": "MPMM",
+      "page": 231
+    },
+    {
+      "name": "Martial Arts Adept",
+      "source": "MPMM",
+      "page": 172
+    },
+    {
+      "name": "Marut",
+      "source": "MPMM",
+      "page": 173
+    },
+    {
+      "name": "Master Thief",
+      "source": "MPMM",
+      "page": 174
+    },
+    {
+      "name": "Maurezhi",
+      "source": "MPMM",
+      "page": 175
+    },
+    {
+      "name": "Maw Demon",
+      "source": "MPMM",
+      "page": 176
+    },
+    {
+      "name": "Meazel",
+      "source": "MPMM",
+      "page": 177
+    },
+    {
+      "name": "Meenlock",
+      "source": "MPMM",
+      "page": 178
+    },
+    {
+      "name": "Merregon",
+      "source": "MPMM",
+      "page": 179
+    },
+    {
+      "name": "Merrenoloth",
+      "source": "MPMM",
+      "page": 180
+    },
+    {
+      "name": "Mindwitness",
+      "source": "MPMM",
+      "page": 181
+    },
+    {
+      "name": "Moloch",
+      "source": "MPMM",
+      "page": 183
+    },
+    {
+      "name": "Molydeus",
+      "source": "MPMM",
+      "page": 184
+    },
+    {
+      "name": "Morkoth",
+      "source": "MPMM",
+      "page": 186
+    },
+    {
+      "name": "Mouth of Grolantor",
+      "source": "MPMM",
+      "page": 187
+    },
+    {
+      "name": "Nabassu",
+      "source": "MPMM",
+      "page": 188
+    },
+    {
+      "name": "Nagpa",
+      "source": "MPMM",
+      "page": 189
+    },
+    {
+      "name": "Narzugon",
+      "source": "MPMM",
+      "page": 190
+    },
+    {
+      "name": "Necromancer Wizard",
+      "source": "MPMM",
+      "page": 264
+    },
+    {
+      "name": "Neogi",
+      "source": "MPMM",
+      "page": 192
+    },
+    {
+      "name": "Neogi Hatchling",
+      "source": "MPMM",
+      "page": 191
+    },
+    {
+      "name": "Neogi Master",
+      "source": "MPMM",
+      "page": 192
+    },
+    {
+      "name": "Neothelid",
+      "source": "MPMM",
+      "page": 193
+    },
+    {
+      "name": "Nightwalker",
+      "source": "MPMM",
+      "page": 194
+    },
+    {
+      "name": "Nilbog",
+      "source": "MPMM",
+      "page": 195
+    },
+    {
+      "name": "Nupperibo",
+      "source": "MPMM",
+      "page": 196
+    },
+    {
+      "name": "Oblex Spawn",
+      "source": "MPMM",
+      "page": 197
+    },
+    {
+      "name": "Ogre Battering Ram",
+      "source": "MPMM",
+      "page": 200
+    },
+    {
+      "name": "Ogre Bolt Launcher",
+      "source": "MPMM",
+      "page": 200
+    },
+    {
+      "name": "Ogre Chain Brute",
+      "source": "MPMM",
+      "page": 201
+    },
+    {
+      "name": "Ogre Howdah",
+      "source": "MPMM",
+      "page": 201
+    },
+    {
+      "name": "Oinoloth",
+      "source": "MPMM",
+      "page": 202
+    },
+    {
+      "name": "Orcus",
+      "source": "MPMM",
+      "page": 204
+    },
+    {
+      "name": "Orthon",
+      "source": "MPMM",
+      "page": 205
+    },
+    {
+      "name": "Ox",
+      "source": "MPMM",
+      "page": 72
+    },
+    {
+      "name": "Phoenix",
+      "source": "MPMM",
+      "page": 206
+    },
+    {
+      "name": "Quetzalcoatlus",
+      "source": "MPMM",
+      "page": 96
+    },
+    {
+      "name": "Quickling",
+      "source": "MPMM",
+      "page": 207
+    },
+    {
+      "name": "Red Abishai",
+      "source": "MPMM",
+      "page": 40
+    },
+    {
+      "name": "Redcap",
+      "source": "MPMM",
+      "page": 208
+    },
+    {
+      "name": "Retriever",
+      "source": "MPMM",
+      "page": 209
+    },
+    {
+      "name": "Rot Troll",
+      "source": "MPMM",
+      "page": 247
+    },
+    {
+      "name": "Rutterkin",
+      "source": "MPMM",
+      "page": 210
+    },
+    {
+      "name": "Sacred Statue",
+      "source": "MPMM",
+      "page": 114
+    },
+    {
+      "name": "Sea Spawn",
+      "source": "MPMM",
+      "page": 211
+    },
+    {
+      "name": "Shadar-kai Gloom Weaver",
+      "source": "MPMM",
+      "page": 213
+    },
+    {
+      "name": "Shadar-kai Shadow Dancer",
+      "source": "MPMM",
+      "page": 213
+    },
+    {
+      "name": "Shadar-kai Soul Monger",
+      "source": "MPMM",
+      "page": 214
+    },
+    {
+      "name": "Shadow Mastiff",
+      "source": "MPMM",
+      "page": 215
+    },
+    {
+      "name": "Shadow Mastiff Alpha",
+      "source": "MPMM",
+      "page": 215
+    },
+    {
+      "name": "Shoosuva",
+      "source": "MPMM",
+      "page": 216
+    },
+    {
+      "name": "Sibriex",
+      "source": "MPMM",
+      "page": 217
+    },
+    {
+      "name": "Skulk",
+      "source": "MPMM",
+      "page": 219
+    },
+    {
+      "name": "Skull Lord",
+      "source": "MPMM",
+      "page": 220
+    },
+    {
+      "name": "Slithering Tracker",
+      "source": "MPMM",
+      "page": 221
+    },
+    {
+      "name": "Spawn of Kyuss",
+      "source": "MPMM",
+      "page": 225
+    },
+    {
+      "name": "Spirit Troll",
+      "source": "MPMM",
+      "page": 247
+    },
+    {
+      "name": "Spring Eladrin",
+      "source": "MPMM",
+      "page": 116
+    },
+    {
+      "name": "Star Spawn Grue",
+      "source": "MPMM",
+      "page": 227
+    },
+    {
+      "name": "Star Spawn Hulk",
+      "source": "MPMM",
+      "page": 227
+    },
+    {
+      "name": "Star Spawn Larva Mage",
+      "source": "MPMM",
+      "page": 228
+    },
+    {
+      "name": "Star Spawn Mangler",
+      "source": "MPMM",
+      "page": 229
+    },
+    {
+      "name": "Star Spawn Seer",
+      "source": "MPMM",
+      "page": 230
+    },
+    {
+      "name": "Steel Predator",
+      "source": "MPMM",
+      "page": 232
+    },
+    {
+      "name": "Stegosaurus",
+      "source": "MPMM",
+      "page": 96
+    },
+    {
+      "name": "Stench Kow",
+      "source": "MPMM",
+      "page": 72
+    },
+    {
+      "name": "Stone Cursed",
+      "source": "MPMM",
+      "page": 233
+    },
+    {
+      "name": "Stone Giant Dreamwalker",
+      "source": "MPMM",
+      "page": 234
+    },
+    {
+      "name": "Storm Giant Quintessent",
+      "source": "MPMM",
+      "page": 235
+    },
+    {
+      "name": "Summer Eladrin",
+      "source": "MPMM",
+      "page": 116
+    },
+    {
+      "name": "Swarm of Cranium Rats",
+      "source": "MPMM",
+      "page": 83
+    },
+    {
+      "name": "Swarm of Rot Grubs",
+      "source": "MPMM",
+      "page": 237
+    },
+    {
+      "name": "Swashbuckler",
+      "source": "MPMM",
+      "page": 238
+    },
+    {
+      "name": "Sword Wraith Commander",
+      "source": "MPMM",
+      "page": 239
+    },
+    {
+      "name": "Sword Wraith Warrior",
+      "source": "MPMM",
+      "page": 239
+    },
+    {
+      "name": "Tanarukk",
+      "source": "MPMM",
+      "page": 240
+    },
+    {
+      "name": "Thorny Vegepygmy",
+      "source": "MPMM",
+      "page": 253
+    },
+    {
+      "name": "Titivilus",
+      "source": "MPMM",
+      "page": 242
+    },
+    {
+      "name": "Tlincalli",
+      "source": "MPMM",
+      "page": 242
+    },
+    {
+      "name": "Tortle",
+      "source": "MPMM",
+      "page": 244
+    },
+    {
+      "name": "Tortle Druid",
+      "source": "MPMM",
+      "page": 244
+    },
+    {
+      "name": "Transmuter Wizard",
+      "source": "MPMM",
+      "page": 265
+    },
+    {
+      "name": "Trapper",
+      "source": "MPMM",
+      "page": 245
+    },
+    {
+      "name": "Ulitharid",
+      "source": "MPMM",
+      "page": 249
+    },
+    {
+      "name": "Vampiric Mist",
+      "source": "MPMM",
+      "page": 250
+    },
+    {
+      "name": "Vargouille",
+      "source": "MPMM",
+      "page": 251
+    },
+    {
+      "name": "Vegepygmy",
+      "source": "MPMM",
+      "page": 252
+    },
+    {
+      "name": "Vegepygmy Chief",
+      "source": "MPMM",
+      "page": 253
+    },
+    {
+      "name": "Velociraptor",
+      "source": "MPMM",
+      "page": 96
+    },
+    {
+      "name": "Venom Troll",
+      "source": "MPMM",
+      "page": 248
+    },
+    {
+      "name": "War Priest",
+      "source": "MPMM",
+      "page": 254
+    },
+    {
+      "name": "Warlock of the Archfey",
+      "source": "MPMM",
+      "page": 255
+    },
+    {
+      "name": "Warlock of the Fiend",
+      "source": "MPMM",
+      "page": 255
+    },
+    {
+      "name": "Warlock of the Great Old One",
+      "source": "MPMM",
+      "page": 256
+    },
+    {
+      "name": "Warlord",
+      "source": "MPMM",
+      "page": 257
+    },
+    {
+      "name": "Wastrilith",
+      "source": "MPMM",
+      "page": 258
+    },
+    {
+      "name": "Water Elemental Myrmidon",
+      "source": "MPMM",
+      "page": 123
+    },
+    {
+      "name": "White Abishai",
+      "source": "MPMM",
+      "page": 41
+    },
+    {
+      "name": "Winter Eladrin",
+      "source": "MPMM",
+      "page": 117
+    },
+    {
+      "name": "Wood Woad",
+      "source": "MPMM",
+      "page": 266
+    },
+    {
+      "name": "Wretched Sorrowsworn",
+      "source": "MPMM",
+      "page": 224
+    },
+    {
+      "name": "Xvart",
+      "source": "MPMM",
+      "page": 267
+    },
+    {
+      "name": "Xvart Warlock of Raxivort",
+      "source": "MPMM",
+      "page": 267
+    },
+    {
+      "name": "Yagnoloth",
+      "source": "MPMM",
+      "page": 268
+    },
+    {
+      "name": "Yeenoghu",
+      "source": "MPMM",
+      "page": 270
+    },
+    {
+      "name": "Yeth Hound",
+      "source": "MPMM",
+      "page": 271
+    },
+    {
+      "name": "Young Kruthik",
+      "source": "MPMM",
+      "page": 168
+    },
+    {
+      "name": "Yuan-ti Anathema",
+      "source": "MPMM",
+      "page": 272
+    },
+    {
+      "name": "Yuan-ti Broodguard",
+      "source": "MPMM",
+      "page": 273
+    },
+    {
+      "name": "Yuan-ti Mind Whisperer",
+      "source": "MPMM",
+      "page": 274
+    },
+    {
+      "name": "Yuan-ti Nightmare Speaker",
+      "source": "MPMM",
+      "page": 275
+    },
+    {
+      "name": "Yuan-ti Pit Master",
+      "source": "MPMM",
+      "page": 276
+    },
+    {
+      "name": "Zaratan",
+      "source": "MPMM",
+      "page": 278
+    },
+    {
+      "name": "Zariel",
+      "source": "MPMM",
+      "page": 280
+    },
+    {
+      "name": "Zuggtmoy",
+      "source": "MPMM",
+      "page": 281
+    }
+  ]
+}

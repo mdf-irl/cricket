@@ -1,0 +1,14 @@
+{
+  "monster": [
+    {
+      "name": "Avatar of Death",
+      "source": "XDMG",
+      "page": 252
+    },
+    {
+      "name": "Giant Fly",
+      "source": "XDMG",
+      "page": 261
+    }
+  ]
+}

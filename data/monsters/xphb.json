@@ -1,0 +1,79 @@
+{
+  "monster": [
+    {
+      "name": "Aberrant Spirit",
+      "source": "XPHB",
+      "page": 322
+    },
+    {
+      "name": "Animated Object",
+      "source": "XPHB",
+      "page": 240
+    },
+    {
+      "name": "Beast of the Land",
+      "source": "XPHB",
+      "page": 123
+    },
+    {
+      "name": "Beast of the Sea",
+      "source": "XPHB",
+      "page": 124
+    },
+    {
+      "name": "Beast of the Sky",
+      "source": "XPHB",
+      "page": 124
+    },
+    {
+      "name": "Bestial Spirit",
+      "source": "XPHB",
+      "page": 323
+    },
+    {
+      "name": "Celestial Spirit",
+      "source": "XPHB",
+      "page": 323
+    },
+    {
+      "name": "Construct Spirit",
+      "source": "XPHB",
+      "page": 324
+    },
+    {
+      "name": "Draconic Spirit",
+      "source": "XPHB",
+      "page": 325
+    },
+    {
+      "name": "Elemental Spirit",
+      "source": "XPHB",
+      "page": 325
+    },
+    {
+      "name": "Fey Spirit",
+      "source": "XPHB",
+      "page": 326
+    },
+    {
+      "name": "Fiendish Spirit",
+      "source": "XPHB",
+      "page": 327
+    },
+    {
+      "name": "Giant Insect",
+      "source": "XPHB",
+      "page": 279
+    },
+    {
+      "name": "Otherworldly Steed",
+      "source": "XPHB",
+      "page": 273
+    },
+    {
+      "name": "Undead Spirit",
+      "source": "XPHB",
+      "page": 328
+    }
+  ]
+}

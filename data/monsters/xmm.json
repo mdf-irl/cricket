@@ -1,0 +1,2519 @@
+{
+  "monster": [
+    {
+      "name": "Aarakocra Aeromancer",
+      "source": "XMM",
+      "page": 10
+    },
+    {
+      "name": "Aarakocra Skirmisher",
+      "source": "XMM",
+      "page": 10
+    },
+    {
+      "name": "Aberrant Cultist",
+      "source": "XMM",
+      "page": 86
+    },
+    {
+      "name": "Aboleth",
+      "source": "XMM",
+      "page": 12
+    },
+    {
+      "name": "Abominable Yeti",
+      "source": "XMM",
+      "page": 340
+    },
+    {
+      "name": "Adult Black Dragon",
+      "source": "XMM",
+      "page": 39
+    },
+    {
+      "name": "Adult Blue Dragon",
+      "source": "XMM",
+      "page": 49
+    },
+    {
+      "name": "Adult Brass Dragon",
+      "source": "XMM",
+      "page": 55
+    },
+    {
+      "name": "Adult Bronze Dragon",
+      "source": "XMM",
+      "page": 59
+    },
+    {
+      "name": "Adult Copper Dragon",
+      "source": "XMM",
+      "page": 79
+    },
+    {
+      "name": "Adult Gold Dragon",
+      "source": "XMM",
+      "page": 145
+    },
+    {
+      "name": "Adult Green Dragon",
+      "source": "XMM",
+      "page": 153
+    },
+    {
+      "name": "Adult Red Dragon",
+      "source": "XMM",
+      "page": 255
+    },
+    {
+      "name": "Adult Silver Dragon",
+      "source": "XMM",
+      "page": 279
+    },
+    {
+      "name": "Adult White Dragon",
+      "source": "XMM",
+      "page": 329
+    },
+    {
+      "name": "Air Elemental",
+      "source": "XMM",
+      "page": 13
+    },
+    {
+      "name": "Allosaurus",
+      "source": "XMM",
+      "page": 348
+    },
+    {
+      "name": "Ancient Black Dragon",
+      "source": "XMM",
+      "page": 40
+    },
+    {
+      "name": "Ancient Blue Dragon",
+      "source": "XMM",
+      "page": 50
+    },
+    {
+      "name": "Ancient Brass Dragon",
+      "source": "XMM",
+      "page": 56
+    },
+    {
+      "name": "Ancient Bronze Dragon",
+      "source": "XMM",
+      "page": 60
+    },
+    {
+      "name": "Ancient Copper Dragon",
+      "source": "XMM",
+      "page": 80
+    },
+    {
+      "name": "Ancient Gold Dragon",
+      "source": "XMM",
+      "page": 146
+    },
+    {
+      "name": "Ancient Green Dragon",
+      "source": "XMM",
+      "page": 154
+    },
+    {
+      "name": "Ancient Red Dragon",
+      "source": "XMM",
+      "page": 256
+    },
+    {
+      "name": "Ancient Silver Dragon",
+      "source": "XMM",
+      "page": 280
+    },
+    {
+      "name": "Ancient White Dragon",
+      "source": "XMM",
+      "page": 330
+    },
+    {
+      "name": "Animal Lord",
+      "source": "XMM",
+      "page": 15
+    },
+    {
+      "name": "Animated Armor",
+      "source": "XMM",
+      "page": 16
+    },
+    {
+      "name": "Animated Broom",
+      "source": "XMM",
+      "page": 16
+    },
+    {
+      "name": "Animated Flying Sword",
+      "source": "XMM",
+      "page": 17
+    },
+    {
+      "name": "Animated Rug of Smothering",
+      "source": "XMM",
+      "page": 17
+    },
+    {
+      "name": "Ankheg",
+      "source": "XMM",
+      "page": 18
+    },
+    {
+      "name": "Ankylosaurus",
+      "source": "XMM",
+      "page": 348
+    },
+    {
+      "name": "Ape",
+      "source": "XMM",
+      "page": 348
+    },
+    {
+      "name": "Arcanaloth",
+      "source": "XMM",
+      "page": 19
+    },
+    {
+      "name": "Arch-hag",
+      "source": "XMM",
+      "page": 21
+    },
+    {
+      "name": "Archelon",
+      "source": "XMM",
+      "page": 349
+    },
+    {
+      "name": "Archmage",
+      "source": "XMM",
+      "page": 199
+    },
+    {
+      "name": "Archpriest",
+      "source": "XMM",
+      "page": 248
+    },
+    {
+      "name": "Assassin",
+      "source": "XMM",
+      "page": 22
+    },
+    {
+      "name": "Awakened Shrub",
+      "source": "XMM",
+      "page": 23
+    },
+    {
+      "name": "Awakened Tree",
+      "source": "XMM",
+      "page": 23
+    },
+    {
+      "name": "Axe Beak",
+      "source": "XMM",
+      "page": 24
+    },
+    {
+      "name": "Azer Pyromancer",
+      "source": "XMM",
+      "page": 25
+    },
+    {
+      "name": "Azer Sentinel",
+      "source": "XMM",
+      "page": 25
+    },
+    {
+      "name": "Baboon",
+      "source": "XMM",
+      "page": 349
+    },
+    {
+      "name": "Badger",
+      "source": "XMM",
+      "page": 349
+    },
+    {
+      "name": "Balor",
+      "source": "XMM",
+      "page": 26
+    },
+    {
+      "name": "Bandit",
+      "source": "XMM",
+      "page": 27
+    },
+    {
+      "name": "Bandit Captain",
+      "source": "XMM",
+      "page": 27
+    },
+    {
+      "name": "Bandit Crime Lord",
+      "source": "XMM",
+      "page": 28
+    },
+    {
+      "name": "Bandit Deceiver",
+      "source": "XMM",
+      "page": 28
+    },
+    {
+      "name": "Banshee",
+      "source": "XMM",
+      "page": 29
+    },
+    {
+      "name": "Barbed Devil",
+      "source": "XMM",
+      "page": 30
+    },
+    {
+      "name": "Barlgura",
+      "source": "XMM",
+      "page": 31
+    },
+    {
+      "name": "Basilisk",
+      "source": "XMM",
+      "page": 32
+    },
+    {
+      "name": "Bat",
+      "source": "XMM",
+      "page": 349
+    },
+    {
+      "name": "Bearded Devil",
+      "source": "XMM",
+      "page": 33
+    },
+    {
+      "name": "Behir",
+      "source": "XMM",
+      "page": 34
+    },
+    {
+      "name": "Beholder",
+      "source": "XMM",
+      "page": 36
+    },
+    {
+      "name": "Beholder Zombie",
+      "source": "XMM",
+      "page": 347
+    },
+    {
+      "name": "Berserker",
+      "source": "XMM",
+      "page": 37
+    },
+    {
+      "name": "Berserker Commander",
+      "source": "XMM",
+      "page": 37
+    },
+    {
+      "name": "Black Bear",
+      "source": "XMM",
+      "page": 349
+    },
+    {
+      "name": "Black Dragon Wyrmling",
+      "source": "XMM",
+      "page": 38
+    },
+    {
+      "name": "Black Pudding",
+      "source": "XMM",
+      "page": 42
+    },
+    {
+      "name": "Blink Dog",
+      "source": "XMM",
+      "page": 46
+    },
+    {
+      "name": "Blob of Annihilation",
+      "source": "XMM",
+      "page": 47
+    },
+    {
+      "name": "Blood Hawk",
+      "source": "XMM",
+      "page": 350
+    },
+    {
+      "name": "Blue Dragon Wyrmling",
+      "source": "XMM",
+      "page": 48
+    },
+    {
+      "name": "Blue Slaad",
+      "source": "XMM",
+      "page": 285
+    },
+    {
+      "name": "Boar",
+      "source": "XMM",
+      "page": 350
+    },
+    {
+      "name": "Bone Devil",
+      "source": "XMM",
+      "page": 52
+    },
+    {
+      "name": "Bone Naga",
+      "source": "XMM",
+      "page": 53
+    },
+    {
+      "name": "Brass Dragon Wyrmling",
+      "source": "XMM",
+      "page": 54
+    },
+    {
+      "name": "Brazen Gorgon",
+      "source": "XMM",
+      "page": 149
+    },
+    {
+      "name": "Bronze Dragon Wyrmling",
+      "source": "XMM",
+      "page": 58
+    },
+    {
+      "name": "Brown Bear",
+      "source": "XMM",
+      "page": 350
+    },
+    {
+      "name": "Bugbear Stalker",
+      "source": "XMM",
+      "page": 62
+    },
+    {
+      "name": "Bugbear Warrior",
+      "source": "XMM",
+      "page": 62
+    },
+    {
+      "name": "Bulette",
+      "source": "XMM",
+      "page": 63
+    },
+    {
+      "name": "Bulette Pup",
+      "source": "XMM",
+      "page": 63
+    },
+    {
+      "name": "Bullywug Bog Sage",
+      "source": "XMM",
+      "page": 64
+    },
+    {
+      "name": "Bullywug Warrior",
+      "source": "XMM",
+      "page": 64
+    },
+    {
+      "name": "Cambion",
+      "source": "XMM",
+      "page": 65
+    },
+    {
+      "name": "Camel",
+      "source": "XMM",
+      "page": 351
+    },
+    {
+      "name": "Carrion Crawler",
+      "source": "XMM",
+      "page": 66
+    },
+    {
+      "name": "Cat",
+      "source": "XMM",
+      "page": 351
+    },
+    {
+      "name": "Centaur Trooper",
+      "source": "XMM",
+      "page": 67
+    },
+    {
+      "name": "Centaur Warden",
+      "source": "XMM",
+      "page": 67
+    },
+    {
+      "name": "Chain Devil",
+      "source": "XMM",
+      "page": 68
+    },
+    {
+      "name": "Chasme",
+      "source": "XMM",
+      "page": 69
+    },
+    {
+      "name": "Chimera",
+      "source": "XMM",
+      "page": 70
+    },
+    {
+      "name": "Chuul",
+      "source": "XMM",
+      "page": 71
+    },
+    {
+      "name": "Clay Golem",
+      "source": "XMM",
+      "page": 72
+    },
+    {
+      "name": "Cloaker",
+      "source": "XMM",
+      "page": 73
+    },
+    {
+      "name": "Cloud Giant",
+      "source": "XMM",
+      "page": 74
+    },
+    {
+      "name": "Cockatrice",
+      "source": "XMM",
+      "page": 75
+    },
+    {
+      "name": "Cockatrice Regent",
+      "source": "XMM",
+      "page": 75
+    },
+    {
+      "name": "Colossus",
+      "source": "XMM",
+      "page": 76
+    },
+    {
+      "name": "Commoner",
+      "source": "XMM",
+      "page": 77
+    },
+    {
+      "name": "Constrictor Snake",
+      "source": "XMM",
+      "page": 351
+    },
+    {
+      "name": "Copper Dragon Wyrmling",
+      "source": "XMM",
+      "page": 78
+    },
+    {
+      "name": "Couatl",
+      "source": "XMM",
+      "page": 82
+    },
+    {
+      "name": "Crab",
+      "source": "XMM",
+      "page": 351
+    },
+    {
+      "name": "Crawling Claw",
+      "source": "XMM",
+      "page": 83
+    },
+    {
+      "name": "Crocodile",
+      "source": "XMM",
+      "page": 352
+    },
+    {
+      "name": "Cultist",
+      "source": "XMM",
+      "page": 84
+    },
+    {
+      "name": "Cultist Fanatic",
+      "source": "XMM",
+      "page": 85
+    },
+    {
+      "name": "Cultist Hierophant",
+      "source": "XMM",
+      "page": 85
+    },
+    {
+      "name": "Cyclops Oracle",
+      "source": "XMM",
+      "page": 88
+    },
+    {
+      "name": "Cyclops Sentry",
+      "source": "XMM",
+      "page": 88
+    },
+    {
+      "name": "Dao",
+      "source": "XMM",
+      "page": 89
+    },
+    {
+      "name": "Darkmantle",
+      "source": "XMM",
+      "page": 90
+    },
+    {
+      "name": "Death Cultist",
+      "source": "XMM",
+      "page": 86
+    },
+    {
+      "name": "Death Dog",
+      "source": "XMM",
+      "page": 91
+    },
+    {
+      "name": "Death Knight",
+      "source": "XMM",
+      "page": 92
+    },
+    {
+      "name": "Death Knight Aspirant",
+      "source": "XMM",
+      "page": 93
+    },
+    {
+      "name": "Death Slaad",
+      "source": "XMM",
+      "page": 287
+    },
+    {
+      "name": "Death Tyrant",
+      "source": "XMM",
+      "page": 95
+    },
+    {
+      "name": "Deer",
+      "source": "XMM",
+      "page": 352
+    },
+    {
+      "name": "Demilich",
+      "source": "XMM",
+      "page": 96
+    },
+    {
+      "name": "Deva",
+      "source": "XMM",
+      "page": 97
+    },
+    {
+      "name": "Dire Wolf",
+      "source": "XMM",
+      "page": 352
+    },
+    {
+      "name": "Dire Worg",
+      "source": "XMM",
+      "page": 335
+    },
+    {
+      "name": "Displacer Beast",
+      "source": "XMM",
+      "page": 98
+    },
+    {
+      "name": "Djinni",
+      "source": "XMM",
+      "page": 99
+    },
+    {
+      "name": "Doppelganger",
+      "source": "XMM",
+      "page": 100
+    },
+    {
+      "name": "Dracolich",
+      "source": "XMM",
+      "page": 102
+    },
+    {
+      "name": "Draft Horse",
+      "source": "XMM",
+      "page": 352
+    },
+    {
+      "name": "Dragon Turtle",
+      "source": "XMM",
+      "page": 103
+    },
+    {
+      "name": "Dretch",
+      "source": "XMM",
+      "page": 103
+    },
+    {
+      "name": "Drider",
+      "source": "XMM",
+      "page": 105
+    },
+    {
+      "name": "Druid",
+      "source": "XMM",
+      "page": 106
+    },
+    {
+      "name": "Dryad",
+      "source": "XMM",
+      "page": 107
+    },
+    {
+      "name": "Dust Mephit",
+      "source": "XMM",
+      "page": 206
+    },
+    {
+      "name": "Eagle",
+      "source": "XMM",
+      "page": 353
+    },
+    {
+      "name": "Earth Elemental",
+      "source": "XMM",
+      "page": 108
+    },
+    {
+      "name": "Efreeti",
+      "source": "XMM",
+      "page": 109
+    },
+    {
+      "name": "Elemental Cataclysm",
+      "source": "XMM",
+      "page": 111
+    },
+    {
+      "name": "Elemental Cultist",
+      "source": "XMM",
+      "page": 87
+    },
+    {
+      "name": "Elephant",
+      "source": "XMM",
+      "page": 353
+    },
+    {
+      "name": "Elk",
+      "source": "XMM",
+      "page": 353
+    },
+    {
+      "name": "Empyrean",
+      "source": "XMM",
+      "page": 113
+    },
+    {
+      "name": "Empyrean Iota",
+      "source": "XMM",
+      "page": 112
+    },
+    {
+      "name": "Erinyes",
+      "source": "XMM",
+      "page": 114
+    },
+    {
+      "name": "Ettercap",
+      "source": "XMM",
+      "page": 115
+    },
+    {
+      "name": "Ettin",
+      "source": "XMM",
+      "page": 116
+    },
+    {
+      "name": "Faerie Dragon Adult",
+      "source": "XMM",
+      "page": 117
+    },
+    {
+      "name": "Faerie Dragon Youth",
+      "source": "XMM",
+      "page": 117
+    },
+    {
+      "name": "Fiend Cultist",
+      "source": "XMM",
+      "page": 87
+    },
+    {
+      "name": "Fire Elemental",
+      "source": "XMM",
+      "page": 118
+    },
+    {
+      "name": "Fire Giant",
+      "source": "XMM",
+      "page": 119
+    },
+    {
+      "name": "Flameskull",
+      "source": "XMM",
+      "page": 120
+    },
+    {
+      "name": "Flaming Skeleton",
+      "source": "XMM",
+      "page": 283
+    },
+    {
+      "name": "Flesh Golem",
+      "source": "XMM",
+      "page": 121
+    },
+    {
+      "name": "Flumph",
+      "source": "XMM",
+      "page": 122
+    },
+    {
+      "name": "Flying Snake",
+      "source": "XMM",
+      "page": 353
+    },
+    {
+      "name": "Fomorian",
+      "source": "XMM",
+      "page": 123
+    },
+    {
+      "name": "Frog",
+      "source": "XMM",
+      "page": 354
+    },
+    {
+      "name": "Frost Giant",
+      "source": "XMM",
+      "page": 124
+    },
+    {
+      "name": "Galeb Duhr",
+      "source": "XMM",
+      "page": 127
+    },
+    {
+      "name": "Gargoyle",
+      "source": "XMM",
+      "page": 128
+    },
+    {
+      "name": "Gas Spore Fungus",
+      "source": "XMM",
+      "page": 125
+    },
+    {
+      "name": "Gelatinous Cube",
+      "source": "XMM",
+      "page": 129
+    },
+    {
+      "name": "Ghast",
+      "source": "XMM",
+      "page": 130
+    },
+    {
+      "name": "Ghast Gravecaller",
+      "source": "XMM",
+      "page": 130
+    },
+    {
+      "name": "Ghost",
+      "source": "XMM",
+      "page": 131
+    },
+    {
+      "name": "Ghoul",
+      "source": "XMM",
+      "page": 132
+    },
+    {
+      "name": "Giant Ape",
+      "source": "XMM",
+      "page": 354
+    },
+    {
+      "name": "Giant Axe Beak",
+      "source": "XMM",
+      "page": 24
+    },
+    {
+      "name": "Giant Badger",
+      "source": "XMM",
+      "page": 354
+    },
+    {
+      "name": "Giant Bat",
+      "source": "XMM",
+      "page": 355
+    },
+    {
+      "name": "Giant Boar",
+      "source": "XMM",
+      "page": 355
+    },
+    {
+      "name": "Giant Centipede",
+      "source": "XMM",
+      "page": 355
+    },
+    {
+      "name": "Giant Constrictor Snake",
+      "source": "XMM",
+      "page": 355
+    },
+    {
+      "name": "Giant Crab",
+      "source": "XMM",
+      "page": 356
+    },
+    {
+      "name": "Giant Crocodile",
+      "source": "XMM",
+      "page": 356
+    },
+    {
+      "name": "Giant Eagle",
+      "source": "XMM",
+      "page": 356
+    },
+    {
+      "name": "Giant Elk",
+      "source": "XMM",
+      "page": 356
+    },
+    {
+      "name": "Giant Fire Beetle",
+      "source": "XMM",
+      "page": 357
+    },
+    {
+      "name": "Giant Frog",
+      "source": "XMM",
+      "page": 357
+    },
+    {
+      "name": "Giant Goat",
+      "source": "XMM",
+      "page": 357
+    },
+    {
+      "name": "Giant Hyena",
+      "source": "XMM",
+      "page": 357
+    },
+    {
+      "name": "Giant Lizard",
+      "source": "XMM",
+      "page": 358
+    },
+    {
+      "name": "Giant Octopus",
+      "source": "XMM",
+      "page": 358
+    },
+    {
+      "name": "Giant Owl",
+      "source": "XMM",
+      "page": 358
+    },
+    {
+      "name": "Giant Rat",
+      "source": "XMM",
+      "page": 358
+    },
+    {
+      "name": "Giant Scorpion",
+      "source": "XMM",
+      "page": 359
+    },
+    {
+      "name": "Giant Seahorse",
+      "source": "XMM",
+      "page": 359
+    },
+    {
+      "name": "Giant Shark",
+      "source": "XMM",
+      "page": 359
+    },
+    {
+      "name": "Giant Spider",
+      "source": "XMM",
+      "page": 359
+    },
+    {
+      "name": "Giant Squid",
+      "source": "XMM",
+      "page": 360
+    },
+    {
+      "name": "Giant Toad",
+      "source": "XMM",
+      "page": 360
+    },
+    {
+      "name": "Giant Venomous Snake",
+      "source": "XMM",
+      "page": 361
+    },
+    {
+      "name": "Giant Vulture",
+      "source": "XMM",
+      "page": 361
+    },
+    {
+      "name": "Giant Wasp",
+      "source": "XMM",
+      "page": 361
+    },
+    {
+      "name": "Giant Weasel",
+      "source": "XMM",
+      "page": 361
+    },
+    {
+      "name": "Giant Wolf Spider",
+      "source": "XMM",
+      "page": 362
+    },
+    {
+      "name": "Gibbering Mouther",
+      "source": "XMM",
+      "page": 133
+    },
+    {
+      "name": "Githyanki Dracomancer",
+      "source": "XMM",
+      "page": 135
+    },
+    {
+      "name": "Githyanki Knight",
+      "source": "XMM",
+      "page": 135
+    },
+    {
+      "name": "Githyanki Warrior",
+      "source": "XMM",
+      "page": 134
+    },
+    {
+      "name": "Githzerai Monk",
+      "source": "XMM",
+      "page": 136
+    },
+    {
+      "name": "Githzerai Psion",
+      "source": "XMM",
+      "page": 137
+    },
+    {
+      "name": "Githzerai Zerth",
+      "source": "XMM",
+      "page": 137
+    },
+    {
+      "name": "Glabrezu",
+      "source": "XMM",
+      "page": 138
+    },
+    {
+      "name": "Gladiator",
+      "source": "XMM",
+      "page": 139
+    },
+    {
+      "name": "Gnoll Demoniac",
+      "source": "XMM",
+      "page": 141
+    },
+    {
+      "name": "Gnoll Fang of Yeenoghu",
+      "source": "XMM",
+      "page": 141
+    },
+    {
+      "name": "Gnoll Pack Lord",
+      "source": "XMM",
+      "page": 140
+    },
+    {
+      "name": "Gnoll Warrior",
+      "source": "XMM",
+      "page": 140
+    },
+    {
+      "name": "Goat",
+      "source": "XMM",
+      "page": 362
+    },
+    {
+      "name": "Goblin Boss",
+      "source": "XMM",
+      "page": 143
+    },
+    {
+      "name": "Goblin Hexer",
+      "source": "XMM",
+      "page": 143
+    },
+    {
+      "name": "Goblin Minion",
+      "source": "XMM",
+      "page": 142
+    },
+    {
+      "name": "Goblin Warrior",
+      "source": "XMM",
+      "page": 142
+    },
+    {
+      "name": "Gold Dragon Wyrmling",
+      "source": "XMM",
+      "page": 144
+    },
+    {
+      "name": "Gorgon",
+      "source": "XMM",
+      "page": 148
+    },
+    {
+      "name": "Goristro",
+      "source": "XMM",
+      "page": 150
+    },
+    {
+      "name": "Graveyard Revenant",
+      "source": "XMM",
+      "page": 260
+    },
+    {
+      "name": "Gray Ooze",
+      "source": "XMM",
+      "page": 151
+    },
+    {
+      "name": "Gray Slaad",
+      "source": "XMM",
+      "page": 286
+    },
+    {
+      "name": "Green Dragon Wyrmling",
+      "source": "XMM",
+      "page": 152
+    },
+    {
+      "name": "Green Hag",
+      "source": "XMM",
+      "page": 156
+    },
+    {
+      "name": "Green Slaad",
+      "source": "XMM",
+      "page": 286
+    },
+    {
+      "name": "Grell",
+      "source": "XMM",
+      "page": 157
+    },
+    {
+      "name": "Grick",
+      "source": "XMM",
+      "page": 158
+    },
+    {
+      "name": "Grick Ancient",
+      "source": "XMM",
+      "page": 158
+    },
+    {
+      "name": "Griffon",
+      "source": "XMM",
+      "page": 159
+    },
+    {
+      "name": "Grimlock",
+      "source": "XMM",
+      "page": 160
+    },
+    {
+      "name": "Guard",
+      "source": "XMM",
+      "page": 162
+    },
+    {
+      "name": "Guard Captain",
+      "source": "XMM",
+      "page": 162
+    },
+    {
+      "name": "Guardian Naga",
+      "source": "XMM",
+      "page": 161
+    },
+    {
+      "name": "Gulthias Blight",
+      "source": "XMM",
+      "page": 45
+    },
+    {
+      "name": "Half-Dragon",
+      "source": "XMM",
+      "page": 163
+    },
+    {
+      "name": "Harpy",
+      "source": "XMM",
+      "page": 164
+    },
+    {
+      "name": "Haunting Revenant",
+      "source": "XMM",
+      "page": 260
+    },
+    {
+      "name": "Hawk",
+      "source": "XMM",
+      "page": 362
+    },
+    {
+      "name": "Hell Hound",
+      "source": "XMM",
+      "page": 165
+    },
+    {
+      "name": "Helmed Horror",
+      "source": "XMM",
+      "page": 166
+    },
+    {
+      "name": "Hezrou",
+      "source": "XMM",
+      "page": 167
+    },
+    {
+      "name": "Hill Giant",
+      "source": "XMM",
+      "page": 168
+    },
+    {
+      "name": "Hippogriff",
+      "source": "XMM",
+      "page": 169
+    },
+    {
+      "name": "Hippopotamus",
+      "source": "XMM",
+      "page": 362
+    },
+    {
+      "name": "Hobgoblin Captain",
+      "source": "XMM",
+      "page": 171
+    },
+    {
+      "name": "Hobgoblin Warlord",
+      "source": "XMM",
+      "page": 171
+    },
+    {
+      "name": "Hobgoblin Warrior",
+      "source": "XMM",
+      "page": 170
+    },
+    {
+      "name": "Homunculus",
+      "source": "XMM",
+      "page": 172
+    },
+    {
+      "name": "Hook Horror",
+      "source": "XMM",
+      "page": 173
+    },
+    {
+      "name": "Horned Devil",
+      "source": "XMM",
+      "page": 174
+    },
+    {
+      "name": "Hunter Shark",
+      "source": "XMM",
+      "page": 363
+    },
+    {
+      "name": "Hydra",
+      "source": "XMM",
+      "page": 175
+    },
+    {
+      "name": "Hyena",
+      "source": "XMM",
+      "page": 363
+    },
+    {
+      "name": "Ice Devil",
+      "source": "XMM",
+      "page": 176
+    },
+    {
+      "name": "Ice Mephit",
+      "source": "XMM",
+      "page": 206
+    },
+    {
+      "name": "Imp",
+      "source": "XMM",
+      "page": 177
+    },
+    {
+      "name": "Incubus",
+      "source": "XMM",
+      "page": 178
+    },
+    {
+      "name": "Intellect Devourer",
+      "source": "XMM",
+      "page": 179
+    },
+    {
+      "name": "Invisible Stalker",
+      "source": "XMM",
+      "page": 180
+    },
+    {
+      "name": "Iron Golem",
+      "source": "XMM",
+      "page": 181
+    },
+    {
+      "name": "Jackal",
+      "source": "XMM",
+      "page": 364
+    },
+    {
+      "name": "Jackalwere",
+      "source": "XMM",
+      "page": 182
+    },
+    {
+      "name": "Juvenile Shadow Dragon",
+      "source": "XMM",
+      "page": 275
+    },
+    {
+      "name": "Kenku",
+      "source": "XMM",
+      "page": 183
+    },
+    {
+      "name": "Killer Whale",
+      "source": "XMM",
+      "page": 364
+    },
+    {
+      "name": "Knight",
+      "source": "XMM",
+      "page": 184
+    },
+    {
+      "name": "Kobold Warrior",
+      "source": "XMM",
+      "page": 185
+    },
+    {
+      "name": "Kraken",
+      "source": "XMM",
+      "page": 187
+    },
+    {
+      "name": "Kuo-toa",
+      "source": "XMM",
+      "page": 189
+    },
+    {
+      "name": "Kuo-toa Archpriest",
+      "source": "XMM",
+      "page": 191
+    },
+    {
+      "name": "Kuo-toa Monitor",
+      "source": "XMM",
+      "page": 190
+    },
+    {
+      "name": "Kuo-toa Whip",
+      "source": "XMM",
+      "page": 190
+    },
+    {
+      "name": "Lacedon Ghoul",
+      "source": "XMM",
+      "page": 132
+    },
+    {
+      "name": "Lamia",
+      "source": "XMM",
+      "page": 192
+    },
+    {
+      "name": "Larva",
+      "source": "XMM",
+      "page": 193
+    },
+    {
+      "name": "Lemure",
+      "source": "XMM",
+      "page": 194
+    },
+    {
+      "name": "Lich",
+      "source": "XMM",
+      "page": 196
+    },
+    {
+      "name": "Lion",
+      "source": "XMM",
+      "page": 364
+    },
+    {
+      "name": "Lizard",
+      "source": "XMM",
+      "page": 364
+    },
+    {
+      "name": "Lizardfolk Geomancer",
+      "source": "XMM",
+      "page": 197
+    },
+    {
+      "name": "Lizardfolk Sovereign",
+      "source": "XMM",
+      "page": 197
+    },
+    {
+      "name": "Mage",
+      "source": "XMM",
+      "page": 199
+    },
+    {
+      "name": "Mage Apprentice",
+      "source": "XMM",
+      "page": 198
+    },
+    {
+      "name": "Magma Mephit",
+      "source": "XMM",
+      "page": 207
+    },
+    {
+      "name": "Magmin",
+      "source": "XMM",
+      "page": 200
+    },
+    {
+      "name": "Mammoth",
+      "source": "XMM",
+      "page": 365
+    },
+    {
+      "name": "Manes",
+      "source": "XMM",
+      "page": 201
+    },
+    {
+      "name": "Manes Vaporspawn",
+      "source": "XMM",
+      "page": 201
+    },
+    {
+      "name": "Manticore",
+      "source": "XMM",
+      "page": 202
+    },
+    {
+      "name": "Marid",
+      "source": "XMM",
+      "page": 203
+    },
+    {
+      "name": "Marilith",
+      "source": "XMM",
+      "page": 204
+    },
+    {
+      "name": "Mastiff",
+      "source": "XMM",
+      "page": 365
+    },
+    {
+      "name": "Medusa",
+      "source": "XMM",
+      "page": 205
+    },
+    {
+      "name": "Merfolk Skirmisher",
+      "source": "XMM",
+      "page": 209
+    },
+    {
+      "name": "Merfolk Wavebender",
+      "source": "XMM",
+      "page": 209
+    },
+    {
+      "name": "Merrow",
+      "source": "XMM",
+      "page": 210
+    },
+    {
+      "name": "Mezzoloth",
+      "source": "XMM",
+      "page": 211
+    },
+    {
+      "name": "Mimic",
+      "source": "XMM",
+      "page": 212
+    },
+    {
+      "name": "Mind Flayer",
+      "source": "XMM",
+      "page": 214
+    },
+    {
+      "name": "Mind Flayer Arcanist",
+      "source": "XMM",
+      "page": 214
+    },
+    {
+      "name": "Minotaur of Baphomet",
+      "source": "XMM",
+      "page": 215
+    },
+    {
+      "name": "Minotaur Skeleton",
+      "source": "XMM",
+      "page": 283
+    },
+    {
+      "name": "Modron Duodrone",
+      "source": "XMM",
+      "page": 217
+    },
+    {
+      "name": "Modron Monodrone",
+      "source": "XMM",
+      "page": 216
+    },
+    {
+      "name": "Modron Pentadrone",
+      "source": "XMM",
+      "page": 218
+    },
+    {
+      "name": "Modron Quadrone",
+      "source": "XMM",
+      "page": 218
+    },
+    {
+      "name": "Modron Tridrone",
+      "source": "XMM",
+      "page": 217
+    },
+    {
+      "name": "Mud Mephit",
+      "source": "XMM",
+      "page": 207
+    },
+    {
+      "name": "Mule",
+      "source": "XMM",
+      "page": 365
+    },
+    {
+      "name": "Mummy",
+      "source": "XMM",
+      "page": 219
+    },
+    {
+      "name": "Mummy Lord",
+      "source": "XMM",
+      "page": 221
+    },
+    {
+      "name": "Myconid Adult",
+      "source": "XMM",
+      "page": 223
+    },
+    {
+      "name": "Myconid Sovereign",
+      "source": "XMM",
+      "page": 223
+    },
+    {
+      "name": "Myconid Spore Servant",
+      "source": "XMM",
+      "page": 223
+    },
+    {
+      "name": "Myconid Sprout",
+      "source": "XMM",
+      "page": 222
+    },
+    {
+      "name": "Nalfeshnee",
+      "source": "XMM",
+      "page": 224
+    },
+    {
+      "name": "Needle Blight",
+      "source": "XMM",
+      "page": 43
+    },
+    {
+      "name": "Night Hag",
+      "source": "XMM",
+      "page": 225
+    },
+    {
+      "name": "Nightmare",
+      "source": "XMM",
+      "page": 226
+    },
+    {
+      "name": "Noble",
+      "source": "XMM",
+      "page": 227
+    },
+    {
+      "name": "Noble Prodigy",
+      "source": "XMM",
+      "page": 227
+    },
+    {
+      "name": "Nothic",
+      "source": "XMM",
+      "page": 228
+    },
+    {
+      "name": "Nycaloth",
+      "source": "XMM",
+      "page": 229
+    },
+    {
+      "name": "Ochre Jelly",
+      "source": "XMM",
+      "page": 230
+    },
+    {
+      "name": "Octopus",
+      "source": "XMM",
+      "page": 365
+    },
+    {
+      "name": "Ogre",
+      "source": "XMM",
+      "page": 231
+    },
+    {
+      "name": "Ogre Zombie",
+      "source": "XMM",
+      "page": 346
+    },
+    {
+      "name": "Ogrillon Ogre",
+      "source": "XMM",
+      "page": 231
+    },
+    {
+      "name": "Oni",
+      "source": "XMM",
+      "page": 232
+    },
+    {
+      "name": "Otyugh",
+      "source": "XMM",
+      "page": 233
+    },
+    {
+      "name": "Owl",
+      "source": "XMM",
+      "page": 366
+    },
+    {
+      "name": "Owlbear",
+      "source": "XMM",
+      "page": 234
+    },
+    {
+      "name": "Panther",
+      "source": "XMM",
+      "page": 366
+    },
+    {
+      "name": "Pegasus",
+      "source": "XMM",
+      "page": 235
+    },
+    {
+      "name": "Performer",
+      "source": "XMM",
+      "page": 236
+    },
+    {
+      "name": "Performer Legend",
+      "source": "XMM",
+      "page": 237
+    },
+    {
+      "name": "Performer Maestro",
+      "source": "XMM",
+      "page": 237
+    },
+    {
+      "name": "Peryton",
+      "source": "XMM",
+      "page": 238
+    },
+    {
+      "name": "Phase Spider",
+      "source": "XMM",
+      "page": 239
+    },
+    {
+      "name": "Piercer",
+      "source": "XMM",
+      "page": 240
+    },
+    {
+      "name": "Piranha",
+      "source": "XMM",
+      "page": 366
+    },
+    {
+      "name": "Pirate",
+      "source": "XMM",
+      "page": 241
+    },
+    {
+      "name": "Pirate Admiral",
+      "source": "XMM",
+      "page": 242
+    },
+    {
+      "name": "Pirate Captain",
+      "source": "XMM",
+      "page": 242
+    },
+    {
+      "name": "Pit Fiend",
+      "source": "XMM",
+      "page": 243
+    },
+    {
+      "name": "Pixie",
+      "source": "XMM",
+      "page": 244
+    },
+    {
+      "name": "Pixie Wonderbringer",
+      "source": "XMM",
+      "page": 244
+    },
+    {
+      "name": "Planetar",
+      "source": "XMM",
+      "page": 245
+    },
+    {
+      "name": "Plesiosaurus",
+      "source": "XMM",
+      "page": 366
+    },
+    {
+      "name": "Polar Bear",
+      "source": "XMM",
+      "page": 367
+    },
+    {
+      "name": "Poltergeist",
+      "source": "XMM",
+      "page": 246
+    },
+    {
+      "name": "Pony",
+      "source": "XMM",
+      "page": 367
+    },
+    {
+      "name": "Priest",
+      "source": "XMM",
+      "page": 248
+    },
+    {
+      "name": "Priest Acolyte",
+      "source": "XMM",
+      "page": 247
+    },
+    {
+      "name": "Primeval Owlbear",
+      "source": "XMM",
+      "page": 234
+    },
+    {
+      "name": "Pseudodragon",
+      "source": "XMM",
+      "page": 249
+    },
+    {
+      "name": "Psychic Gray Ooze",
+      "source": "XMM",
+      "page": 151
+    },
+    {
+      "name": "Pteranodon",
+      "source": "XMM",
+      "page": 367
+    },
+    {
+      "name": "Purple Worm",
+      "source": "XMM",
+      "page": 250
+    },
+    {
+      "name": "Quaggoth",
+      "source": "XMM",
+      "page": 251
+    },
+    {
+      "name": "Quaggoth Thonot",
+      "source": "XMM",
+      "page": 251
+    },
+    {
+      "name": "Quasit",
+      "source": "XMM",
+      "page": 252
+    },
+    {
+      "name": "Questing Knight",
+      "source": "XMM",
+      "page": 184
+    },
+    {
+      "name": "Rakshasa",
+      "source": "XMM",
+      "page": 253
+    },
+    {
+      "name": "Rat",
+      "source": "XMM",
+      "page": 367
+    },
+    {
+      "name": "Raven",
+      "source": "XMM",
+      "page": 368
+    },
+    {
+      "name": "Red Dragon Wyrmling",
+      "source": "XMM",
+      "page": 254
+    },
+    {
+      "name": "Red Slaad",
+      "source": "XMM",
+      "page": 285
+    },
+    {
+      "name": "Reef Shark",
+      "source": "XMM",
+      "page": 368
+    },
+    {
+      "name": "Remorhaz",
+      "source": "XMM",
+      "page": 258
+    },
+    {
+      "name": "Revenant",
+      "source": "XMM",
+      "page": 259
+    },
+    {
+      "name": "Rhinoceros",
+      "source": "XMM",
+      "page": 368
+    },
+    {
+      "name": "Riding Horse",
+      "source": "XMM",
+      "page": 368
+    },
+    {
+      "name": "Roc",
+      "source": "XMM",
+      "page": 261
+    },
+    {
+      "name": "Roper",
+      "source": "XMM",
+      "page": 262
+    },
+    {
+      "name": "Rust Monster",
+      "source": "XMM",
+      "page": 263
+    },
+    {
+      "name": "Saber-Toothed Tiger",
+      "source": "XMM",
+      "page": 369
+    },
+    {
+      "name": "Sahuagin Baron",
+      "source": "XMM",
+      "page": 265
+    },
+    {
+      "name": "Sahuagin Priest",
+      "source": "XMM",
+      "page": 265
+    },
+    {
+      "name": "Sahuagin Warrior",
+      "source": "XMM",
+      "page": 264
+    },
+    {
+      "name": "Salamander",
+      "source": "XMM",
+      "page": 267
+    },
+    {
+      "name": "Salamander Fire Snake",
+      "source": "XMM",
+      "page": 266
+    },
+    {
+      "name": "Salamander Inferno Master",
+      "source": "XMM",
+      "page": 267
+    },
+    {
+      "name": "Satyr",
+      "source": "XMM",
+      "page": 268
+    },
+    {
+      "name": "Satyr Revelmaster",
+      "source": "XMM",
+      "page": 268
+    },
+    {
+      "name": "Scarecrow",
+      "source": "XMM",
+      "page": 269
+    },
+    {
+      "name": "Scorpion",
+      "source": "XMM",
+      "page": 369
+    },
+    {
+      "name": "Scout",
+      "source": "XMM",
+      "page": 270
+    },
+    {
+      "name": "Scout Captain",
+      "source": "XMM",
+      "page": 270
+    },
+    {
+      "name": "Sea Hag",
+      "source": "XMM",
+      "page": 271
+    },
+    {
+      "name": "Seahorse",
+      "source": "XMM",
+      "page": 369
+    },
+    {
+      "name": "Shadow",
+      "source": "XMM",
+      "page": 272
+    },
+    {
+      "name": "Shadow Demon",
+      "source": "XMM",
+      "page": 273
+    },
+    {
+      "name": "Shadow Dragon",
+      "source": "XMM",
+      "page": 275
+    },
+    {
+      "name": "Shambling Mound",
+      "source": "XMM",
+      "page": 276
+    },
+    {
+      "name": "Shield Guardian",
+      "source": "XMM",
+      "page": 277
+    },
+    {
+      "name": "Shrieker Fungus",
+      "source": "XMM",
+      "page": 125
+    },
+    {
+      "name": "Silver Dragon Wyrmling",
+      "source": "XMM",
+      "page": 278
+    },
+    {
+      "name": "Skeleton",
+      "source": "XMM",
+      "page": 282
+    },
+    {
+      "name": "Slaad Tadpole",
+      "source": "XMM",
+      "page": 284
+    },
+    {
+      "name": "Smoke Mephit",
+      "source": "XMM",
+      "page": 208
+    },
+    {
+      "name": "Solar",
+      "source": "XMM",
+      "page": 288
+    },
+    {
+      "name": "Spectator",
+      "source": "XMM",
+      "page": 289
+    },
+    {
+      "name": "Specter",
+      "source": "XMM",
+      "page": 290
+    },
+    {
+      "name": "Sphinx of Lore",
+      "source": "XMM",
+      "page": 293
+    },
+    {
+      "name": "Sphinx of Secrets",
+      "source": "XMM",
+      "page": 292
+    },
+    {
+      "name": "Sphinx of Valor",
+      "source": "XMM",
+      "page": 294
+    },
+    {
+      "name": "Sphinx of Wonder",
+      "source": "XMM",
+      "page": 291
+    },
+    {
+      "name": "Spider",
+      "source": "XMM",
+      "page": 369
+    },
+    {
+      "name": "Spined Devil",
+      "source": "XMM",
+      "page": 296
+    },
+    {
+      "name": "Spirit Naga",
+      "source": "XMM",
+      "page": 297
+    },
+    {
+      "name": "Sprite",
+      "source": "XMM",
+      "page": 298
+    },
+    {
+      "name": "Spy",
+      "source": "XMM",
+      "page": 295
+    },
+    {
+      "name": "Spy Master",
+      "source": "XMM",
+      "page": 295
+    },
+    {
+      "name": "Steam Mephit",
+      "source": "XMM",
+      "page": 208
+    },
+    {
+      "name": "Stirge",
+      "source": "XMM",
+      "page": 299
+    },
+    {
+      "name": "Stone Giant",
+      "source": "XMM",
+      "page": 300
+    },
+    {
+      "name": "Stone Golem",
+      "source": "XMM",
+      "page": 301
+    },
+    {
+      "name": "Storm Giant",
+      "source": "XMM",
+      "page": 302
+    },
+    {
+      "name": "Succubus",
+      "source": "XMM",
+      "page": 303
+    },
+    {
+      "name": "Swarm of Bats",
+      "source": "XMM",
+      "page": 370
+    },
+    {
+      "name": "Swarm of Crawling Claws",
+      "source": "XMM",
+      "page": 83
+    },
+    {
+      "name": "Swarm of Dretches",
+      "source": "XMM",
+      "page": 104
+    },
+    {
+      "name": "Swarm of Insects",
+      "source": "XMM",
+      "page": 370
+    },
+    {
+      "name": "Swarm of Larvae",
+      "source": "XMM",
+      "page": 193
+    },
+    {
+      "name": "Swarm of Lemures",
+      "source": "XMM",
+      "page": 194
+    },
+    {
+      "name": "Swarm of Piranhas",
+      "source": "XMM",
+      "page": 370
+    },
+    {
+      "name": "Swarm of Rats",
+      "source": "XMM",
+      "page": 370
+    },
+    {
+      "name": "Swarm of Ravens",
+      "source": "XMM",
+      "page": 371
+    },
+    {
+      "name": "Swarm of Stirges",
+      "source": "XMM",
+      "page": 299
+    },
+    {
+      "name": "Swarm of Venomous Snakes",
+      "source": "XMM",
+      "page": 371
+    },
+    {
+      "name": "Tarrasque",
+      "source": "XMM",
+      "page": 305
+    },
+    {
+      "name": "Thri-kreen Marauder",
+      "source": "XMM",
+      "page": 306
+    },
+    {
+      "name": "Thri-kreen Psion",
+      "source": "XMM",
+      "page": 306
+    },
+    {
+      "name": "Tiger",
+      "source": "XMM",
+      "page": 371
+    },
+    {
+      "name": "Tough",
+      "source": "XMM",
+      "page": 307
+    },
+    {
+      "name": "Tough Boss",
+      "source": "XMM",
+      "page": 307
+    },
+    {
+      "name": "Treant",
+      "source": "XMM",
+      "page": 308
+    },
+    {
+      "name": "Tree Blight",
+      "source": "XMM",
+      "page": 44
+    },
+    {
+      "name": "Triceratops",
+      "source": "XMM",
+      "page": 372
+    },
+    {
+      "name": "Troglodyte",
+      "source": "XMM",
+      "page": 309
+    },
+    {
+      "name": "Troll",
+      "source": "XMM",
+      "page": 310
+    },
+    {
+      "name": "Troll Limb",
+      "source": "XMM",
+      "page": 310
+    },
+    {
+      "name": "Twig Blight",
+      "source": "XMM",
+      "page": 43
+    },
+    {
+      "name": "Tyrannosaurus Rex",
+      "source": "XMM",
+      "page": 372
+    },
+    {
+      "name": "Ultroloth",
+      "source": "XMM",
+      "page": 311
+    },
+    {
+      "name": "Umber Hulk",
+      "source": "XMM",
+      "page": 312
+    },
+    {
+      "name": "Unicorn",
+      "source": "XMM",
+      "page": 313
+    },
+    {
+      "name": "Vampire",
+      "source": "XMM",
+      "page": 317
+    },
+    {
+      "name": "Vampire Familiar",
+      "source": "XMM",
+      "page": 314
+    },
+    {
+      "name": "Vampire Nightbringer",
+      "source": "XMM",
+      "page": 316
+    },
+    {
+      "name": "Vampire Spawn",
+      "source": "XMM",
+      "page": 315
+    },
+    {
+      "name": "Vampire Umbral Lord",
+      "source": "XMM",
+      "page": 318
+    },
+    {
+      "name": "Venomous Snake",
+      "source": "XMM",
+      "page": 372
+    },
+    {
+      "name": "Vine Blight",
+      "source": "XMM",
+      "page": 44
+    },
+    {
+      "name": "Violet Fungus",
+      "source": "XMM",
+      "page": 126
+    },
+    {
+      "name": "Violet Fungus Necrohulk",
+      "source": "XMM",
+      "page": 126
+    },
+    {
+      "name": "Vrock",
+      "source": "XMM",
+      "page": 319
+    },
+    {
+      "name": "Vulture",
+      "source": "XMM",
+      "page": 372
+    },
+    {
+      "name": "Warhorse",
+      "source": "XMM",
+      "page": 373
+    },
+    {
+      "name": "Warhorse Skeleton",
+      "source": "XMM",
+      "page": 282
+    },
+    {
+      "name": "Warrior Commander",
+      "source": "XMM",
+      "page": 321
+    },
+    {
+      "name": "Warrior Infantry",
+      "source": "XMM",
+      "page": 320
+    },
+    {
+      "name": "Warrior Veteran",
+      "source": "XMM",
+      "page": 320
+    },
+    {
+      "name": "Water Elemental",
+      "source": "XMM",
+      "page": 322
+    },
+    {
+      "name": "Water Weird",
+      "source": "XMM",
+      "page": 323
+    },
+    {
+      "name": "Weasel",
+      "source": "XMM",
+      "page": 372
+    },
+    {
+      "name": "Werebear",
+      "source": "XMM",
+      "page": 324
+    },
+    {
+      "name": "Wereboar",
+      "source": "XMM",
+      "page": 325
+    },
+    {
+      "name": "Wererat",
+      "source": "XMM",
+      "page": 325
+    },
+    {
+      "name": "Weretiger",
+      "source": "XMM",
+      "page": 326
+    },
+    {
+      "name": "Werewolf",
+      "source": "XMM",
+      "page": 327
+    },
+    {
+      "name": "White Dragon Wyrmling",
+      "source": "XMM",
+      "page": 328
+    },
+    {
+      "name": "Wight",
+      "source": "XMM",
+      "page": 332
+    },
+    {
+      "name": "Will-o'-Wisp",
+      "source": "XMM",
+      "page": 333
+    },
+    {
+      "name": "Winged Kobold",
+      "source": "XMM",
+      "page": 185
+    },
+    {
+      "name": "Winter Wolf",
+      "source": "XMM",
+      "page": 334
+    },
+    {
+      "name": "Wolf",
+      "source": "XMM",
+      "page": 373
+    },
+    {
+      "name": "Worg",
+      "source": "XMM",
+      "page": 335
+    },
+    {
+      "name": "Wraith",
+      "source": "XMM",
+      "page": 336
+    },
+    {
+      "name": "Wyvern",
+      "source": "XMM",
+      "page": 337
+    },
+    {
+      "name": "Xorn",
+      "source": "XMM",
+      "page": 338
+    },
+    {
+      "name": "Yeti",
+      "source": "XMM",
+      "page": 339
+    },
+    {
+      "name": "Yochlol",
+      "source": "XMM",
+      "page": 341
+    },
+    {
+      "name": "Young Black Dragon",
+      "source": "XMM",
+      "page": 38
+    },
+    {
+      "name": "Young Blue Dragon",
+      "source": "XMM",
+      "page": 48
+    },
+    {
+      "name": "Young Brass Dragon",
+      "source": "XMM",
+      "page": 54
+    },
+    {
+      "name": "Young Bronze Dragon",
+      "source": "XMM",
+      "page": 58
+    },
+    {
+      "name": "Young Copper Dragon",
+      "source": "XMM",
+      "page": 78
+    },
+    {
+      "name": "Young Gold Dragon",
+      "source": "XMM",
+      "page": 144
+    },
+    {
+      "name": "Young Green Dragon",
+      "source": "XMM",
+      "page": 152
+    },
+    {
+      "name": "Young Red Dragon",
+      "source": "XMM",
+      "page": 254
+    },
+    {
+      "name": "Young Remorhaz",
+      "source": "XMM",
+      "page": 258
+    },
+    {
+      "name": "Young Silver Dragon",
+      "source": "XMM",
+      "page": 278
+    },
+    {
+      "name": "Young White Dragon",
+      "source": "XMM",
+      "page": 328
+    },
+    {
+      "name": "Yuan-ti Abomination",
+      "source": "XMM",
+      "page": 345
+    },
+    {
+      "name": "Yuan-ti Infiltrator",
+      "source": "XMM",
+      "page": 342
+    },
+    {
+      "name": "Yuan-ti Malison (Type 1)",
+      "source": "XMM",
+      "page": 343
+    },
+    {
+      "name": "Yuan-ti Malison (Type 2)",
+      "source": "XMM",
+      "page": 343
+    },
+    {
+      "name": "Yuan-ti Malison (Type 3)",
+      "source": "XMM",
+      "page": 344
+    },
+    {
+      "name": "Zombie",
+      "source": "XMM",
+      "page": 346
+    }
+  ]
+}

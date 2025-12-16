@@ -1,0 +1,104 @@
+{
+  "monster": [
+    {
+      "name": "Aberrant Spirit",
+      "source": "TCE",
+      "page": 109
+    },
+    {
+      "name": "Adult Red Dracolich",
+      "source": "TCE",
+      "page": 137
+    },
+    {
+      "name": "Beast of the Land",
+      "source": "TCE",
+      "page": 61
+    },
+    {
+      "name": "Beast of the Sea",
+      "source": "TCE",
+      "page": 61
+    },
+    {
+      "name": "Beast of the Sky",
+      "source": "TCE",
+      "page": 61
+    },
+    {
+      "name": "Bestial Spirit",
+      "source": "TCE",
+      "page": 109
+    },
+    {
+      "name": "Celestial Spirit",
+      "source": "TCE",
+      "page": 110
+    },
+    {
+      "name": "Construct Spirit",
+      "source": "TCE",
+      "page": 111
+    },
+    {
+      "name": "Dancing Item",
+      "source": "TCE",
+      "page": 29
+    },
+    {
+      "name": "Elemental Spirit",
+      "source": "TCE",
+      "page": 111
+    },
+    {
+      "name": "Fey Spirit",
+      "source": "TCE",
+      "page": 112
+    },
+    {
+      "name": "Fiendish Spirit",
+      "source": "TCE",
+      "page": 112
+    },
+    {
+      "name": "Homunculus Servant",
+      "source": "TCE",
+      "page": 22
+    },
+    {
+      "name": "Juvenile Mimic",
+      "source": "TCE",
+      "page": 167
+    },
+    {
+      "name": "Mighty Servant of Leuk-o",
+      "source": "TCE",
+      "page": 131
+    },
+    {
+      "name": "Reflection",
+      "source": "TCE",
+      "page": 158
+    },
+    {
+      "name": "Shadow Spirit",
+      "source": "TCE",
+      "page": 114
+    },
+    {
+      "name": "Steel Defender",
+      "source": "TCE",
+      "page": 19
+    },
+    {
+      "name": "Undead Spirit",
+      "source": "TCE",
+      "page": 114
+    },
+    {
+      "name": "Wildfire Spirit",
+      "source": "TCE",
+      "page": 40
+    }
+  ]
+}

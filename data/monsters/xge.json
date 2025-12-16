@@ -1,0 +1,14 @@
+{
+  "monster": [
+    {
+      "name": "Hound of Ill Omen",
+      "source": "XGE",
+      "page": 50
+    },
+    {
+      "name": "Tiny Servant",
+      "source": "XGE",
+      "page": 169
+    }
+  ]
+}
