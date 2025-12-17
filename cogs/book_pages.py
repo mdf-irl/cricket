@@ -18,7 +18,7 @@ MAX_PAGES_BY_SOURCE = {
     "TCE": 192,
     "MPMM": 288,
     "XMM": 384,
-    "XDMG": 388,
+    "XDMG": 379,
 }
 SOURCE_DISPLAY = {
     "XPHB": "Player's Handbook (2024)",
