@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import asyncio
 from typing import Optional
 
 import discord
@@ -11,6 +12,9 @@ from playwright.async_api import async_playwright
 from logger_config import get_logger
 
 logger = get_logger(__name__)
+
+# Precompile regex used for class formatting
+CLASS_PAIR_PATTERN = re.compile(r"([A-Za-z][A-Za-z'\-\s]+?)\s+(\d{1,2})")
 
 
 async def _has_proficiency_indicator(element) -> bool:
@@ -70,6 +74,10 @@ class Sheet(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.character_map = self.load_character_map()
+        # Playwright browser reuse to avoid relaunching for every request
+        self._pw = None
+        self._browser = None
+        self._browser_lock = asyncio.Lock()
 
     def load_character_map(self) -> dict[str, str]:
         """Load character map from JSON file with error handling."""
@@ -90,12 +98,38 @@ class Sheet(commands.Cog):
 
     def _format_classes(self, raw: str) -> str:
         """Format classes: single -> name only; multi -> Name (L) / Name (L)."""
-        pairs = re.findall(r"([A-Za-z][A-Za-z'\-\s]+?)\s+(\d{1,2})", raw or "")
+        pairs = CLASS_PAIR_PATTERN.findall(raw or "")
         if not pairs:
             return raw.strip() if raw else ""
         if len(pairs) == 1:
             return pairs[0][0].strip()
         return " / ".join(f"{name.strip()} ({lvl})" for name, lvl in pairs)
+
+    async def _ensure_browser(self):
+        """Ensure a shared Playwright browser is available."""
+        async with self._browser_lock:
+            if self._browser is not None:
+                return
+            # Start Playwright and launch a single Chromium browser instance
+            self._pw = await async_playwright().start()
+            self._browser = await self._pw.chromium.launch(headless=True)
+
+    async def _close_browser(self):
+        try:
+            if self._browser:
+                await self._browser.close()
+        finally:
+            self._browser = None
+            if self._pw:
+                await self._pw.stop()
+                self._pw = None
+
+    def cog_unload(self) -> None:
+        # Schedule async cleanup
+        try:
+            asyncio.create_task(self._close_browser())
+        except Exception:
+            pass
 
     async def _get_abilities(self, page) -> list[str]:
         """Return all 6 ability scores formatted with abbreviations."""
@@ -225,51 +259,64 @@ class Sheet(commands.Cog):
             Dictionary of character data or None on error.
         """
         try:
-            async with async_playwright() as p:
-                browser = await p.chromium.launch(headless=True)
-                page = await browser.new_page()
-                
-                logger.info(f"Navigating to {url}")
-                await page.goto(url, wait_until="networkidle")
-                await page.wait_for_timeout(2000)
-                
-                # Extract character name from page title
-                title = await page.title()
-                name_match = re.search(r"^(.+?)'s Character Sheet", title)
-                name = name_match.group(1) if name_match else ""
-                
-                # Extract all data
-                level = await self._get_element_text(page, ".ddbc-character-progression-summary__level")
-                race = await self._get_element_text(page, ".ddbc-character-summary__race")
-                classes = self._format_classes(await self._get_element_text(page, ".ddbc-character-summary__classes"))
-                max_hp = await self._get_element_text(page, "[data-testid='max-hp']")
-                ac = await self._get_element_text(page, ".ddbc-armor-class-box__value")
-                
-                # Extract walking speed
-                speed_text = await self._get_element_text(page, ".ct-quick-info__box--speed")
-                speed_match = re.search(r"(\d+)\s*ft", speed_text)
-                speed = f"{speed_match.group(1)} ft." if speed_match else ""
-                
-                abilities = await self._get_abilities(page)
-                avatar = (await self._get_avatar(page)).split("?")[0]  # Strip query params
-                saves = await self._get_saving_throws(page)
-                skills = await self._get_skills(page)
-                
-                await browser.close()
-                
-                return {
-                    "name": name,
-                    "level": level,
-                    "race": race,
-                    "classes": classes,
-                    "max_hp": max_hp,
-                    "ac": ac,
-                    "speed": speed,
-                    "abilities": abilities,
-                    "avatar": avatar,
-                    "saving_throws": saves,
-                    "skills": skills,
-                }
+            # Ensure a shared browser exists
+            await self._ensure_browser()
+            context = await self._browser.new_context()
+            page = await context.new_page()
+
+            logger.info(f"Navigating to {url}")
+            await page.goto(url, wait_until="networkidle")
+            await page.wait_for_timeout(1000)
+
+            # Extract character name from page title
+            title = await page.title()
+            name_match = re.search(r"^(.+?)'s Character Sheet", title)
+            name = name_match.group(1) if name_match else ""
+
+            # Extract simple fields first
+            level_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-progression-summary__level"))
+            race_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-summary__race"))
+            classes_text_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-summary__classes"))
+            max_hp_task = asyncio.create_task(self._get_element_text(page, "[data-testid='max-hp']"))
+            ac_task = asyncio.create_task(self._get_element_text(page, ".ddbc-armor-class-box__value"))
+            speed_text_task = asyncio.create_task(self._get_element_text(page, ".ct-quick-info__box--speed"))
+
+            # Heavier sections in parallel
+            abilities_task = asyncio.create_task(self._get_abilities(page))
+            avatar_task = asyncio.create_task(self._get_avatar(page))
+            saves_task = asyncio.create_task(self._get_saving_throws(page))
+            skills_task = asyncio.create_task(self._get_skills(page))
+
+            # Await simple tasks
+            level, race, classes_text, max_hp, ac, speed_text = await asyncio.gather(
+                level_task, race_task, classes_text_task, max_hp_task, ac_task, speed_text_task
+            )
+            classes = self._format_classes(classes_text)
+
+            speed_match = re.search(r"(\d+)\s*ft", speed_text)
+            speed = f"{speed_match.group(1)} ft." if speed_match else ""
+
+            # Await heavier sections
+            abilities, avatar, saves, skills = await asyncio.gather(
+                abilities_task, avatar_task, saves_task, skills_task
+            )
+            avatar = (avatar or "").split("?")[0]
+
+            await context.close()
+
+            return {
+                "name": name,
+                "level": level,
+                "race": race,
+                "classes": classes,
+                "max_hp": max_hp,
+                "ac": ac,
+                "speed": speed,
+                "abilities": abilities,
+                "avatar": avatar,
+                "saving_throws": saves,
+                "skills": skills,
+            }
         except Exception as e:
             logger.error(f"Error scraping character page {url}: {type(e).__name__}: {e}")
             return None
