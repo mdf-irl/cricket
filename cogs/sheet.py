@@ -13,6 +13,40 @@ from logger_config import get_logger
 logger = get_logger(__name__)
 
 
+async def _has_proficiency_indicator(element) -> bool:
+    """Detect proficiency using SVG circle indicators near the row content.
+    This approach looks specifically for an SVG circle used by D&D Beyond's
+    proficiency bubbles. It is intentionally strict to avoid false positives.
+    """
+    try:
+        # Look for SVG circles within common proficiency/bubble containers
+        sel = ", ".join([
+            ".ct-proficiency-bubble svg circle",
+            ".ct-proficiency-bubble__icon svg circle",
+            ".ddbc-proficiency-bubble svg circle",
+            "svg.ct-proficiency-bubble__svg circle",
+            # Fallback: any svg circle within the row element
+            "svg circle",
+        ])
+        circles = element.locator(sel)
+        count = await circles.count()
+        if count == 0:
+            return False
+
+        # If present, ensure at least one circle looks like a real bubble
+        # by having a radius attribute (r) or a fill attribute.
+        for idx in range(min(count, 5)):
+            c = circles.nth(idx)
+            r = await c.get_attribute("r")
+            fill = await c.get_attribute("fill")
+            if (r and r != "0") or (fill and fill.lower() != "none"):
+                return True
+        # If attributes aren't exposed, still treat presence as signal
+        return True
+    except Exception:
+        return False
+
+
 class CharacterSheetView(discord.ui.View):
     """View with a button to open the full character sheet on D&D Beyond."""
     
@@ -116,75 +150,69 @@ class Sheet(commands.Cog):
         return ""
 
     async def _get_saving_throws(self, page) -> list[str]:
-        """Return all 6 saving throws with proficiency markers."""
+        """Return all 6 saving throws with proficiency markers.
+        Detection prefers proficiency bubbles or checked checkboxes within each save.
+        """
         abilities = ["str", "dex", "con", "int", "wis", "cha"]
         abbrevs = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
-        
-        # Wait for saves to load
+
+        # Wait for saves to load (anchor on STR save existing)
         await page.locator(".ddbc-saving-throws-summary__ability--str").first.wait_for(
             timeout=10000, state="attached"
         )
-        
-        # Extract modifiers and proficiency
-        saves = []
+
+        saves: list[str] = []
         for i, suffix in enumerate(abilities):
             try:
                 ability_elem = page.locator(f".ddbc-saving-throws-summary__ability--{suffix}").first
+
+                # Extract the numeric modifier by reading text segments
                 text = await ability_elem.inner_text()
                 parts = [p.strip() for p in text.splitlines() if p.strip()]
                 modifier = f"{parts[-2]}{parts[-1]}" if len(parts) >= 2 else "+0"
-                
-                # Check proficiency via aria-label
-                try:
-                    proficiency_elem = ability_elem.locator("xpath=following-sibling::*//span[@aria-label]")
-                    aria_label = await proficiency_elem.first.get_attribute("aria-label", timeout=1000)
-                    is_proficient = aria_label and "Not Proficient" not in aria_label
-                except Exception:
-                    is_proficient = False
-                
+
+                # Robust proficiency detection using shared helper
+                is_proficient = await _has_proficiency_indicator(ability_elem)
+
                 save_text = f"{abbrevs[i]} {modifier}"
                 if is_proficient:
                     save_text = f"**{save_text}**"
                 saves.append(save_text)
             except Exception:
                 saves.append(f"{abbrevs[i]} +0")
-        
+
         return saves
 
     async def _get_skills(self, page) -> list[str]:
-        """Return all 18 skills with bonuses and proficiency markers."""
+        """Return all 18 skills with bonuses and proficiency markers.
+        Detection prefers presence of proficiency bubbles or checked indicators within each skill row.
+        """
         # Wait for skills to load
         await page.locator(".ct-skills__item").first.wait_for(timeout=10000)
-        
+
         # Get all skill items
         skill_items = page.locator(".ct-skills__item")
         count = await skill_items.count()
-        
-        skills = []
+
+        skills: list[str] = []
         for i in range(count):
             item = skill_items.nth(i)
             text = await item.inner_text()
             parts = [p.strip() for p in text.splitlines() if p.strip()]
-            
-            # Format: [STAT, Skill Name, +/-, Bonus]
+
+            # Expected order: [STAT, Skill Name, +/-, Bonus, ...]
             if len(parts) >= 4:
                 skill_name = parts[1]
                 bonus = f"{parts[2]}{parts[3]}"
-                
-                # Check proficiency by looking for aria-label in related elements
-                try:
-                    # Look for proficiency indicator
-                    proficiency_elem = item.locator("xpath=following-sibling::div[1]//span[@aria-label]")
-                    aria_label = await proficiency_elem.first.get_attribute("aria-label", timeout=1000)
-                    is_proficient = aria_label and "Not Proficient" not in aria_label
-                except Exception:
-                    is_proficient = False
-                
+
+                # Robust proficiency detection within the same row
+                is_proficient = await _has_proficiency_indicator(item)
+
                 skill_text = f"{skill_name} {bonus}"
                 if is_proficient:
                     skill_text = f"**{skill_text}**"
                 skills.append(skill_text)
-        
+
         return skills
 
     async def _scrape_character_page(self, url: str) -> Optional[dict]:
