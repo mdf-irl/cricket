@@ -58,7 +58,7 @@ class CharacterSheetView(discord.ui.View):
         super().__init__(timeout=None)
         # Add a link button
         self.add_item(discord.ui.Button(
-            label="View Full Sheet",
+            label="Open Full Sheet",
             style=discord.ButtonStyle.link,
             url=url,
             emoji="📋"
