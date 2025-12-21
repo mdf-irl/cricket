@@ -15,7 +15,7 @@ intents.members = True
 intents.presences = True
 intents.message_content = True
 
-bot = commands.Bot(command_prefix=None, intents=intents, help_command=None)
+bot = commands.Bot(command_prefix=">", intents=intents, help_command=None)
 
 async def load_cogs():
     """Load all cogs from the cogs directory."""
