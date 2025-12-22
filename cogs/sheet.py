@@ -2,6 +2,9 @@ import json
 import os
 import re
 import asyncio
+import datetime
+from datetime import timezone
+from zoneinfo import ZoneInfo
 from typing import Optional
 
 import discord
@@ -119,8 +122,24 @@ class Sheet(commands.Cog):
         if data['avatar']:
             embed.set_thumbnail(url=data['avatar'])
         
-        # Set footer with Discord member
-        # embed.set_footer(text=f"Character of {member.display_name}", icon_url=member.display_avatar.url)
+        # Set footer with Discord member and last scraped time
+        footer_text = f"Character of {member.display_name}"
+        if "_scraped_at" in data:
+            try:
+                scraped = datetime.datetime.fromisoformat(data["_scraped_at"])
+                formatted_time = scraped.strftime('%m/%d/%Y %I:%M %p')
+                # Replace UTC offset with EST/EDT
+                tz_offset = scraped.strftime('%z')
+                if tz_offset == '-0500':
+                    tz_name = 'EST'
+                elif tz_offset == '-0400':
+                    tz_name = 'EDT'
+                else:
+                    tz_name = scraped.strftime('%Z') or 'UTC'
+                footer_text += f" • Last scraped: {formatted_time} {tz_name}"
+            except (ValueError, TypeError):
+                pass
+        embed.set_footer(text=footer_text)
         
         # Core stats
         embed.add_field(
@@ -237,7 +256,14 @@ class Sheet(commands.Cog):
                     logger.warning("Remote sheet fetch returned unexpected shape; ignoring")
                     data = None
                 else:
-                    # Cache successful fetch
+                    # Cache successful fetch with timestamp (in New York timezone)
+                    try:
+                        ny_tz = ZoneInfo("America/New_York")
+                        scraped_time = datetime.datetime.now(ny_tz).isoformat()
+                    except Exception:
+                        # Fall back to UTC if timezone data unavailable
+                        scraped_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
+                    data["_scraped_at"] = scraped_time
                     self._cache[str(character_id)] = data
                     self._save_cache()
             except Exception as e:

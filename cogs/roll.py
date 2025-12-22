@@ -24,7 +24,7 @@ DICE_BLOCK_REGEX = re.compile(
 
 
 class RollView(ui.View):
-    """View with buttons to show/hide roll breakdown."""
+    """View with button to toggle roll breakdown visibility."""
 
     def __init__(self, embed_base: discord.Embed, breakdown_text: str, user_id: int):
         super().__init__(timeout=300)
@@ -39,29 +39,23 @@ class RollView(ui.View):
         if self.breakdown_visible and self.breakdown_text:
             embed.add_field(name="Roll Breakdown", value=self.breakdown_text, inline=False)
         return embed
-
-    @ui.button(label="Hide Breakdown", style=discord.ButtonStyle.secondary, emoji="📖", disabled=True)
-    async def hide_button(self, interaction: discord.Interaction, button: ui.Button):
-        """Hide the roll breakdown."""
-        if interaction.user.id != self.user_id:
-            await interaction.response.defer()
-            return
-
-        self.breakdown_visible = False
-        button.disabled = True
-        self.show_button.disabled = False
-        await interaction.response.edit_message(embed=self._get_embed(), view=self)
+    
+    def _update_button_label(self) -> None:
+        """Update the button label based on current state."""
+        label = "Hide Breakdown" if self.breakdown_visible else "Show Breakdown"
+        emoji = "📖" if self.breakdown_visible else "📋"
+        self.toggle_button.label = label
+        self.toggle_button.emoji = emoji
 
     @ui.button(label="Show Breakdown", style=discord.ButtonStyle.secondary, emoji="📋")
-    async def show_button(self, interaction: discord.Interaction, button: ui.Button):
-        """Show the roll breakdown."""
+    async def toggle_button(self, interaction: discord.Interaction, button: ui.Button):
+        """Toggle the roll breakdown visibility."""
         if interaction.user.id != self.user_id:
             await interaction.response.defer()
             return
 
-        self.breakdown_visible = True
-        button.disabled = True
-        self.hide_button.disabled = False
+        self.breakdown_visible = not self.breakdown_visible
+        self._update_button_label()
         await interaction.response.edit_message(embed=self._get_embed(), view=self)
 
 

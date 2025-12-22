@@ -47,7 +47,7 @@ class OnThisDayView(ui.View):
         embed.set_footer(text=f"🔋 Powered by Wikipedia | Event {self.current_index + 1} of {len(self.events)}")
         return embed
 
-    @ui.button(label="◀ Previous", style=discord.ButtonStyle.secondary)
+    @ui.button(label="◀", style=discord.ButtonStyle.secondary)
     async def prev_button(self, interaction: discord.Interaction, button: ui.Button) -> None:
         if interaction.user.id != self.user_id:
             await interaction.response.defer()
@@ -57,7 +57,7 @@ class OnThisDayView(ui.View):
         self._update_buttons()
         await interaction.response.edit_message(embed=self._build_embed(), view=self)
 
-    @ui.button(label="Next ▶", style=discord.ButtonStyle.secondary)
+    @ui.button(label="▶", style=discord.ButtonStyle.secondary)
     async def next_button(self, interaction: discord.Interaction, button: ui.Button) -> None:
         if interaction.user.id != self.user_id:
             await interaction.response.defer()
