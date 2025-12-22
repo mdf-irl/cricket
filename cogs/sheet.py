@@ -7,8 +7,9 @@ from typing import Optional
 import discord
 from discord.ext import commands
 from discord import app_commands
-from playwright.async_api import async_playwright
 
+from config import Config
+from http_manager import HTTP
 from logger_config import get_logger
 
 logger = get_logger(__name__)
@@ -17,38 +18,9 @@ logger = get_logger(__name__)
 CLASS_PAIR_PATTERN = re.compile(r"([A-Za-z][A-Za-z'\-\s]+?)\s+(\d{1,2})")
 
 
-async def _has_proficiency_indicator(element) -> bool:
-    """Detect proficiency using SVG circle indicators near the row content.
-    This approach looks specifically for an SVG circle used by D&D Beyond's
-    proficiency bubbles. It is intentionally strict to avoid false positives.
-    """
-    try:
-        # Look for SVG circles within common proficiency/bubble containers
-        sel = ", ".join([
-            ".ct-proficiency-bubble svg circle",
-            ".ct-proficiency-bubble__icon svg circle",
-            ".ddbc-proficiency-bubble svg circle",
-            "svg.ct-proficiency-bubble__svg circle",
-            # Fallback: any svg circle within the row element
-            "svg circle",
-        ])
-        circles = element.locator(sel)
-        count = await circles.count()
-        if count == 0:
-            return False
-
-        # If present, ensure at least one circle looks like a real bubble
-        # by having a radius attribute (r) or a fill attribute.
-        for idx in range(min(count, 5)):
-            c = circles.nth(idx)
-            r = await c.get_attribute("r")
-            fill = await c.get_attribute("fill")
-            if (r and r != "0") or (fill and fill.lower() != "none"):
-                return True
-        # If attributes aren't exposed, still treat presence as signal
-        return True
-    except Exception:
-        return False
+"""Sheet command now relies solely on a remote proxy and local cache.
+All Playwright scraping code has been removed from the bot to keep the Pi light.
+"""
 
 
 class CharacterSheetView(discord.ui.View):
@@ -66,18 +38,17 @@ class CharacterSheetView(discord.ui.View):
 
 
 class Sheet(commands.Cog):
-    """D&D character sheet cog that fetches character data from D&D Beyond."""
+    """D&D character sheet cog fetching data via proxy or cache."""
     
     DATA_FILE = os.path.join("data", "character_map.json")
+    CACHE_FILE = os.path.join("data", "sheet_cache.json")
     BASE_URL = "https://www.dndbeyond.com/characters/"
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.character_map = self.load_character_map()
-        # Playwright browser reuse to avoid relaunching for every request
-        self._pw = None
-        self._browser = None
-        self._browser_lock = asyncio.Lock()
+        # Cache in-memory map: character_id -> data
+        self._cache: dict[str, dict] = self._load_cache()
 
     def load_character_map(self) -> dict[str, str]:
         """Load character map from JSON file with error handling."""
@@ -90,11 +61,30 @@ class Sheet(commands.Cog):
             logger.error(f"Error loading {self.DATA_FILE}: {type(e).__name__}: {e}")
             return {}
 
-    async def _get_element_text(self, page, selector: str, timeout: int = 10000) -> str:
-        """Generic helper to get text from a selector."""
-        locator = page.locator(selector).first
-        await locator.wait_for(timeout=timeout)
-        return (await locator.inner_text()).strip()
+    def _load_cache(self) -> dict[str, dict]:
+        """Load previously scraped character data cache."""
+        try:
+            with open(self.CACHE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    logger.info(f"Loaded sheet cache with {len(data)} entries from {self.CACHE_FILE}")
+                    return data
+        except FileNotFoundError:
+            logger.info("No existing sheet cache; starting fresh")
+        except json.JSONDecodeError as e:
+            logger.warning(f"Invalid cache JSON {self.CACHE_FILE}: {e}; starting empty")
+        return {}
+
+    def _save_cache(self) -> None:
+        """Persist cache to disk."""
+        try:
+            os.makedirs("data", exist_ok=True)
+            with open(self.CACHE_FILE, "w", encoding="utf-8") as f:
+                json.dump(self._cache, f, indent=2)
+        except Exception as e:
+            logger.error(f"Error saving sheet cache: {type(e).__name__}: {e}")
+
+    # Scraping helpers removed; bot no longer performs direct scraping.
 
     def _format_classes(self, raw: str) -> str:
         """Format classes: single -> name only; multi -> Name (L) / Name (L)."""
@@ -105,221 +95,9 @@ class Sheet(commands.Cog):
             return pairs[0][0].strip()
         return " / ".join(f"{name.strip()} ({lvl})" for name, lvl in pairs)
 
-    async def _ensure_browser(self):
-        """Ensure a shared Playwright browser is available."""
-        async with self._browser_lock:
-            if self._browser is not None:
-                return
-            # Start Playwright and launch a single Chromium browser instance
-            self._pw = await async_playwright().start()
-            self._browser = await self._pw.chromium.launch(headless=True)
+    # No browser lifecycle management required anymore.
 
-    async def _close_browser(self):
-        try:
-            if self._browser:
-                await self._browser.close()
-        finally:
-            self._browser = None
-            if self._pw:
-                await self._pw.stop()
-                self._pw = None
-
-    def cog_unload(self) -> None:
-        # Schedule async cleanup
-        try:
-            asyncio.create_task(self._close_browser())
-        except Exception:
-            pass
-
-    async def _get_abilities(self, page) -> list[str]:
-        """Return all 6 ability scores formatted with abbreviations."""
-        locator = page.locator(".ddbc-ability-summary")
-        await locator.first.wait_for(timeout=10000)
-        raw_texts = await locator.all_inner_texts()
-        
-        # Map full names to abbreviations
-        abbrev_map = {
-            "STRENGTH": "STR",
-            "DEXTERITY": "DEX",
-            "CONSTITUTION": "CON",
-            "INTELLIGENCE": "INT",
-            "WISDOM": "WIS",
-            "CHARISMA": "CHA"
-        }
-        
-        abilities = []
-        for text in raw_texts:
-            parts = [p.strip() for p in text.splitlines() if p.strip()]
-            if len(parts) >= 4:
-                full_name = parts[0].upper()
-                abbrev = abbrev_map.get(full_name, parts[0][:3].upper())
-                abilities.append(f"{abbrev} {parts[1]}{parts[2]} ({parts[3]})")
-            else:
-                abilities.append(" ".join(parts))
-        return abilities
-
-    async def _get_avatar(self, page) -> str:
-        """Return the avatar image URL."""
-        portrait = page.locator(".ddbc-character-avatar__portrait").first
-        await portrait.wait_for(timeout=10000)
-        
-        # Try direct src attribute
-        if src := await portrait.get_attribute("src"):
-            return src.strip()
-        
-        # Try img child
-        try:
-            img = page.locator(".ddbc-character-avatar__portrait img").first
-            await img.wait_for(timeout=3000)
-            if src := await img.get_attribute("src"):
-                return src.strip()
-        except Exception:
-            pass
-        
-        # Try background-image in style
-        if style := await portrait.get_attribute("style"):
-            if match := re.search(r"background-image:\s*url\(['\"]?(.*?)['\"]?\)", style):
-                return match.group(1)
-        
-        return ""
-
-    async def _get_saving_throws(self, page) -> list[str]:
-        """Return all 6 saving throws with proficiency markers.
-        Detection prefers proficiency bubbles or checked checkboxes within each save.
-        """
-        abilities = ["str", "dex", "con", "int", "wis", "cha"]
-        abbrevs = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
-
-        # Wait for saves to load (anchor on STR save existing)
-        await page.locator(".ddbc-saving-throws-summary__ability--str").first.wait_for(
-            timeout=10000, state="attached"
-        )
-
-        saves: list[str] = []
-        for i, suffix in enumerate(abilities):
-            try:
-                ability_elem = page.locator(f".ddbc-saving-throws-summary__ability--{suffix}").first
-
-                # Extract the numeric modifier by reading text segments
-                text = await ability_elem.inner_text()
-                parts = [p.strip() for p in text.splitlines() if p.strip()]
-                modifier = f"{parts[-2]}{parts[-1]}" if len(parts) >= 2 else "+0"
-
-                # Robust proficiency detection using shared helper
-                is_proficient = await _has_proficiency_indicator(ability_elem)
-
-                save_text = f"{abbrevs[i]} {modifier}"
-                if is_proficient:
-                    save_text = f"**{save_text}**"
-                saves.append(save_text)
-            except Exception:
-                saves.append(f"{abbrevs[i]} +0")
-
-        return saves
-
-    async def _get_skills(self, page) -> list[str]:
-        """Return all 18 skills with bonuses and proficiency markers.
-        Detection prefers presence of proficiency bubbles or checked indicators within each skill row.
-        """
-        # Wait for skills to load
-        await page.locator(".ct-skills__item").first.wait_for(timeout=10000)
-
-        # Get all skill items
-        skill_items = page.locator(".ct-skills__item")
-        count = await skill_items.count()
-
-        skills: list[str] = []
-        for i in range(count):
-            item = skill_items.nth(i)
-            text = await item.inner_text()
-            parts = [p.strip() for p in text.splitlines() if p.strip()]
-
-            # Expected order: [STAT, Skill Name, +/-, Bonus, ...]
-            if len(parts) >= 4:
-                skill_name = parts[1]
-                bonus = f"{parts[2]}{parts[3]}"
-
-                # Robust proficiency detection within the same row
-                is_proficient = await _has_proficiency_indicator(item)
-
-                skill_text = f"{skill_name} {bonus}"
-                if is_proficient:
-                    skill_text = f"**{skill_text}**"
-                skills.append(skill_text)
-
-        return skills
-
-    async def _scrape_character_page(self, url: str) -> Optional[dict]:
-        """Scrape character data from D&D Beyond.
-        
-        Args:
-            url: Full D&D Beyond character URL.
-            
-        Returns:
-            Dictionary of character data or None on error.
-        """
-        try:
-            # Ensure a shared browser exists
-            await self._ensure_browser()
-            context = await self._browser.new_context()
-            page = await context.new_page()
-
-            logger.info(f"Navigating to {url}")
-            await page.goto(url, wait_until="networkidle")
-            await page.wait_for_timeout(1000)
-
-            # Extract character name from page title
-            title = await page.title()
-            name_match = re.search(r"^(.+?)'s Character Sheet", title)
-            name = name_match.group(1) if name_match else ""
-
-            # Extract simple fields first
-            level_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-progression-summary__level"))
-            race_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-summary__race"))
-            classes_text_task = asyncio.create_task(self._get_element_text(page, ".ddbc-character-summary__classes"))
-            max_hp_task = asyncio.create_task(self._get_element_text(page, "[data-testid='max-hp']"))
-            ac_task = asyncio.create_task(self._get_element_text(page, ".ddbc-armor-class-box__value"))
-            speed_text_task = asyncio.create_task(self._get_element_text(page, ".ct-quick-info__box--speed"))
-
-            # Heavier sections in parallel
-            abilities_task = asyncio.create_task(self._get_abilities(page))
-            avatar_task = asyncio.create_task(self._get_avatar(page))
-            saves_task = asyncio.create_task(self._get_saving_throws(page))
-            skills_task = asyncio.create_task(self._get_skills(page))
-
-            # Await simple tasks
-            level, race, classes_text, max_hp, ac, speed_text = await asyncio.gather(
-                level_task, race_task, classes_text_task, max_hp_task, ac_task, speed_text_task
-            )
-            classes = self._format_classes(classes_text)
-
-            speed_match = re.search(r"(\d+)\s*ft", speed_text)
-            speed = f"{speed_match.group(1)} ft." if speed_match else ""
-
-            # Await heavier sections
-            abilities, avatar, saves, skills = await asyncio.gather(
-                abilities_task, avatar_task, saves_task, skills_task
-            )
-            avatar = (avatar or "").split("?")[0]
-
-            await context.close()
-
-            return {
-                "name": name,
-                "level": level,
-                "race": race,
-                "classes": classes,
-                "max_hp": max_hp,
-                "ac": ac,
-                "speed": speed,
-                "abilities": abilities,
-                "avatar": avatar,
-                "saving_throws": saves,
-                "skills": skills,
-            }
-        except Exception as e:
-            logger.error(f"Error scraping character page {url}: {type(e).__name__}: {e}")
-            return None
+    # All scraping logic removed.
 
     def _format_character_embed(self, data: dict, member: discord.Member) -> discord.Embed:
         """Format character data into a Discord embed.
@@ -445,21 +223,40 @@ class Sheet(commands.Cog):
             )
             return
         
-        # Scrape character data
-        url = f"{self.BASE_URL}{character_id}"
-        logger.info(f"Fetching character {character_id} for member {discord_member.display_name}")
-        
-        data = await self._scrape_character_page(url)
-        
-        if not data:
-            await interaction.followup.send(
-                "❌ Failed to fetch character data from D&D Beyond. The character may be private or the page may have changed.",
-                ephemeral=True
-            )
-            logger.error(f"Failed to scrape character {character_id}")
-            return
+        # Prefer remote proxy if configured; else fall back to cache
+        data: dict | None = None
+        remote_base = getattr(Config, "SHEET_PROXY_BASE", None)
+        if remote_base:
+            proxy_url = f"{remote_base.rstrip('/')}/sheet/{character_id}"
+            logger.info(f"Attempting remote sheet fetch from {proxy_url}")
+            try:
+                data = await HTTP.fetch_json(proxy_url)
+                # Minimal validation
+                required_keys = {"name", "level", "race", "classes", "max_hp", "ac", "speed", "abilities", "avatar", "saving_throws", "skills"}
+                if not isinstance(data, dict) or not required_keys.issubset(data.keys()):
+                    logger.warning("Remote sheet fetch returned unexpected shape; ignoring")
+                    data = None
+                else:
+                    # Cache successful fetch
+                    self._cache[str(character_id)] = data
+                    self._save_cache()
+            except Exception as e:
+                logger.warning(f"Remote sheet fetch failed: {type(e).__name__}: {e}")
+
+        if data is None:
+            # Fallback to cached data
+            cached = self._cache.get(str(character_id))
+            if not cached:
+                await interaction.followup.send(
+                    "❌ Sheet proxy unavailable and no cached data found. Try again when your PC is online.",
+                    ephemeral=True,
+                )
+                return
+            data = cached
         
         # Format and send embed with button
+        # Build canonical URL for the button
+        url = f"{self.BASE_URL}{character_id}"
         embed = self._format_character_embed(data, discord_member)
         view = CharacterSheetView(url)
         await interaction.followup.send(embed=embed, view=view)

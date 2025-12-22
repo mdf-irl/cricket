@@ -14,6 +14,7 @@ class Config:
     TEST_GUILD_ID: int | None = None
     OPENWEATHERMAP_KEY: str | None = None
     PRIVATE_URL_BASE: str | None = None
+    SHEET_PROXY_BASE: str | None = None
     
     @classmethod
     def load(cls) -> bool:
@@ -24,6 +25,7 @@ class Config:
         """
         cls.DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
         cls.PRIVATE_URL_BASE = os.getenv("PRIVATE_URL_BASE")
+        cls.SHEET_PROXY_BASE = os.getenv("SHEET_PROXY_BASE")
         
         guild_id_str = os.getenv("TEST_GUILD_ID")
         if guild_id_str:
@@ -36,6 +38,10 @@ class Config:
         cls.OPENWEATHERMAP_KEY = os.getenv("OPENWEATHERMAP_KEY")
         if not cls.OPENWEATHERMAP_KEY:
             logger.warning("OPENWEATHERMAP_KEY not set — weather commands will be disabled")
+        
+        # Optional remote sheet proxy base URL
+        if not cls.SHEET_PROXY_BASE:
+            logger.warning("SHEET_PROXY_BASE not set — /sheet will use cached data if PC is unavailable")
         
         # Validate required settings
         if not cls.DISCORD_TOKEN:

@@ -1,0 +1,48 @@
+{
+  "153930651": {
+    "name": "Clerissa ",
+    "level": "Level 14",
+    "race": "High Half-Elf",
+    "classes": "Cleric",
+    "max_hp": "115",
+    "ac": "22",
+    "speed": "30 ft.",
+    "abilities": [
+      "STR -1 (8)",
+      "DEX +3 (16)",
+      "CON +3 (16)",
+      "INT -1 (8)",
+      "WIS +4 (18)",
+      "CHA -1 (8)"
+    ],
+    "avatar": "https://www.dndbeyond.com/avatars/52178/358/1581111423-153930651.jpeg",
+    "saving_throws": [
+      "STR +1",
+      "DEX +3",
+      "CON +3",
+      "INT -1",
+      "**WIS +9**",
+      "**CHA +4**"
+    ],
+    "skills": [
+      "Acrobatics +3",
+      "Animal Handling +4",
+      "Arcana +3",
+      "Athletics -1",
+      "Deception -1",
+      "History -1",
+      "**Insight +9**",
+      "Intimidation -1",
+      "Investigation -1",
+      "Medicine +4",
+      "Nature -1",
+      "**Perception +9**",
+      "Performance -1",
+      "**Persuasion +4**",
+      "Religion +3",
+      "Sleight of Hand +3",
+      "**Stealth +8**",
+      "Survival +4"
+    ]
+  }
+}
