@@ -110,7 +110,7 @@ class Sheet(commands.Cog):
             Discord embed with character information.
         """
         embed = discord.Embed(
-            title=f"{data['name']}",
+            title=f"🐉 {data['name']} ({member.display_name})",
             description=f"**{data['race']}** • **{data['classes']}** • {data['level']}",
             color=discord.Color.blue()
         )
@@ -120,11 +120,11 @@ class Sheet(commands.Cog):
             embed.set_thumbnail(url=data['avatar'])
         
         # Set footer with Discord member and last scraped time
-        footer_text = f"Character of {member.display_name}"
+        # footer_text = f"Character of {member.display_name}"
         if "_scraped_at" in data:
             try:
                 scraped = datetime.datetime.fromisoformat(data["_scraped_at"])
-                formatted_time = scraped.strftime('%m/%d/%Y %I:%M %p')
+                formatted_time = scraped.strftime('%m/%d/%Y @ %I:%M %p')
                 # Replace UTC offset with EST/EDT
                 tz_offset = scraped.strftime('%z')
                 if tz_offset == '-0500':
@@ -133,7 +133,7 @@ class Sheet(commands.Cog):
                     tz_name = 'EDT'
                 else:
                     tz_name = scraped.strftime('%Z') or 'UTC'
-                footer_text += f" • Last scraped: {formatted_time} {tz_name}"
+                footer_text = f"🔋 Last scraped: {formatted_time} {tz_name}"
             except (ValueError, TypeError):
                 pass
         embed.set_footer(text=footer_text)
