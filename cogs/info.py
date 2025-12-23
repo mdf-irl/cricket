@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import asyncio
 import datetime
+import os
 import platform
 import time
 import typing
+from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import discord
 
@@ -274,3 +277,42 @@ class Info(discord.ext.commands.Cog):
             embed.add_field(name="Guild Join", value="-", inline=True)
 
         await interaction.response.send_message(embed=embed)
+
+    @discord.app_commands.command(name="cogversions")
+    async def cogversions(self, interaction: discord.Interaction) -> None:
+        """Show the last modification time of all loaded cogs."""
+        await interaction.response.defer()
+
+        cogs_dir = Path("./cogs")
+        cog_info = []
+
+        # Get modification times for all .py files in cogs directory
+        for cog_file in sorted(cogs_dir.glob("*.py")):
+            if cog_file.stem.startswith("_"):
+                continue
+
+            try:
+                mod_time = os.path.getmtime(cog_file)
+                # Convert to EST/EDT timezone
+                mod_dt = datetime.datetime.fromtimestamp(mod_time, tz=ZoneInfo("America/New_York"))
+                formatted_time = mod_dt.strftime('%m/%d/%Y %I:%M %p %Z')
+                cog_info.append((cog_file.stem, formatted_time))
+            except OSError as e:
+                logger.warning(f"Could not get mtime for {cog_file}: {e}")
+                cog_info.append((cog_file.stem, "N/A"))
+
+        # Build embed
+        embed = discord.Embed(
+            title="🔧 Cog Versions",
+            description="Last modification times of all loaded cogs",
+            color=discord.Color.blurple()
+        )
+
+        if cog_info:
+            cog_text = "\n".join(f"`{name}`: {time_str}" for name, time_str in cog_info)
+            embed.add_field(name="Cogs", value=cog_text, inline=False)
+        else:
+            embed.add_field(name="Cogs", value="No cogs found", inline=False)
+
+        embed.set_footer(text="🔋 Times shown in EST/EDT")
+        await interaction.followup.send(embed=embed)

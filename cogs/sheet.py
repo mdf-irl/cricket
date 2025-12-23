@@ -209,6 +209,7 @@ class Sheet(commands.Cog):
             member: String representation of member ID (from autocomplete).
         """
         # Defer immediately as scraping takes time
+        logger.info(f"Sheet command invoked by {interaction.user} (ID: {interaction.user.id}) for member ID: {member}")
         await interaction.response.defer()
         
         # Validate character map loaded
