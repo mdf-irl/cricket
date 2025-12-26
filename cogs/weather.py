@@ -1,5 +1,4 @@
 import json
-import os
 from urllib.parse import urlencode
 
 import discord
@@ -9,11 +8,11 @@ from discord import app_commands
 from logger_config import get_logger
 from http_manager import HTTP
 from config import Config
+from constants import WEATHER_LOCATIONS_FILE
 
 logger = get_logger(__name__)
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
-USER_LOCATIONS_FILE = os.path.join("data", "weather_locations.json")
 
 
 class WeatherCog(commands.Cog):
@@ -26,7 +25,7 @@ class WeatherCog(commands.Cog):
     def _load_locations(self) -> dict[int, str]:
         """Load user locations from JSON file."""
         try:
-            with open(USER_LOCATIONS_FILE, "r", encoding="utf-8") as f:
+            with open(WEATHER_LOCATIONS_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return {int(k): v for k, v in data.items()}
         except (FileNotFoundError, json.JSONDecodeError, ValueError) as e:
@@ -36,8 +35,8 @@ class WeatherCog(commands.Cog):
     def _save_locations(self) -> None:
         """Save user locations to JSON file."""
         try:
-            os.makedirs("data", exist_ok=True)
-            with open(USER_LOCATIONS_FILE, "w", encoding="utf-8") as f:
+            WEATHER_LOCATIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+            with open(WEATHER_LOCATIONS_FILE, "w", encoding="utf-8") as f:
                 json.dump({str(k): v for k, v in self.user_locations.items()}, f, indent=2)
         except Exception as e:
             logger.error(f"Error saving weather locations: {e}")

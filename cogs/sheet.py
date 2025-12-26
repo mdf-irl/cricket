@@ -1,8 +1,7 @@
 import json
-import os
-import re
 import datetime
 from zoneinfo import ZoneInfo
+import re
 
 import discord
 from discord.ext import commands
@@ -11,6 +10,7 @@ from discord import app_commands
 from config import Config
 from http_manager import HTTP
 from logger_config import get_logger
+from constants import CHARACTER_MAP_FILE, SHEET_CACHE_FILE
 
 logger = get_logger(__name__)
 
@@ -40,8 +40,6 @@ class CharacterSheetView(discord.ui.View):
 class Sheet(commands.Cog):
     """D&D character sheet cog fetching data via proxy or cache."""
     
-    DATA_FILE = os.path.join("data", "character_map.json")
-    CACHE_FILE = os.path.join("data", "sheet_cache.json")
     BASE_URL = "https://www.dndbeyond.com/characters/"
 
     def __init__(self, bot: commands.Bot):
@@ -53,33 +51,33 @@ class Sheet(commands.Cog):
     def load_character_map(self) -> dict[str, str]:
         """Load character map from JSON file with error handling."""
         try:
-            with open(self.DATA_FILE, "r", encoding="utf-8") as f:
+            with open(CHARACTER_MAP_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                logger.info(f"Loaded character map with {len(data)} entries from {self.DATA_FILE}")
+                logger.info(f"Loaded character map with {len(data)} entries from {CHARACTER_MAP_FILE}")
                 return data
         except (FileNotFoundError, json.JSONDecodeError) as e:
-            logger.error(f"Error loading {self.DATA_FILE}: {type(e).__name__}: {e}")
+            logger.error(f"Error loading {CHARACTER_MAP_FILE}: {type(e).__name__}: {e}")
             return {}
 
     def _load_cache(self) -> dict[str, dict]:
         """Load previously scraped character data cache."""
         try:
-            with open(self.CACHE_FILE, "r", encoding="utf-8") as f:
+            with open(SHEET_CACHE_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, dict):
-                    logger.info(f"Loaded sheet cache with {len(data)} entries from {self.CACHE_FILE}")
+                    logger.info(f"Loaded sheet cache with {len(data)} entries from {SHEET_CACHE_FILE}")
                     return data
         except FileNotFoundError:
             logger.info("No existing sheet cache; starting fresh")
         except json.JSONDecodeError as e:
-            logger.warning(f"Invalid cache JSON {self.CACHE_FILE}: {e}; starting empty")
+            logger.warning(f"Invalid cache JSON {SHEET_CACHE_FILE}: {e}; starting empty")
         return {}
 
     def _save_cache(self) -> None:
         """Persist cache to disk."""
         try:
-            os.makedirs("data", exist_ok=True)
-            with open(self.CACHE_FILE, "w", encoding="utf-8") as f:
+            SHEET_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+            with open(SHEET_CACHE_FILE, "w", encoding="utf-8") as f:
                 json.dump(self._cache, f, indent=2)
         except Exception as e:
             logger.error(f"Error saving sheet cache: {type(e).__name__}: {e}")

@@ -1,19 +1,17 @@
 import json
-import os
 
 import discord
 from discord.ext import commands
 from discord import app_commands
 
 from logger_config import get_logger
+from constants import BOOKS_FILE
 
 logger = get_logger(__name__)
 
 
 class Books(commands.Cog):
     """D&D books reference cog with links to official sources."""
-    
-    DATA_FILE = os.path.join("data", "books.json")
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -22,12 +20,12 @@ class Books(commands.Cog):
     def load_books_data(self) -> dict:
         """Load books data from JSON file with error handling."""
         try:
-            with open(self.DATA_FILE, "r", encoding="utf-8") as f:
+            with open(BOOKS_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                logger.info(f"Loaded books data from {self.DATA_FILE}")
+                logger.info(f"Loaded books data from {BOOKS_FILE}")
                 return data
         except (FileNotFoundError, json.JSONDecodeError) as e:
-            logger.error(f"Error loading {self.DATA_FILE}: {type(e).__name__}: {e}")
+            logger.error(f"Error loading {BOOKS_FILE}: {type(e).__name__}: {e}")
             return {}
 
     def format_books(self, category: dict) -> list[str]:

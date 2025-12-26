@@ -8,26 +8,17 @@ from discord import app_commands
 
 from config import Config
 from logger_config import get_logger
+from constants import (
+    MAX_PAGES_BY_SOURCE,
+    SOURCE_DISPLAY,
+    SPELLS_DIR,
+    MONSTERS_DIR,
+    ITEMS_DIR,
+)
 
 logger = get_logger(__name__)
 
 BASE_IMG_PREFIX = Config.PRIVATE_URL_BASE
-MAX_PAGES_BY_SOURCE = {
-    "XPHB": 384,
-    "XGE": 193,
-    "TCE": 192,
-    "MPMM": 288,
-    "XMM": 384,
-    "XDMG": 379,
-}
-SOURCE_DISPLAY = {
-    "XPHB": "Player's Handbook (2024)",
-    "XGE": "Xanathar's Guide to Everything (2017)",
-    "TCE": "Tasha's Cauldron of Everything (2020)",
-    "MPMM": "Monsters of the Multiverse (2022)",
-    "XMM": "Monster Manual (2024)",
-    "XDMG": "Dungeon Master's Guide (2024)",
-}
 
 
 class PageView(discord.ui.View):
@@ -117,17 +108,17 @@ class BookPage(commands.Cog):
     
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.spells_data: dict[str, list[dict]] = self._load_data("data/spells", "spell")
+        self.spells_data: dict[str, list[dict]] = self._load_data(SPELLS_DIR, "spell")
         self.spell_entries: list[tuple[str, str]] = self._build_entries(self.spells_data)
-        self.monsters_data: dict[str, list[dict]] = self._load_data("data/monsters", "monster")
+        self.monsters_data: dict[str, list[dict]] = self._load_data(MONSTERS_DIR, "monster")
         self.monster_entries: list[tuple[str, str]] = self._build_entries(self.monsters_data)
-        self.items_data: dict[str, list[dict]] = self._load_data("data/items", "item")
+        self.items_data: dict[str, list[dict]] = self._load_data(ITEMS_DIR, "item")
         self.item_entries: list[tuple[str, str]] = self._build_entries(self.items_data)
     
-    def _load_data(self, folder: str, data_key: str) -> dict[str, list[dict]]:
+    def _load_data(self, folder: Path, data_key: str) -> dict[str, list[dict]]:
         """Load data from all JSON files in specified folder."""
         data_dict = {}
-        data_dir = Path(folder)
+        data_dir = folder
         
         if not data_dir.exists():
             logger.warning(f"Directory not found: {data_dir}")

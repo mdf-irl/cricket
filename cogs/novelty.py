@@ -6,9 +6,9 @@ from discord import app_commands
 from discord.ext import commands
 
 from http_manager import HTTP
-import logger_config
+from logger_config import get_logger
 
-logger = logger_config.get_logger(__name__)
+logger = get_logger(__name__)
 
 
 class Novelty(commands.Cog):

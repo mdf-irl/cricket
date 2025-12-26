@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 import discord
@@ -6,15 +5,13 @@ from discord.ext import commands
 from discord import app_commands
 
 from logger_config import get_logger
+from constants import IMAGES_DIR, ALLOWED_IMAGE_EXTENSIONS
 
 logger = get_logger(__name__)
 
 
 class Images(commands.Cog):
     """Image gallery cog for serving custom images and GIFs."""
-    
-    IMAGES_DIR = os.path.join("data", "images")
-    ALLOWED_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.gif', '.webp'}
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -28,7 +25,7 @@ class Images(commands.Cog):
             Dictionary mapping lowercase filename (without extension) to full filename.
         """
         images_dict = {}
-        images_path = Path(self.IMAGES_DIR)
+        images_path = IMAGES_DIR
         
         if not images_path.exists():
             logger.warning(f"Images directory not found: {images_path}")
@@ -36,12 +33,12 @@ class Images(commands.Cog):
         
         try:
             for image_file in images_path.iterdir():
-                if image_file.is_file() and image_file.suffix.lower() in self.ALLOWED_EXTENSIONS:
+                if image_file.is_file() and image_file.suffix.lower() in ALLOWED_IMAGE_EXTENSIONS:
                     # Store without extension as key
                     name_key = image_file.stem.lower()
                     images_dict[name_key] = image_file.name
             
-            logger.info(f"Loaded {len(images_dict)} images from {self.IMAGES_DIR}")
+            logger.info(f"Loaded {len(images_dict)} images from {IMAGES_DIR}")
             return images_dict
         except Exception as e:
             logger.error(f"Error loading images from {images_path}: {type(e).__name__}: {e}")
@@ -81,7 +78,7 @@ class Images(commands.Cog):
         
         # Get the full filename and path
         filename = self.images[name_key]
-        filepath = os.path.join(self.IMAGES_DIR, filename)
+        filepath = IMAGES_DIR / filename
         
         try:
             # Send the image file

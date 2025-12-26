@@ -15,6 +15,7 @@ class Config:
     OPENWEATHERMAP_KEY: str | None = None
     PRIVATE_URL_BASE: str | None = None
     SHEET_PROXY_BASE: str | None = None
+    TMDB_API_KEY: str | None = None
     
     @classmethod
     def load(cls) -> bool:
@@ -38,6 +39,10 @@ class Config:
         cls.OPENWEATHERMAP_KEY = os.getenv("OPENWEATHERMAP_KEY")
         if not cls.OPENWEATHERMAP_KEY:
             logger.warning("OPENWEATHERMAP_KEY not set — weather commands will be disabled")
+        
+        cls.TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+        if not cls.TMDB_API_KEY:
+            logger.warning("TMDB_API_KEY not set — movie commands will use local fallback data")
         
         # Optional remote sheet proxy base URL
         if not cls.SHEET_PROXY_BASE:

@@ -1,6 +1,5 @@
 import asyncio
 import json
-import os
 import platform
 from pathlib import Path
 from urllib.parse import urlparse
@@ -12,12 +11,9 @@ from discord.ext import commands
 from config import Config
 from http_manager import HTTP
 from logger_config import get_logger
+from constants import IMAGES_DIR, ALLOWED_IMAGE_EXTENSIONS, CHARACTER_MAP_FILE
 
 logger = get_logger(__name__)
-
-IMAGES_DIR = os.path.join("data", "images")
-ALLOWED_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
-CHARACTER_MAP_FILE = os.path.join("data", "character_map.json")
 
 
 class Admin(commands.Cog):
@@ -50,14 +46,14 @@ class Admin(commands.Cog):
         if not name or len(name) > 50:
             return None, None, "❌ Name must be 1-50 characters."
 
-        if suffix not in ALLOWED_EXTENSIONS:
-            return None, None, f"❌ Image must use one of: {', '.join(sorted(ALLOWED_EXTENSIONS))}"
+        if suffix not in ALLOWED_IMAGE_EXTENSIONS:
+            return None, None, f"❌ Image must use one of: {', '.join(sorted(ALLOWED_IMAGE_EXTENSIONS))}"
 
         images_cog = self.bot.get_cog("Images")
         if images_cog and name in getattr(images_cog, "images", {}):
             return None, None, f"❌ `{name}` already exists."
 
-        images_path = Path(IMAGES_DIR)
+        images_path = IMAGES_DIR
         try:
             images_path.mkdir(parents=True, exist_ok=True)
         except Exception as e:
@@ -80,6 +76,7 @@ class Admin(commands.Cog):
     def _save_character_map_file(self, character_map: dict) -> bool:
         """Persist character map JSON to disk."""
         try:
+            CHARACTER_MAP_FILE.parent.mkdir(parents=True, exist_ok=True)
             with open(CHARACTER_MAP_FILE, "w", encoding="utf-8") as f:
                 json.dump(character_map, f, indent=4)
             return True
@@ -111,7 +108,7 @@ class Admin(commands.Cog):
         await interaction.response.defer(ephemeral=True)
 
         # Choose the appropriate reboot command for the current platform
-        if os.name == "nt":
+        if platform.system() == "Windows":
             cmd = ["shutdown", "/r", "/t", "5", "/f"]
         else:
             cmd = ["sudo", "reboot"]
@@ -346,7 +343,7 @@ class Admin(commands.Cog):
             await interaction.followup.send(f"❌ Image `{name}` not found.", ephemeral=True)
             return
 
-        filepath = Path(IMAGES_DIR) / filename
+        filepath = IMAGES_DIR / filename
 
         try:
             if filepath.exists():
