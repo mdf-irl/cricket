@@ -209,6 +209,29 @@ class Admin(commands.Cog):
 
         await interaction.followup.send(status, ephemeral=True)
 
+    @admin_group.command(name="flushchatlogs", description="Flush buffered chat logs to disk now.")
+    async def flushchatlogs(self, interaction: discord.Interaction) -> None:
+        if not await self._ensure_admin(interaction):
+            return
+
+        await interaction.response.defer(ephemeral=True)
+
+        cog = self.bot.get_cog("ChatLogger")
+        if not cog or not hasattr(cog, "flush"):
+            await interaction.followup.send("❌ ChatLogger cog is not loaded.", ephemeral=True)
+            return
+
+        try:
+            count = await cog.flush()  # type: ignore[attr-defined]
+            await interaction.followup.send(f"✅ Flushed {count} chat log entries to disk.", ephemeral=True)
+            logger.info("Chat logs flushed on-demand by %s (ID: %s) — %s entries", interaction.user, interaction.user.id, count)
+        except Exception as e:
+            logger.error("Chat log flush failed: %s: %s", type(e).__name__, e)
+            await interaction.followup.send(
+                f"❌ Failed to flush chat logs: {type(e).__name__}",
+                ephemeral=True,
+            )
+
     @admin_group.command(name="testsheetproxy", description="Check if the sheet proxy is reachable.")
     async def testsheetproxy(self, interaction: discord.Interaction) -> None:
         if not await self._ensure_admin(interaction):

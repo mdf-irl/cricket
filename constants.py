@@ -11,6 +11,7 @@ CHARACTER_MAP_FILE = Path("data") / "character_map.json"
 SHEET_CACHE_FILE = Path("data") / "sheet_cache.json"
 WEATHER_LOCATIONS_FILE = Path("data") / "weather_locations.json"
 BOOKS_FILE = Path("data") / "books.json"
+CHAT_LOG_DIR = Path("data") / "chat_logs"
 
 # Data directories
 SPELLS_DIR = Path("data") / "spells"

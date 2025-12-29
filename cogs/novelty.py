@@ -15,6 +15,7 @@ from logger_config import get_logger
 logger = get_logger(__name__)
 
 C0N_IMAGE_PATH = Path("data/c0n.png")
+AUTISM_IMAGE_PATH = Path("data/autism_announcement.jpg")
 
 
 class Novelty(commands.Cog):
@@ -104,6 +105,35 @@ class Novelty(commands.Cog):
         )
         await interaction.response.send_message(embed=embed)
         logger.info(f"8ball command used by {interaction.user} (ID: {interaction.user.id})")
+
+    @app_commands.command(name="announce", description="Send the autism announcement image with custom text.")
+    @app_commands.describe(text="The announcement text to append after the image.")
+    async def announce(self, interaction: discord.Interaction, text: str) -> None:
+        await interaction.response.defer()
+
+        if not AUTISM_IMAGE_PATH.exists():
+            await interaction.followup.send(
+                "❌ Announcement image not found. Please contact the bot admin.",
+                ephemeral=True,
+            )
+            logger.warning(f"announce image missing at {AUTISM_IMAGE_PATH}")
+            return
+
+        try:
+            file = discord.File(AUTISM_IMAGE_PATH, filename="autism_announcement.jpg")
+            embed = discord.Embed(color=discord.Color.pink())
+            embed.set_image(url="attachment://autism_announcement.jpg")
+            embed.set_footer(text=text)
+            await interaction.followup.send(embed=embed, file=file)
+            logger.info(
+                f"announce command used by {interaction.user} (ID: {interaction.user.id}): {text[:50]}"
+            )
+        except Exception as e:
+            logger.error(f"Error in announce command: {type(e).__name__}: {e}")
+            await interaction.followup.send(
+                "❌ Failed to send the announcement.",
+                ephemeral=True,
+            )
     
     @app_commands.command(name="newbycon", description="Show how many days it has been since gabby ruined newbyCon.")
     async def newbycon(self, interaction: discord.Interaction) -> None:
@@ -186,25 +216,40 @@ class Novelty(commands.Cog):
         ]
         draw.polygon(pointer_points, fill=(255, 255, 255, 255), outline=(0, 0, 0, 255))
         
-        # Prepare text
-        try:
-            font_size = 20
-            font = ImageFont.truetype("arial.ttf", font_size)
-        except (IOError, OSError):
-            font = ImageFont.load_default()
-            font_size = 11
-        
-        # Wrap text to fit bubble
+        # Prepare text font with smart scaling (enlarge for short messages, shrink only if needed)
+        font_size = 36
+        font = self._get_font(font_size)
         lines = self._wrap_text(text, draw, font, bubble_width - 20)
-        
-        # Auto-reduce font if needed
-        while len(lines) * (font_size + 5) > bubble_height - 20 and font_size > 8:
-            font_size = max(8, font_size - 2)
-            try:
-                font = ImageFont.truetype("arial.ttf", font_size)
-            except (IOError, OSError):
-                pass
+
+        # Try to enlarge font for short messages while it still fits
+        max_font = 96
+        while font_size < max_font:
+            next_size = font_size + 4
+            next_font = self._get_font(next_size)
+            next_lines = self._wrap_text(text, draw, next_font, bubble_width - 20)
+
+            # Compute dimensions for next size
+            next_total_height = len(next_lines) * (next_size + 4)
+            next_max_line_width = 0
+            for line in next_lines:
+                bbox = draw.textbbox((0, 0), line, font=next_font)
+                next_max_line_width = max(next_max_line_width, bbox[2] - bbox[0])
+
+            if next_total_height <= bubble_height - 20 and next_max_line_width <= bubble_width - 20:
+                font_size = next_size
+                font = next_font
+                lines = next_lines
+            else:
+                break
+
+        # If text still doesn't fit, reduce font until it fits
+        attempts = 0
+        while (len(lines) * (font_size + 4) > bubble_height - 20 or
+               max((draw.textbbox((0, 0), line, font=font)[2] - draw.textbbox((0, 0), line, font=font)[0]) for line in lines) > bubble_width - 20) and font_size > 10 and attempts < 20:
+            font_size -= 2
+            font = self._get_font(font_size)
             lines = self._wrap_text(text, draw, font, bubble_width - 20)
+            attempts += 1
         
         # Draw text centered in bubble
         total_text_height = len(lines) * (font_size + 4)
@@ -226,6 +271,41 @@ class Novelty(commands.Cog):
         image_bytes.seek(0)
         
         return image_bytes
+
+    def _get_font(self, size: int) -> ImageFont.FreeTypeFont:
+        """Get a TrueType font at the requested size with Windows fallbacks."""
+        candidates = [
+            # Generic names (if fontconfig resolves them)
+            "Arial.ttf",
+            "DejaVuSans.ttf",
+            "LiberationSans-Regular.ttf",
+            "FreeSans.ttf",
+            "NotoSans-Regular.ttf",
+            # Windows common paths
+            "C:/Windows/Fonts/arial.ttf",
+            "C:/Windows/Fonts/ARIAL.TTF",
+            "C:/Windows/Fonts/segoeui.ttf",
+            "C:/Windows/Fonts/SEGOEUI.TTF",
+            "C:/Windows/Fonts/tahoma.ttf",
+            "C:/Windows/Fonts/TAHOMA.TTF",
+            "C:/Windows/Fonts/calibri.ttf",
+            "C:/Windows/Fonts/CALIBRI.TTF",
+            # Linux/Raspberry Pi common paths
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+            "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+            "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf",
+            "/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf",
+            "/usr/share/fonts/truetype/droid/DroidSans.ttf",
+            "/usr/share/fonts/truetype/ttf-bitstream-vera/Vera.ttf",
+        ]
+        for path in candidates:
+            try:
+                return ImageFont.truetype(path, size)
+            except Exception:
+                continue
+        return ImageFont.load_default()
 
     def _wrap_text(self, text: str, draw: ImageDraw.ImageDraw, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
         """Wrap text to fit within max_width."""

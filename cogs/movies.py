@@ -158,7 +158,7 @@ class Movies(commands.Cog):
                 tmdb_id = int(title)
             except ValueError:
                 await interaction.followup.send(
-                    "❌ Please select a movie from the autocomplete dropdown.",
+                    "❌ Please select a movie from the auto-complete dropdown.",
                     ephemeral=True,
                 )
                 return
