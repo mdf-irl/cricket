@@ -1,0 +1,169 @@
+{
+  "species": [
+    {
+      "name": "Aarakocra",
+      "source": "MPMM",
+      "page": 6
+    },
+    {
+      "name": "Aasimar",
+      "source": "MPMM",
+      "page": 7
+    },
+    {
+      "name": "Bugbear",
+      "source": "MPMM",
+      "page": 8
+    },
+    {
+      "name": "Centaur",
+      "source": "MPMM",
+      "page": 9
+    },
+    {
+      "name": "Changeling",
+      "source": "MPMM",
+      "page": 10
+    },
+    {
+      "name": "Deep Gnome",
+      "source": "MPMM",
+      "page": 11
+    },
+    {
+      "name": "Duergar",
+      "source": "MPMM",
+      "page": 12
+    },
+    {
+      "name": "Eladrin",
+      "source": "MPMM",
+      "page": 13
+    },
+    {
+      "name": "Fairy",
+      "source": "MPMM",
+      "page": 14
+    },
+    {
+      "name": "Firbolg",
+      "source": "MPMM",
+      "page": 15
+    },
+    {
+      "name": "Air Genasi",
+      "source": "MPMM",
+      "page": 16
+    },
+    {
+      "name": "Earth Genasi",
+      "source": "MPMM",
+      "page": 17
+    },
+    {
+      "name": "Fire Genasi",
+      "source": "MPMM",
+      "page": 17
+    },
+    {
+      "name": "Water Genasi",
+      "source": "MPMM",
+      "page": 17
+    },
+    {
+      "name": "Githyanki",
+      "source": "MPMM",
+      "page": 18
+    },
+    {
+      "name": "Githzerai",
+      "source": "MPMM",
+      "page": 19
+    },
+    {
+      "name": "Goblin",
+      "source": "MPMM",
+      "page": 20
+    },
+    {
+      "name": "Goliath",
+      "source": "MPMM",
+      "page": 21
+    },
+    {
+      "name": "Harengon",
+      "source": "MPMM",
+      "page": 22
+    },
+    {
+      "name": "Hobgoblin",
+      "source": "MPMM",
+      "page": 23
+    },
+    {
+      "name": "Kenku",
+      "source": "MPMM",
+      "page": 24
+    },
+    {
+      "name": "Kobold",
+      "source": "MPMM",
+      "page": 25
+    },
+    {
+      "name": "Lizardfolk",
+      "source": "MPMM",
+      "page": 26
+    },
+    {
+      "name": "Minotaur",
+      "source": "MPMM",
+      "page": 27
+    },
+    {
+      "name": "Orc",
+      "source": "MPMM",
+      "page": 28
+    },
+    {
+      "name": "Satyr",
+      "source": "MPMM",
+      "page": 29
+    },
+    {
+      "name": "Sea Elf",
+      "source": "MPMM",
+      "page": 30
+    },
+    {
+      "name": "Shadar-kai",
+      "source": "MPMM",
+      "page": 31
+    },
+    {
+      "name": "Shifter",
+      "source": "MPMM",
+      "page": 32
+    },
+    {
+      "name": "Tabaxi",
+      "source": "MPMM",
+      "page": 33
+    },
+    {
+      "name": "Tortle",
+      "source": "MPMM",
+      "page": 34
+    },
+    {
+      "name": "Triton",
+      "source": "MPMM",
+      "page": 35
+    },
+    {
+      "name": "Yuan-ti",
+      "source": "MPMM",
+      "page": 36
+    }
+  ]
+}

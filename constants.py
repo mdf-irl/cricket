@@ -17,6 +17,7 @@ CHAT_LOG_DIR = Path("data") / "chat_logs"
 SPELLS_DIR = Path("data") / "spells"
 MONSTERS_DIR = Path("data") / "monsters"
 ITEMS_DIR = Path("data") / "items"
+SPECIES_DIR = Path("data") / "species"
 
 # Max pages per book source
 MAX_PAGES_BY_SOURCE = {

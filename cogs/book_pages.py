@@ -14,6 +14,7 @@ from constants import (
     SPELLS_DIR,
     MONSTERS_DIR,
     ITEMS_DIR,
+    SPECIES_DIR,
 )
 
 logger = get_logger(__name__)
@@ -114,6 +115,8 @@ class BookPage(commands.Cog):
         self.monster_entries: list[tuple[str, str]] = self._build_entries(self.monsters_data)
         self.items_data: dict[str, list[dict]] = self._load_data(ITEMS_DIR, "item")
         self.item_entries: list[tuple[str, str]] = self._build_entries(self.items_data)
+        self.species_data: dict[str, list[dict]] = self._load_data(SPECIES_DIR, "species")
+        self.species_entries: list[tuple[str, str]] = self._build_entries(self.species_data)
     
     def _load_data(self, folder: Path, data_key: str) -> dict[str, list[dict]]:
         """Load data from all JSON files in specified folder."""
@@ -177,7 +180,7 @@ class BookPage(commands.Cog):
         interaction: discord.Interaction,
         name: str,
         data_dict: dict[str, list[dict]],
-        item_type: Literal["spell", "monster"],
+        item_type: Literal["spell", "monster", "item", "species"],
     ) -> None:
         """Generic handler for spell and monster page commands."""
         await interaction.response.defer()
@@ -244,7 +247,7 @@ class BookPage(commands.Cog):
                 title_prefix="D&D Monster",
                 color=discord.Color.red(),
             )
-        else:  # item
+        elif item_type == "item":
             view = PageView(
                 user_id=interaction.user.id,
                 item_name=item_name,
@@ -254,6 +257,17 @@ class BookPage(commands.Cog):
                 title_emoji="🐉",
                 title_prefix="D&D Item",
                 color=discord.Color.gold(),
+            )
+        else:  # species
+            view = PageView(
+                user_id=interaction.user.id,
+                item_name=item_name,
+                source=source,
+                page=page,
+                max_pages=max_pages,
+                title_emoji="🐉",
+                title_prefix="D&D Species",
+                color=discord.Color.green(),
             )
         
         await interaction.followup.send(embed=view._current_embed(), view=view)
@@ -303,7 +317,20 @@ class BookPage(commands.Cog):
     ) -> list[app_commands.Choice[str]]:
         """Autocomplete item names as 'name (source)'."""
         return self._autocomplete(current, self.item_entries, self.items_data)
-    
+    @app_commands.command(name="species", description="View a species page from D&D 5e books.")
+    @app_commands.describe(name="The species name to view")
+    async def species(self, interaction: discord.Interaction, name: str) -> None:
+        """Display a species's page as an image."""
+        await self._handle_page_command(interaction, name, self.species_data, "species")
+
+    @species.autocomplete("name")
+    async def species_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> list[app_commands.Choice[str]]:
+        """Autocomplete species names as 'name (source)'."""  
+        return self._autocomplete(current, self.species_entries, self.species_data)    
     def _autocomplete(
         self,
         current: str,

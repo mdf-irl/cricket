@@ -1,0 +1,54 @@
+{
+  "species": [
+    {
+      "name": "Aasimar",
+      "source": "XPHB",
+      "page": 186
+    },
+    {
+      "name": "Dragonborn",
+      "source": "XPHB",
+      "page": 187
+    },
+    {
+      "name": "Dwarf",
+      "source": "XPHB",
+      "page": 188
+    },
+    {
+      "name": "Elf",
+      "source": "XPHB",
+      "page": 189
+    },
+    {
+      "name": "Gnome",
+      "source": "XPHB",
+      "page": 191
+    },
+    {
+      "name": "Goliath",
+      "source": "XPHB",
+      "page": 192
+    },
+    {
+      "name": "Halfling",
+      "source": "XPHB",
+      "page": 193
+    },
+    {
+      "name": "Human",
+      "source": "XPHB",
+      "page": 194
+    },
+    {
+      "name": "Orc",
+      "source": "XPHB",
+      "page": 195
+    },
+    {
+      "name": "Tiefling",
+      "source": "XPHB",
+      "page": 196
+    }
+  ]
+}
