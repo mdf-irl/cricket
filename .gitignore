@@ -171,3 +171,4 @@ cython_debug/
 *.code-workspace
 
 data/images/
+data/chat_logs/

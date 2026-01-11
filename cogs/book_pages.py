@@ -15,6 +15,7 @@ from constants import (
     MONSTERS_DIR,
     ITEMS_DIR,
     SPECIES_DIR,
+    CLASSES_DIR,
 )
 
 logger = get_logger(__name__)
@@ -117,6 +118,8 @@ class BookPage(commands.Cog):
         self.item_entries: list[tuple[str, str]] = self._build_entries(self.items_data)
         self.species_data: dict[str, list[dict]] = self._load_data(SPECIES_DIR, "species")
         self.species_entries: list[tuple[str, str]] = self._build_entries(self.species_data)
+        self.classes_data: dict[str, list[dict]] = self._load_data(CLASSES_DIR, "class")
+        self.class_entries: list[tuple[str, str]] = self._build_entries(self.classes_data)
     
     def _load_data(self, folder: Path, data_key: str) -> dict[str, list[dict]]:
         """Load data from all JSON files in specified folder."""
@@ -180,7 +183,7 @@ class BookPage(commands.Cog):
         interaction: discord.Interaction,
         name: str,
         data_dict: dict[str, list[dict]],
-        item_type: Literal["spell", "monster", "item", "species"],
+        item_type: Literal["spell", "monster", "item", "species", "class"],
     ) -> None:
         """Generic handler for spell and monster page commands."""
         await interaction.response.defer()
@@ -258,6 +261,17 @@ class BookPage(commands.Cog):
                 title_prefix="D&D Item",
                 color=discord.Color.gold(),
             )
+        elif item_type == "class":
+            view = PageView(
+                user_id=interaction.user.id,
+                item_name=item_name,
+                source=source,
+                page=page,
+                max_pages=max_pages,
+                title_emoji="🐉",
+                title_prefix="D&D Class",
+                color=discord.Color.purple(),
+            )
         else:  # species
             view = PageView(
                 user_id=interaction.user.id,
@@ -330,7 +344,23 @@ class BookPage(commands.Cog):
         current: str,
     ) -> list[app_commands.Choice[str]]:
         """Autocomplete species names as 'name (source)'."""  
-        return self._autocomplete(current, self.species_entries, self.species_data)    
+        return self._autocomplete(current, self.species_entries, self.species_data)
+
+    @app_commands.command(name="class", description="View a class page from D&D 5e books.")
+    @app_commands.describe(name="The class name to view")
+    async def class_cmd(self, interaction: discord.Interaction, name: str) -> None:
+        """Display a class's page as an image."""
+        await self._handle_page_command(interaction, name, self.classes_data, "class")
+
+    @class_cmd.autocomplete("name")
+    async def class_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> list[app_commands.Choice[str]]:
+        """Autocomplete class names as 'name (source)'."""
+        return self._autocomplete(current, self.class_entries, self.classes_data)
+
     def _autocomplete(
         self,
         current: str,

@@ -1,0 +1,64 @@
+{
+  "class": [
+    {
+      "name": "Barbarian",
+      "source": "XPHB",
+      "page": 51
+    },
+    {
+      "name": "Bard",
+      "source": "XPHB",
+      "page": 59
+    },
+    {
+      "name": "Cleric",
+      "source": "XPHB",
+      "page": 69
+    },
+    {
+      "name": "Druid",
+      "source": "XPHB",
+      "page": 79
+    },
+    {
+      "name": "Fighter",
+      "source": "XPHB",
+      "page": 91
+    },
+    {
+      "name": "Monk",
+      "source": "XPHB",
+      "page": 101
+    },
+    {
+      "name": "Paladin",
+      "source": "XPHB",
+      "page": 109
+    },
+    {
+      "name": "Ranger",
+      "source": "XPHB",
+      "page": 119
+    },
+    {
+      "name": "Rogue",
+      "source": "XPHB",
+      "page": 129
+    },
+    {
+      "name": "Sorcerer",
+      "source": "XPHB",
+      "page": 139
+    },
+    {
+      "name": "Warlock",
+      "source": "XPHB",
+      "page": 153
+    },
+    {
+      "name": "Wizard",
+      "source": "XPHB",
+      "page": 165
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import datetime
 import random
 import asyncio
+import re
 from pathlib import Path
 from io import BytesIO
 
@@ -16,6 +17,7 @@ logger = get_logger(__name__)
 
 C0N_IMAGE_PATH = Path("data/c0n.png")
 AUTISM_IMAGE_PATH = Path("data/autism_announcement.jpg")
+MENTION_PATTERN = re.compile(r"<@!?([0-9]+)>")
 
 
 class Novelty(commands.Cog):
@@ -157,6 +159,9 @@ class Novelty(commands.Cog):
         """Create an image with c0n and a speech bubble containing text."""
         await interaction.response.defer()
 
+        # Replace Discord mentions with display names for cleaner rendering
+        text_for_image = self._replace_mentions(text, interaction.guild)
+
         # Check if image exists
         if not C0N_IMAGE_PATH.exists():
             await interaction.followup.send(
@@ -168,12 +173,13 @@ class Novelty(commands.Cog):
 
         try:
             # Run image processing in executor to avoid blocking
-            image_bytes = await asyncio.to_thread(self._create_c0nsay_image, text)
+            image_bytes = await asyncio.to_thread(self._create_c0nsay_image, text_for_image)
             
-            # Send as file
-            await interaction.followup.send(
-                file=discord.File(image_bytes, filename="c0n_says.png")
-            )
+            file = discord.File(image_bytes, filename="c0n_says.png")
+            embed = discord.Embed(color=discord.Color.pink())
+            embed.set_image(url="attachment://c0n_says.png")
+
+            await interaction.followup.send(embed=embed, file=file)
             logger.info(f"c0nsay command used by {interaction.user} (ID: {interaction.user.id}): {text[:50]}")
         except Exception as e:
             logger.error(f"Error in c0nsay command: {type(e).__name__}: {e}")
@@ -181,6 +187,22 @@ class Novelty(commands.Cog):
                 "❌ An error occurred while creating the image.",
                 ephemeral=True,
             )
+
+    def _replace_mentions(self, text: str, guild: discord.Guild | None) -> str:
+        """Replace mention syntax with display names for the current guild."""
+        if not guild:
+            return text
+
+        def _sub(match: re.Match[str]) -> str:
+            try:
+                user_id = int(match.group(1))
+            except (ValueError, TypeError):
+                return match.group(0)
+
+            member = guild.get_member(user_id)
+            return member.display_name if member else match.group(0)
+
+        return MENTION_PATTERN.sub(_sub, text)
 
     def _create_c0nsay_image(self, text: str) -> BytesIO:
         """Create an image with c0n and a speech bubble containing text."""
